@@ -1,0 +1,68 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block content %}
+<div class="min-h-screen bg-gray-50 py-10">
+    <div class="container mx-auto">
+        <h1 class="text-4xl font-extrabold text-center text-blue-600 mb-6">Create a New Article</h1>
+        <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-8">
+            <form method="post" enctype="multipart/form-data" class="space-y-6">
+                {% csrf_token %}
+                
+                <!-- Title -->
+                <div>
+                    <label for="id_title" class="block text-lg font-semibold text-gray-700">Article Title</label>
+                    <input type="text" id="id_title" name="title" placeholder="Enter your article title" 
+                        class="w-full mt-2 px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+
+                <!-- Content -->
+                <div>
+                    <label for="id_content" class="block text-lg font-semibold text-gray-700">Content</label>
+                    <textarea id="id_content" name="content" rows="8" placeholder="Write your article content here..." 
+                        class="w-full mt-2 px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                </div>
+
+                <!-- Category -->
+                <div>
+                    <label for="id_category" class="block text-lg font-semibold text-gray-700">Category</label>
+                    <input type="text" id="id_category" name="category" placeholder="Enter article category"
+                        class="w-full mt-2 px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+
+                <!-- Tags -->
+                <div>
+                    <label for="id_tags" class="block text-lg font-semibold text-gray-700">Tags</label>
+                    <input type="text" id="id_tags" name="tags" placeholder="Enter tags separated by commas"
+                        class="w-full mt-2 px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+
+                <!-- Feature Image -->
+                <div>
+                    <label for="id_feature_image" class="block text-lg font-semibold text-gray-700">Feature Image</label>
+                    <input type="file" id="id_feature_image" name="feature_image" 
+                        class="w-full mt-2 px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+                </div>
+
+                <!-- Status -->
+                <div>
+                    <label for="id_status" class="block text-lg font-semibold text-gray-700">Status</label>
+                    <select id="id_status" name="status"
+                        class="w-full mt-2 px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <option value="draft">Draft</option>
+                        <option value="published">Published</option>
+                    </select>
+                </div>
+
+                <!-- Buttons -->
+                <div class="flex justify-end space-x-4">
+                    <a href="{% url 'list_articles' %}" 
+                       class="bg-gray-300 text-gray-700 px-6 py-2 rounded-md shadow hover:bg-gray-400 transition">Cancel</a>
+                    <button type="submit" 
+                       class="bg-blue-500 text-white px-6 py-2 rounded-md shadow hover:bg-blue-600 transition">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

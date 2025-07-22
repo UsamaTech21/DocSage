@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block content %}
+<div class="min-h-screen bg-blue-50">
+    <header class="text-center py-8 bg-gradient-to-r from-blue-500 to-green-400 text-white">
+        <h1 class="text-5xl font-bold">SYMPTOM CHECKER</h1>
+        <p class="mt-4 text-lg">Upload an image for detailed analysis of possible skin conditions.</p>
+    </header>
+
+    <div class="container mx-auto p-6 bg-white rounded-lg shadow-lg mt-10">
+        <form action="{% url 'symptom_checker_results' %}" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <!-- Image Upload -->
+            <div class="mb-6">
+                <h3 class="font-semibold text-lg text-center">Upload Image:</h3>
+                <div class="flex justify-center mt-4">
+                    <input type="file" name="image" id="image-upload" accept="image/*" required
+                        class="border border-gray-300 rounded-md p-2">
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="text-center mt-6">
+                <button type="submit"
+                    class="bg-green-500 text-white px-6 py-2 rounded-md shadow hover:bg-green-600">
+                    Analyze Image
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

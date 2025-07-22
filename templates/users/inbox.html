@@ -1,0 +1,116 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block content %}
+<div class="flex h-screen bg-blue-50">
+    <!-- Sidebar -->
+    <div class="w-1/3 bg-white shadow-lg overflow-y-auto">
+        <!-- Search and "Find Users" Button -->
+        <div class="p-4 border-b flex items-center justify-between">
+            <input type="text" placeholder="Search..." class="w-3/4 p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <a href="{% url 'search_users' %}" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+                Find Users
+            </a>
+        </div>
+
+        <!-- Conversations List -->
+        <div id="conversations-list" class="space-y-4 p-4">
+            {% for convo in conversations %}
+            <div class="p-4 border-b hover:bg-gray-100 cursor-pointer flex items-center space-x-4" onclick="loadConversation({{ convo.id }})">
+                <!-- Profile Picture -->
+                <img src="{{ convo.profile_picture_url }}" alt="User" class="w-12 h-12 rounded-full border">
+                <div class="flex-1">
+                    <!-- Username -->
+                    <h3 class="font-bold text-gray-800">{{ convo.username }}</h3>
+                    <!-- Last Message -->
+                    <p class="text-sm text-gray-600 truncate">{{ convo.last_message }}</p>
+                </div>
+            </div>
+            {% empty %}
+            <p class="text-center text-gray-500">No conversations available. Start a new one by finding users!</p>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- Main Chat Section -->
+    <div id="chat-section" class="w-2/3 flex flex-col bg-blue-50 hidden">
+        <!-- Chat Header -->
+        <div id="chat-header" class="p-4 bg-white shadow flex items-center space-x-4">
+            <img id="chat-user-profile" class="w-12 h-12 rounded-full border hidden" alt="Profile">
+            <h2 id="chat-title" class="text-lg font-bold text-gray-800"></h2>
+        </div>
+        <!-- Messages -->
+        <div id="chat-messages" class="flex-1 overflow-y-auto p-4 space-y-4"></div>
+        <!-- Message Input -->
+        <form id="message-form" class="p-4 bg-white border-t">
+            <div class="flex items-center">
+                <input id="message-input" type="text" placeholder="Type a message..." class="flex-1 border rounded p-2 focus:ring-blue-500 focus:outline-none">
+                <button id="send-message" type="button" class="ml-2 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+                    Send
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    function loadConversation(conversationId) {
+        fetch(`/users/conversation/${conversationId}/`)
+            .then(response => response.json())
+            .then(data => {
+                // Update chat header
+                document.getElementById('chat-title').textContent = data.other_participant.username;
+                document.getElementById('chat-header').classList.remove('hidden');
+
+                // Update messages
+                const chatMessages = document.getElementById('chat-messages');
+                chatMessages.innerHTML = '';
+                data.messages.forEach(message => {
+                    const isSelf = message.sender_id === data.current_user_id;
+                    const messageDiv = document.createElement('div');
+                    messageDiv.className = `flex ${isSelf ? 'justify-end' : 'justify-start'}`;
+                    messageDiv.innerHTML = `
+                        <div class="max-w-xs px-4 py-2 ${isSelf ? 'bg-blue-500 text-white' : 'bg-gray-200 text-black'} rounded-lg">
+                            ${message.content}
+                        </div>
+                    `;
+                    chatMessages.appendChild(messageDiv);
+                });
+
+                // Show the chat section
+                document.getElementById('chat-section').classList.remove('hidden');
+
+                // Attach send message functionality
+                document.getElementById('send-message').onclick = () => sendMessage(conversationId);
+            });
+    }
+
+    function sendMessage(conversationId) {
+        const input = document.getElementById('message-input');
+        const message = input.value;
+        if (!message) return;
+
+        fetch(`/users/conversation/${conversationId}/`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRFToken': '{{ csrf_token }}',
+            },
+            body: JSON.stringify({ text: message }),
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                const chatMessages = document.getElementById('chat-messages');
+                const newMessage = document.createElement('div');
+                newMessage.className = 'flex justify-end';
+                newMessage.innerHTML = `
+                    <div class="max-w-xs px-4 py-2 bg-blue-500 text-white rounded-lg">${data.message.content}</div>
+                `;
+                chatMessages.appendChild(newMessage);
+                input.value = '';
+            }
+        });
+    }
+</script>
+
+{% endblock %}

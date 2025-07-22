@@ -1,0 +1,132 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% load form_tags %}
+
+{% block content %}
+<div class="min-h-screen bg-blue-50 py-10">
+    <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-6">
+        <!-- Sidebar -->
+        <div class="bg-white rounded-lg shadow-md p-4">
+            <div class="user-info text-center">
+                {% if user.profile_picture %}
+                    <img src="{{ user.profile_picture.url }}" alt="User Profile Picture" class="rounded-full h-24 w-24 mx-auto shadow-md">
+                {% else %}
+                    <img src="{% static 'media/default_profile_picture.jpg' %}" alt="Default Profile Picture" class="rounded-full h-24 w-24 mx-auto shadow-md">
+                {% endif %}
+                <h2 class="text-2xl font-bold text-gray-700 mt-4">{{ user.username }}</h2>
+                <p class="text-sm text-gray-500">From: "{{ user.city|default:"N/A" }}"</p>
+            </div>
+            <ul class="mt-6 space-y-4">
+                <li>
+                    <a href="{% url 'user_dashboard' %}" class="flex items-center gap-2 text-gray-600 hover:text-blue-600">
+                        <span class="material-icons">Dashboard</span> 
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'edit_profile' %}" class="flex items-center gap-2 text-blue-600 font-bold">
+                        <span class="material-icons">Edit Profile</span> 
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'list_articles' %}" class="flex items-center gap-2 text-gray-600 hover:text-blue-600">
+                        <span class="material-icons">My Article</span>
+                    </a>
+                </li>        
+                <li>
+                    <a href="{% url 'inbox' %}" class="flex items-center gap-2 text-gray-600 hover:text-blue-600">
+                        <span class="material-icons">Inbox</span> 
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'logout' %}" class="flex items-center gap-2 text-red-600 hover:text-red-800">
+                        <span class="material-icons">Log Out</span> 
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Edit Profile Content -->
+        <div class="md:col-span-3 bg-gradient-to-br from-blue-50 to-white rounded-lg shadow-lg p-8">
+            <!-- Heading -->
+            <div class="flex justify-between items-center border-b pb-4">
+                <h2 class="text-3xl font-bold text-blue-700">Edit Profile</h2>
+                <span class="text-sm text-gray-500">Make changes to your profile details</span>
+            </div>
+
+            <!-- Form -->
+            <form action="{% url 'edit_profile' %}" method="post" enctype="multipart/form-data" class="mt-8 space-y-6">
+                {% csrf_token %}
+
+                <!-- Form Fields -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Username -->
+                    <div class="flex flex-col">
+                        <label for="username" class="text-sm font-medium text-gray-600 mb-2">Username</label>
+                        <input id="username" name="username" type="text" value="{{ form.username.value }}" class="h-12 px-4 rounded-md border-2 border-gray-300 focus:border-blue-500 focus:ring focus:ring-blue-300 shadow-sm" />
+                    </div>
+
+                    <!-- Email -->
+                    <div class="flex flex-col">
+                        <label for="email" class="text-sm font-medium text-gray-600 mb-2">Email Address</label>
+                        <input id="email" name="email" type="email" value="{{ form.email.value }}" class="h-12 px-4 rounded-md border-2 border-gray-300 focus:border-blue-500 focus:ring focus:ring-blue-300 shadow-sm" />
+                    </div>
+
+                    <!-- Profile Picture -->
+                    <div class="flex flex-col">
+                        <label for="profile_picture" class="text-sm font-medium text-gray-600 mb-2">Profile Picture</label>
+                        <div class="flex items-center gap-4">
+                            {% if user.profile_picture %}
+                                <img src="{{ user.profile_picture.url }}" alt="Current Profile Picture" class="w-16 h-16 rounded-full shadow-md border-2 border-gray-300">
+                            {% else %}
+                                <img src="{% static 'media/default_profile_picture.jpg' %}" alt="Default Profile Picture" class="w-16 h-16 rounded-full shadow-md border-2 border-gray-300">
+                            {% endif %}
+                            <input id="profile_picture" name="profile_picture" type="file" class="h-12 px-4 rounded-md border-2 border-gray-300 focus:border-blue-500 focus:ring focus:ring-blue-300 shadow-sm w-full" />
+                        </div>
+                    </div>
+
+                    <!-- Age -->
+                    <div class="flex flex-col">
+                        <label for="age" class="text-sm font-medium text-gray-600 mb-2">Age</label>
+                        <input id="age" name="age" type="number" value="{{ form.age.value }}" class="h-12 px-4 rounded-md border-2 border-gray-300 focus:border-blue-500 focus:ring focus:ring-blue-300 shadow-sm" />
+                    </div>
+
+                    <!-- Gender -->
+                    <div class="flex flex-col">
+                        <label for="gender" class="text-sm font-medium text-gray-600 mb-2">Gender</label>
+                        <select id="gender" name="gender" class="h-12 px-4 rounded-md border-2 border-gray-300 focus:border-blue-500 focus:ring focus:ring-blue-300 shadow-sm">
+                            <option value="" disabled selected>-- Select Gender --</option>
+                            <option value="Male" {% if user.gender == "Male" %}selected{% endif %}>Male</option>
+                            <option value="Female" {% if user.gender == "Female" %}selected{% endif %}>Female</option>
+                        </select>
+                    </div>
+
+                    <!-- Blood Group -->
+                    <div class="flex flex-col">
+                        <label for="blood_group" class="text-sm font-medium text-gray-600 mb-2">Blood Group</label>
+                        <input id="blood_group" name="blood_group" type="text" value="{{ form.blood_group.value }}" class="h-12 px-4 rounded-md border-2 border-gray-300 focus:border-blue-500 focus:ring focus:ring-blue-300 shadow-sm" />
+                    </div>
+
+                    <!-- Height -->
+                    <div class="flex flex-col">
+                        <label for="height" class="text-sm font-medium text-gray-600 mb-2">Height (in meters)</label>
+                        <input id="height" name="height" type="text" value="{{ form.height.value }}" class="h-12 px-4 rounded-md border-2 border-gray-300 focus:border-blue-500 focus:ring focus:ring-blue-300 shadow-sm" />
+                    </div>
+
+                    <!-- Weight -->
+                    <div class="flex flex-col">
+                        <label for="weight" class="text-sm font-medium text-gray-600 mb-2">Weight (in kg)</label>
+                        <input id="weight" name="weight" type="text" value="{{ form.weight.value }}" class="h-12 px-4 rounded-md border-2 border-gray-300 focus:border-blue-500 focus:ring focus:ring-blue-300 shadow-sm" />
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="text-center">
+                    <button type="submit" class="w-full md:w-1/2 bg-gradient-to-r from-green-500 to-blue-500 text-white font-bold text-lg px-6 py-3 rounded-lg shadow-lg transform hover:scale-105 hover:from-green-600 hover:to-blue-600 focus:outline-none focus:ring-4 focus:ring-blue-300">
+                        Update Profile
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

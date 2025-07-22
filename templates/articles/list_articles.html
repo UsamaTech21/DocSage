@@ -1,0 +1,83 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block content %}
+<div class="min-h-screen bg-gray-50 py-10">
+    <div class="container mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
+            <!-- Sidebar -->
+            <div class="bg-white rounded-lg shadow-md p-4">
+                <div class="user-info text-center">
+                    {% if user.profile_picture %}
+                        <img src="{{ user.profile_picture.url }}" alt="User Profile Picture" class="rounded-full h-24 w-24 mx-auto shadow-md">
+                    {% else %}
+                        <img src="{% static 'media/default_profile_picture.jpg' %}" alt="Default Profile Picture" class="rounded-full h-24 w-24 mx-auto shadow-md">
+                    {% endif %}
+                    <h2 class="text-2xl font-bold text-gray-700 mt-4">{{ user.username }}</h2>
+                    <p class="text-sm text-gray-500">From: "{{ user.city|default:"N/A" }}"</p>
+                </div>
+                <ul class="mt-6 space-y-4">
+                    <li>
+                        <a href="{% url 'user_dashboard' %}" class="flex items-center gap-2 {% if request.resolver_match.url_name == 'user_dashboard' %}text-blue-600 font-bold{% else %}text-gray-600 hover:text-blue-600{% endif %}">
+                            <span class="material-icons">Dashboard</span> 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'edit_profile' %}" class="flex items-center gap-2 {% if request.resolver_match.url_name == 'edit_profile' %}text-blue-600 font-bold{% else %}text-gray-600 hover:text-blue-600{% endif %}">
+                            <span class="material-icons">Edit Profile</span> 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'list_articles' %}" class="flex items-center gap-2 {% if request.resolver_match.url_name == 'list_articles' %}text-blue-600 font-bold{% else %}text-gray-600 hover:text-blue-600{% endif %}">
+                            <span class="material-icons">My Articles</span> 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'inbox' %}" class="flex items-center gap-2 {% if request.resolver_match.url_name == 'inbox' %}text-blue-600 font-bold{% else %}text-gray-600 hover:text-blue-600{% endif %}">
+                            <span class="material-icons">Inbox</span> 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'logout' %}" class="flex items-center gap-2 text-red-600 hover:text-red-800">
+                            <span class="material-icons">Log Out</span> 
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+
+            <!-- Articles Section -->
+            <div class="lg:col-span-3">
+                <h1 class="text-4xl font-bold text-center text-blue-600 mb-6">My Articles</h1>
+                {% if articles %}
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {% for article in articles %}
+                            <div class="bg-white rounded-lg shadow-md p-4">
+                                <div class="relative">
+                                    {% if article.feature_image %}
+                                        <img src="{{ article.feature_image.url }}" alt="Article Image" class="w-full rounded-md shadow-md">
+                                    {% else %}
+                                        <img src="{% static 'media/default_article_image.jpg' %}" alt="Default Article Image" class="w-full rounded-md shadow-md">
+                                    {% endif %}
+                                </div>
+                                <div class="mt-4">
+                                    <h2 class="text-xl font-bold text-gray-800">{{ article.title }}</h2>
+                                    <p class="text-sm text-gray-500 mt-2">Category: {{ article.category }}</p>
+                                    <p class="text-gray-600 mt-2">{{ article.content|truncatewords:20 }}</p>
+                                    <p class="text-sm font-medium text-gray-500 mt-2">Status: {{ article.get_status_display }}</p>
+                                    <div class="mt-4 text-center">
+                                        <a href="{% url 'edit_article' article.id %}" class="text-blue-500 hover:underline">Edit</a> |
+                                        <a href="{% url 'delete_article' article.id %}" class="text-red-500 hover:underline">Delete</a>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    <p class="text-center text-gray-500">You haven't published any articles yet.</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

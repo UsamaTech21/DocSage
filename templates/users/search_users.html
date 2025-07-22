@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block content %}
+<div class="p-4">
+    <h2 class="text-xl font-bold mb-4">Find Users</h2>
+    <form method="GET" action="{% url 'search_users' %}">
+        <input type="text" name="query" placeholder="Search users by username" class="border p-2 rounded w-full" value="{{ query }}">
+        <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded mt-2">Search</button>
+    </form>
+
+    <div class="mt-4">
+        {% if results %}
+            <ul>
+                {% for user in results %}
+                    <li class="flex justify-between items-center border-b py-2">
+                        <div class="flex items-center space-x-4">
+                            <img src="{{ user.profile_picture_url }}" alt="Profile" class="w-12 h-12 rounded-full border">
+                            <div>
+                                <p class="font-bold">{{ user.username }}</p>
+                                <p class="text-gray-500">{{ user.email }}</p>
+                            </div>
+                        </div>
+                        <a href="{% url 'start_conversation' user.id %}" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">
+                            Message
+                        </a>
+                    </li>
+                {% endfor %}
+
+            </ul>
+        {% else %}
+            <p class="text-gray-500">No users found.</p>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

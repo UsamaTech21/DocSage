@@ -1,0 +1,63 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block content %}
+<div class="bg-blue-50 min-h-screen">
+    <!-- Header Section -->
+    <header class="relative text-center bg-cover bg-center py-20" style="background-image: url('{% static "media/doctor_bg.jpg" %}'); backdrop-filter: blur(5px);">
+        <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+        <div class="relative z-10">
+            <h1 class="text-4xl md:text-6xl font-bold text-green-500">DOCSAGE FIND A DOCTOR</h1>
+            <p class="text-xl text-white mt-2">Search For The Best Doctors Near You And Book An Appointment Easily</p>
+            <form method="GET" action="{% url 'find_doctor' %}" class="mt-6">
+                <input name="query" type="text" placeholder="Search by doctor name or expertise" class="w-full max-w-md px-4 py-2 border rounded-md shadow-md focus:outline-none focus:ring-2 focus:ring-green-400">
+                <div class="flex justify-center mt-4">
+                    <select name="specialization" class="px-4 py-2 mx-2 bg-white border border-gray-300 rounded-md shadow-md focus:outline-none">
+                        <option value="">Specialization: All</option>
+                        <option value="Dermatologist">Dermatologist</option>
+                        <option value="Cardiologist">Cardiologist</option>
+                    </select>
+                    <select name="location" class="px-4 py-2 mx-2 bg-white border border-gray-300 rounded-md shadow-md focus:outline-none">
+                        <option value="">Location: All</option>
+                        <option value="Gujranwala">Gujranwala</option>
+                        <option value="Lahore">Lahore</option>
+                        <option value="Islamabad">Islamabad</option>
+                    </select>
+                </div>
+                <button type="submit" class="mt-4 bg-green-500 text-white px-6 py-2 rounded-md shadow hover:bg-green-600">Search</button>
+            </form>
+        </div>
+    </header>
+
+    <!-- Doctor Cards Section -->
+    <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
+        {% if doctors %}
+            {% for doctor in doctors %}
+            <div class="bg-white rounded-lg shadow-md p-4">
+                <div class="flex items-center justify-center">
+                    {% if doctor.picture %}
+                    <img src="{{ doctor.picture.url }}" alt="{{ doctor.name }}" class="w-24 h-24 rounded-full shadow-md">
+                    {% else %}
+                    <img src="{% static 'media/default_doctor.png' %}" alt="{{ doctor.name }}" class="w-24 h-24 rounded-full shadow-md">
+                    {% endif %}
+                </div>
+                <div class="text-center mt-4">
+                    <h2 class="text-lg font-bold text-gray-800">{{ doctor.name }}</h2>
+                    <p class="text-gray-600">{{ doctor.location }}</p>
+                    <p class="text-gray-600">{{ doctor.expertise }}</p>
+                    <span class="text-sm text-green-500 bg-green-100 px-2 py-1 rounded-full">{{ doctor.degree }}</span>
+                </div>
+                <div class="flex justify-center items-center space-x-4 mt-4">
+                    <a href="{% url 'doctor_detail' doctor.id %}" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Report Analysis</a>
+                    <a href="{% url 'doctor_detail' doctor.id %}" class="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600">Book Online</a>
+                </div>
+            </div>
+            {% endfor %}
+        {% else %}
+        <div class="text-center col-span-full">
+            <p class="text-gray-600 text-lg">No doctors found matching your criteria.</p>
+        </div>
+        {% endif %}
+    </section>
+</div>
+{% endblock %}

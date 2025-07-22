@@ -1,0 +1,66 @@
+<!-- templates/doctors/doctor_dashboard.html -->
+ {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Dashboard</title>
+    <link rel="stylesheet" href="{% static 'css/user.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'symptom_checker' %}">Symptom Checker</a></li>
+                <li><a href="{% url 'find_doctor' %}">Find Doctor</a></li>
+                <li><a href="{% url 'article_list' %}">Articles</a></li>
+                <li><a href="{% url 'login' %}">Login</a></li>
+                <li><a href="{% url 'signup' %}">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Doctor Dashboard</h1>
+        <!-- Add doctor-specific information and controls here -->
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="{% static "media/w_logo.png" %}" alt="DocSage">
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Symptom Checker</a></li>
+                    <li><a href="#">Find Doctor</a></li>
+                    <li><a href="#">Articles</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <ul>
+                    <li><a href="#"><img src="{% static "media/github@2x.png" %}" alt="Facebook"></a></li>
+                    <li><a href="#"><img src="{% static "media/linkedin@2x.png" %}" alt="Instagram"></a></li>
+                    <li><a href="#"><img src="{% static "media/github@2x.png" %}" alt="Twitter"></a></li>
+                    <li><a href="#"><img src="{% static "media/github@2x.png" %}" alt="LinkedIn"></a></li>
+                    <li><a href="#"><img src="{% static "media/github@2x.png" %}" alt="YouTube"></a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p>Email: contact@docsage.com</p>
+                <p>Phone: 123-456-7890</p>
+                <p>Address: 123 Health St, Wellness City, HW 45678</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 DocSage. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

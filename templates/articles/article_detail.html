@@ -1,0 +1,60 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block content %}
+<div class="min-h-screen bg-gray-50 py-10">
+    <div class="container mx-auto">
+        <!-- Article Content Section -->
+        <div class="bg-white rounded-lg shadow-md p-8">
+            <h1 class="text-4xl font-bold text-gray-800 mb-4">{{ article.title }}</h1>
+            <div class="flex items-center mb-6">
+                {% if article.author.profile_picture %}
+                    <img src="{{ article.author.profile_picture.url }}" alt="Author Image" class="h-12 w-12 rounded-full shadow-md">
+                {% else %}
+                    <img src="{% static 'media/default_profile_picture.jpg' %}" alt="Default Profile Image" class="h-12 w-12 rounded-full shadow-md">
+                {% endif %}
+                <div class="ml-4">
+                    <p class="text-lg font-semibold">{{ article.author.username }}</p>
+                    <p class="text-sm text-gray-500">{{ article.author.specialization|default:"General Practitioner" }}</p>
+                </div>
+            </div>
+            {% if article.feature_image %}
+                <img src="{{ article.feature_image.url }}" alt="Article Image" class="w-full rounded-md shadow-md mb-6">
+            {% endif %}
+            <div class="text-lg text-gray-700 leading-relaxed">
+                {{ article.content|linebreaks }}
+            </div>
+            <div class="mt-6 flex justify-between items-center">
+                <button onclick="window.location.href='{% url 'like_article' article.id %}'" class="flex items-center gap-2 text-red-500 hover:text-red-700">
+                    <i class="fas fa-heart">Likes</i>
+                    <span>{{ article.total_likes }}</span>
+                </button>
+                <button class="flex items-center gap-2 text-blue-500 hover:text-blue-700" onclick="shareArticle('{{ request.build_absolute_uri }}')">
+                    <i class="fas fa-share-alt"></i>
+                    <span>Share</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Comments Section -->
+        <div class="mt-10 bg-gray-100 rounded-lg shadow-md p-6">
+            <h2 class="text-2xl font-bold text-gray-800">Comments</h2>
+            <div class="mt-4">
+                {% for comment in comments %}
+                <div class="mt-4 border-b pb-4">
+                    <p class="font-semibold text-gray-800">{{ comment.author.username }}</p>
+                    <p class="text-gray-600 mt-1">{{ comment.content }}</p>
+                </div>
+                {% empty %}
+                <p class="text-gray-500">No comments yet. Be the first to comment!</p>
+                {% endfor %}
+            </div>
+            <form action="{% url 'add_comment' article.id %}" method="post" class="mt-6">
+                {% csrf_token %}
+                <textarea name="content" rows="3" class="w-full px-4 py-2 border rounded-md shadow-md focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="Write your comment here..."></textarea>
+                <button type="submit" class="mt-4 bg-blue-500 text-white px-6 py-2 rounded-md shadow hover:bg-blue-600">Post Comment</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

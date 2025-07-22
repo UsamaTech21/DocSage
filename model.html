@@ -1,0 +1,1407 @@
+<!doctype html>
+<html lang="en" id="site">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="theme-colour" content="#2479b2">
+        <link rel="canonical" href="https://dermnetnz.org/dermdiag"/>
+        <title>DermDiag</title>
+        <meta property="og:title" content="DermDiag"/>
+        <meta name="twitter:title" content="DermDiag"/>
+        <base href="https://dermnetnz.org/">
+        <!--[if lte IE 6]></base><![endif]-->
+        <meta name="generator" content="Silverstripe CMS 5.2">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="description" content=""/>
+        <meta property="og:description" content=""/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:url" content="https://dermnetnz.org/dermdiag"/>
+        <meta property="og:locale" content="en_US"/>
+        <meta property="og:site_name" content="DermNet®"/>
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:description" content=""/>
+        <meta name="twitter:creator" content=""/>
+        <meta name="twitter:site" content=""/>
+        <meta property="article:published_time" content="2024-04-22T05:06:15+00:00"/>
+        <meta property="article:modified_time" content="2024-11-07T03:05:13+00:00"/>
+        <link rel="apple-touch-icon" sizes="57x57" href="/assets/Favicon/favicon__FitWzU3LDU3XQ.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/assets/Favicon/favicon__FitWzYwLDYwXQ.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/assets/Favicon/favicon__FitWzcyLDcyXQ.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/assets/Favicon/favicon__FitWzc2LDc2XQ.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/assets/Favicon/favicon__FitWzExNCwxMTRd.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/assets/Favicon/favicon__FitWzEyMCwxMjBd.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/assets/Favicon/favicon__FitWzE0NCwxNDRd.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/assets/Favicon/favicon__FitWzE1MiwxNTJd.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/Favicon/favicon__FitWzE4MCwxODBd.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/assets/Favicon/favicon__FitWzE2LDE2XQ.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/assets/Favicon/favicon__FitWzMyLDMyXQ.png">
+        <link rel="icon" type="image/png" sizes="48x48" href="/assets/Favicon/favicon__FitWzQ4LDQ4XQ.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/assets/Favicon/favicon__FitWzk2LDk2XQ.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="/assets/Favicon/favicon__FitWzE5MiwxOTJd.png">
+        <meta name="msapplication-TileColor" content="##116BA3">
+        <meta name="theme-color" content="##116BA3">
+        <style>
+            html {
+                font-size: 10px;
+                font-family: Verdana, sans-serif;
+            }
+
+            .js-postload {
+                display: none;
+            }
+        </style>
+        <script>
+            // Remove a class on all elements to make them visible
+            // This avoids a flash of unstyled content
+            document.addEventListener('DOMContentLoaded', function() {
+
+                // Find all elements with the class 'js-postload'
+                var elements = document.querySelectorAll('.js-postload');
+
+                // Loop through all elements and remove the class
+                for (var i = 0; i < elements.length; i++) {
+                    elements[i].classList.remove('js-postload');
+                }
+            });
+        </script>
+        <!-- Google Analytics-->
+        <script async defer src="https://www.googletagmanager.com/gtag/js?id=G-ZVT7LBZQ5J"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+
+            gtag('config', 'G-ZVT7LBZQ5J');
+        </script>
+        <!-- Clicky -->
+        <script async defer data-id="101371808" src="//static.getclicky.com/js"></script>
+        <!-- InMobi Choice. Consent Manager Tag v3.0 (for TCF 2.2) -->
+        <script type="text/javascript" async="true" defer>
+            (function() {
+                var host = window.location.hostname;
+                var element = document.createElement('script');
+                var firstScript = document.getElementsByTagName('script')[0];
+                var url = 'https://cmp.inmobi.com'.concat('/choice/', 'PG2TJyS6S9mc7', '/', host, '/choice.js?tag_version=V3');
+                var uspTries = 0;
+                var uspTriesLimit = 3;
+                element.async = true;
+                element.type = 'text/javascript';
+                element.src = url;
+
+                firstScript.parentNode.insertBefore(element, firstScript);
+
+                function makeStub() {
+                    var TCF_LOCATOR_NAME = '__tcfapiLocator';
+                    var queue = [];
+                    var win = window;
+                    var cmpFrame;
+
+                    function addFrame() {
+                        var doc = win.document;
+                        var otherCMP = !!(win.frames[TCF_LOCATOR_NAME]);
+
+                        if (!otherCMP) {
+                            if (doc.body) {
+                                var iframe = doc.createElement('iframe');
+
+                                iframe.style.cssText = 'display:none';
+                                iframe.name = TCF_LOCATOR_NAME;
+                                doc.body.appendChild(iframe);
+                            } else {
+                                setTimeout(addFrame, 5);
+                            }
+                        }
+                        return !otherCMP;
+                    }
+
+                    function tcfAPIHandler() {
+                        var gdprApplies;
+                        var args = arguments;
+
+                        if (!args.length) {
+                            return queue;
+                        } else if (args[0] === 'setGdprApplies') {
+                            if (args.length > 3 && args[2] === 2 && typeof args[3] === 'boolean') {
+                                gdprApplies = args[3];
+                                if (typeof args[2] === 'function') {
+                                    args[2]('set', true);
+                                }
+                            }
+                        } else if (args[0] === 'ping') {
+                            var retr = {
+                                gdprApplies: gdprApplies,
+                                cmpLoaded: false,
+                                cmpStatus: 'stub'
+                            };
+
+                            if (typeof args[2] === 'function') {
+                                args[2](retr);
+                            }
+                        } else {
+                            if (args[0] === 'init' && typeof args[3] === 'object') {
+                                args[3] = Object.assign(args[3], {
+                                    tag_version: 'V3'
+                                });
+                            }
+                            queue.push(args);
+                        }
+                    }
+
+                    function postMessageEventHandler(event) {
+                        var msgIsString = typeof event.data === 'string';
+                        var json = {};
+
+                        try {
+                            if (msgIsString) {
+                                json = JSON.parse(event.data);
+                            } else {
+                                json = event.data;
+                            }
+                        } catch (ignore) {}
+
+                        var payload = json.__tcfapiCall;
+
+                        if (payload) {
+                            window.__tcfapi(payload.command, payload.version, function(retValue, success) {
+                                var returnMsg = {
+                                    __tcfapiReturn: {
+                                        returnValue: retValue,
+                                        success: success,
+                                        callId: payload.callId
+                                    }
+                                };
+                                if (msgIsString) {
+                                    returnMsg = JSON.stringify(returnMsg);
+                                }
+                                if (event && event.source && event.source.postMessage) {
+                                    event.source.postMessage(returnMsg, '*');
+                                }
+                            }, payload.parameter);
+                        }
+                    }
+
+                    while (win) {
+                        try {
+                            if (win.frames[TCF_LOCATOR_NAME]) {
+                                cmpFrame = win;
+                                break;
+                            }
+                        } catch (ignore) {}
+
+                        if (win === window.top) {
+                            break;
+                        }
+                        win = win.parent;
+                    }
+                    if (!cmpFrame) {
+                        addFrame();
+                        win.__tcfapi = tcfAPIHandler;
+                        win.addEventListener('message', postMessageEventHandler, false);
+                    }
+                }
+                ;
+                makeStub();
+
+                var uspStubFunction = function() {
+                    var arg = arguments;
+                    if (typeof window.__uspapi !== uspStubFunction) {
+                        setTimeout(function() {
+                            if (typeof window.__uspapi !== 'undefined') {
+                                window.__uspapi.apply(window.__uspapi, arg);
+                            }
+                        }, 500);
+                    }
+                };
+
+                var checkIfUspIsReady = function() {
+                    uspTries++;
+                    if (window.__uspapi === uspStubFunction && uspTries < uspTriesLimit) {
+                        console.warn('USP is not accessible');
+                    } else {
+                        clearInterval(uspInterval);
+                    }
+                };
+
+                if (typeof window.__uspapi === 'undefined') {
+                    window.__uspapi = uspStubFunction;
+                    var uspInterval = setInterval(checkIfUspIsReady, 6000);
+                }
+            }
+            )();
+        </script>
+        <!-- End InMobi Choice. Consent Manager Tag v3.0 (for TCF 2.2) -->
+        <!-- AdPushUp -->
+        <script>
+            (function(w, d) {
+                function loadAp() {
+                    var s = d.createElement("script");
+                    s.src = "//cdn.adpushup.com/44776/adpushup.js";
+                    s.setAttribute("crossorigin", "anonymous");
+                    d.body.appendChild(s);
+                    w.adpushup = w.adpushup || {
+                        que: []
+                    };
+                    removeUserActionListeners(loadAp);
+                }
+                function addUserActionListeners(callback) {
+                    ['scroll', 'mousemove', 'keydown'].forEach(function(event) {
+                        w.addEventListener(event, callback);
+                    });
+                }
+                function removeUserActionListeners(callback) {
+                    ['scroll', 'mousemove', 'keydown'].forEach(function(event) {
+                        w.removeEventListener(event, callback);
+                    });
+                }
+                addUserActionListeners(loadAp);
+            }
+            )(window, document);
+        </script>
+        <!-- AdPushUp AR code -->
+        <script data-cfasync="false" type="text/javascript">
+            (function(w, d) {
+                var s = d.createElement('script');
+                s.src = '//delivery.adrecover.com/45418/adRecover.js';
+                s.type = 'text/javascript';
+                s.async = true;
+                (d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s);
+            }
+            )(window, document);
+        </script>
+        <!-- AIM v4-->
+        <script async defer src="https://aim-tag.hcn.health/js/client.js?dl=aimDataLayer"></script>
+        <script>
+            window.aimDataLayer = window.aimDataLayer || [];
+            function aimTag() {
+                aimDataLayer.push(arguments);
+            }
+
+            aimTag('544feac8-e409-44e6-9eef-df8c3a44efe8', 'pageview');
+            // If your contract includes signal, then callback will include personal information on the visitor
+            aimTag('544feac8-e409-44e6-9eef-df8c3a44efe8', 'signal', function(err, success) {
+                if (err) {
+                    // This will occur if we disable your API Key
+                    console.log(err);
+                } else {
+                    // console.log(success);
+                    if (success.identity_type === "AUT") {// Handle signal callback here
+                    }
+                }
+            });
+        </script>
+        <script src="https://servedbydoceree.doceree.com/resources/p/doc_ad/23/157/dc.js" data-siteId="157" data-platId="1" data-pubId="23"></script>
+        <!-- webmd pixel -->
+        <SCRIPT type="text/javascript" src="https://bh.contextweb.com/cp?p=7510&token=CFH5611YVA4P&url=[PAGE_URL]&rr=[REFERRER_URL]&campaign={{CAMPAIGN}}&frmtext=[FORM_TEXT]&clktext=[CLICK_TEXT]&us_privacy=${us_privacy}&gpp=${GPP_STRING_XXXXX}&gpp_sid=${GPP_SID}&param1=[PARAM_1]&param2=[PARAM_2]&param3=[PARAM_3]&param4=[PARAM_4]&param5=[PARAM_5]" async></SCRIPT>
+        <link rel="preload" crossorigin href="_resources/themes/mercury/dist/fonts/poppins-latin-ext-400.woff2?v=1.0.2" as="font" type="font/woff2">
+        <link rel="preload" crossorigin href="_resources/themes/mercury/dist/fonts/poppins-latin-ext-600.woff2?v=1.0.2" as="font" type="font/woff2">
+        <link rel="preload" crossorigin href="_resources/themes/mercury/dist/fonts/poppins-latin-ext-700.woff2?v=1.0.2" as="font" type="font/woff2">
+        <style>
+            @font-face {
+                font-family: 'Poppins-Fallback';
+                src: local("Arial");
+                ascent-override: 105%; descent-override: 35%; line-gap-override: 10%; }
+
+            @font-face {
+                font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 400;
+                font-display: swap;
+                src: local('Poppins'), url('_resources/themes/mercury/dist/fonts/poppins-latin-ext-400.woff2?v=1.0.2') format('woff2');
+            }
+
+            @font-face {
+                font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 600;
+                font-display: swap;
+                src: local('Poppins'), url('_resources/themes/mercury/dist/fonts/poppins-latin-ext-600.woff2?v=1.0.2') format('woff2');
+            }
+
+            @font-face {
+                font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 700;
+                font-display: swap;
+                src: local('Poppins'), url('_resources/themes/mercury/dist/fonts/poppins-latin-ext-700.woff2?v=1.0.2') format('woff2');
+            }
+        </style>
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@graph": [
+                    {
+                        "@type": "Organization",
+                        "@id": "https://dermnetnz.org/#organization",
+                        "name": "DermNet",
+                        "url": "https://dermnetnz.org",
+                        "sameAs": [
+                            "https://www.facebook.com/dermnetnz/",
+                            "https://twitter.com/dermnetnz",
+                            "https://www.youtube.com/channel/UCj4I5L1l7jT64IuMZJirfhQ",
+                            "https://www.instagram.com/dermnet/",
+                            "https://en.wikipedia.org/wiki/DermNet_NZ"
+                        ],
+                        "logo": {
+                            "@type": "ImageObject",
+                            "inLanguage": "en",
+                            "@id": "https://dermnetnz.org/#logo",
+                            "url": "https://dermnetnz.org_resources/themes/mercury/dist/images/svg/logo-white-tm.svg",
+                            "width": 184,
+                            "height": 41,
+                            "caption": "DermNet Logo"
+                        },
+                        "founder": {
+                            "@type": [
+                                "Person",
+                                "Physician"
+                            ],
+                            "medicalSpecialty": "Dermatology",
+                            "name": "Dr. Amanda Oakley",
+                            "url": "https://dermnetnz.org/about-us",
+                            "telephone": "+64 7 839 8899",
+                            "address": {
+                                "@type": "PostalAddress",
+                                "addressLocality": "Hamilton",
+                                "addressRegion": "Waikato",
+                                "postalCode": "3204",
+                                "streetAddress": "183 Pembroke Street"
+                            },
+                            "sameAs": [
+                                "https://en.wikipedia.org/wiki/Amanda_Oakley",
+                                "https://miiskin.com/about/articles-guidelines-and-reviewers/amanda-oakley/",
+                                "https://www.nzdsi.org/Dermatologist-Detail.aspx?id=88167544-6e15-47da-9b50-d9668f246f6d",
+                                "https://www.linkedin.com/in/amanda-oakley-a95b4822/",
+                                "https://profiles.auckland.ac.nz/amanda-oakley",
+                                "https://orcid.org/0000-0002-9461-2790",
+                                "https://gg.govt.nz/file/25820"
+                            ],
+                            "@id": "https://dermnetnz.org/about-us#founder",
+                            "awards": [
+                                "Companion of the New Zealand Order of Merit",
+                                "Honorary Fellow of the Royal New Zealand College of General Practitioners",
+                                "Honorary Member of the American Academy of Dermatology",
+                                "Honorary International Member of the American Dermatological Association",
+                                "Honorary Member of Skin Cancer College of Australasia",
+                                "Honorary Member of MelNet",
+                                "Honorary Member of Indian Society of Teledermatology",
+                                "International Pioneer Award, Womens Dermatological Society, 2015",
+                                "Lifetime Achievement Award, TechSoup 2017",
+                                "NZDSI Excellence Award for Exceptional Service to Dermatology, 2018"
+                            ],
+                            "alumniOf": {
+                                "@type": "CollegeOrUniversity",
+                                "name": "University of Bristol",
+                                "sameAs": [
+                                    "https://en.wikipedia.org/wiki/University_of_Bristol",
+                                    "https://www.bristol.ac.uk/"
+                                ]
+                            },
+                            "hospitalAffiliation": [
+                                {
+                                    "@type": "Hospital",
+                                    "name": "Waikato Hospital",
+                                    "@id": "https://en.wikipedia.org/wiki/Waikato_Hospital",
+                                    "address": {
+                                        "@type": "PostalAddress",
+                                        "addressLocality": "Hamilton",
+                                        "addressRegion": "Waikato",
+                                        "postalCode": "3204",
+                                        "streetAddress": "183 Pembroke Street"
+                                    }
+                                }
+                            ]},
+                            "slogan": "All about the skin",
+                            "description": "Information on skin diseases and skin conditions, reviewed and edited by Medical Professionals",
+                            "alternateName": "DermNet NZ",
+                            "legalName": "DermNet New Zealand Trust",
+                            "parentOrganization": {
+                                "@type": "MedicalOrganization",
+                                "name": "New Zealand Dermatological Society",
+                                "description": "NZ Dermatalogical Society Inc is a not-for-profit incorporated society of more than 60 dermatologists.",
+                                "url": "https://www.nzdsi.org/",
+                                "sameAs": [
+                                    "https://en.wikipedia.org/wiki/New_Zealand_Dermatological_Society",
+                                    "https://twitter.com/nzdsi"
+                                ],
+                                "logo": "https://dermnetnz.org_resources/themes/mercury/dist/images/svg/logo-white-tm.svg"
+                            }
+                        },
+                        {
+                            "@type": "WebSite",
+                            "@id": "https://dermnetnz.org/#website",
+                            "url": "https://dermnetnz.org/",
+                            "name": "DermNet",
+                            "description": "Information on skin diseases and skin conditions, reviewed and edited by Medical Professionals",
+                            "publisher": {
+                                "@id": "https://dermnetnz.org/#organization"
+                            },
+                            "editor": {
+                                "@type": [
+                                    "Person",
+                                    "Physician"
+                                ],
+                                "medicalSpecialty": "Dermatology",
+                                "name": "Dr. Ian Coulson",
+                                "telephone": "+64 7 839 8899",
+                                "address": {
+                                    "@type": "PostalAddress",
+                                    "addressLocality": "Hamilton",
+                                    "addressRegion": "Waikato",
+                                    "postalCode": "3204",
+                                    "streetAddress": "183 Pembroke Street"
+                                },
+                                "sameAs": [
+                                    "http://www.drcoulson.co.uk/",
+                                    "https://www.circlehealthgroup.co.uk/consultants/ian-halliday-coulson",
+                                    "https://www.xperta.pro/expert/dr-ian-coulson-expert-witness"
+                                ],
+                                "@id": "https://dermnetnz.org/about-us#editor",
+                                "award": "Sir Archibald Gray Medal 2022"
+                            },
+                            "potentialAction": [
+                                {
+                                    "@type": "SearchAction",
+                                    "target": {
+                                        "@type": "EntryPoint",
+                                        "urlTemplate": "https://dermnetnz.org/search/?q={search_term_string}"
+                                    },
+                                    "query-input": "required name=search_term_string"
+                                }
+                            ],
+                            "inLanguage": "en",
+                            "copyrightHolder": {
+                                "@id": "https://dermnetnz.org/#organization"
+                            }
+                        },
+                        {
+                            "@type": "BreadcrumbList",
+                            "@id": "https://dermnetnz.org/#breadcrumb",
+                            "itemListElement": [
+                                {
+                                    "@type": "ListItem",
+                                    "position": 1,
+                                    "item": {
+                                        "@id": "https://dermnetnz.org/dermdiag",
+                                        "name": "DermDiag"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }</script>
+            <link rel="stylesheet" type="text/css" href="/_resources/themes/mercury/dist/styles/app.css?m=1730250502">
+            <link rel="stylesheet" type="text/css" href="/_resources/themes/mercury/dist/styles/extended.css?m=1727061283">
+            <link rel="stylesheet" type="text/css" href="/_resources/themes/mercury/dist/styles/dermdiag.css?m=1724815107">
+        </head>
+        <body class="Toast\Pages\DermDiagPage">
+            <header class="header">
+                <div class="header__wrap">
+                    <a href="https://dermnetnz.org" class="header__wrap__logo" title="DermNet">
+                        <img src="_resources/themes/mercury/dist/images/svg/logo-white-tm.svg" width="185" height="41" alt="DermNet">
+                    </a>
+                    <div class="header__wrap__search">
+                        <form class="header__wrap__search__form" autocomplete="off">
+                            <label for="site-search">Search DermNet</label>
+                            <input id="site-search" type="text" class="[ js-suggest-input ]" autocomplete="off" name="search" placeholder="Search DermNet">
+                            <span class="keyboard">
+                                <span class="keyboard__key keyboard__key--meta">
+                                    <b>Ctrl</b>
+                                </span>
+                                <span class="keyboard__key">
+                                    <b>K</b>
+                                </span>
+                            </span>
+                            <img onclick="" class="header__wrap__search__close" src="_resources/themes/mercury/dist/images/svg/close.svg" width="20" height="20" loading="lazy" alt="close">
+                            <script type="application/javascript" src="/_resources/themes/mercury/dist/scripts/dermdiag.js?m=1724815107"></script>
+                            <script type="application/javascript" src="/_resources/themes/mercury/dist/scripts/app.js?m=1730250502"></script>
+                            <script type="application/javascript" src="/_resources/themes/mercury/dist/scripts/extended.js?m=1727128129"></script>
+                            <script>
+
+                                function isAppleDevice() {
+                                    return /(Mac|iPhone|iPod|iPad)/i.test(navigator.platform);
+                                }
+
+                                if (typeof navigator !== 'undefined') {
+                                    document.querySelector('.keyboard__key--meta').innerHTML = isAppleDevice() ? '<b>⌘</b>' : '<b>Ctrl</b>';
+                                }
+                            </script>
+                        </form>
+                        <div class="suggest [ js-suggest ]">
+                            <div class="suggest__list [ js-suggest-list ]"></div>
+                        </div>
+                    </div>
+                    <div class="header__wrap__cta">
+                        <p class="colour--white">Are you a healthcare professional</p>
+                        <p>
+                            <a href="https://pro.dermnetnz.org" class="button button--small button--dark button--arrow" target="_blank">
+                                GO TO DERMNET <span>PRO</span>
+                            </a>
+                        </p>
+                    </div>
+                    <a href="/dermdiag#" style="display:none;" class="header__wrap__burger" aria-label="Toggle mobile menu" onclick="event.preventDefault();document.querySelector('.mobile-menu').scrollTop = 0;document.body.classList.toggle('mobileMenuActive');">
+                        <div class="header__wrap__burger__ring header__wrap__burger__ring--1"></div>
+                        <div class="header__wrap__burger__ring header__wrap__burger__ring--2"></div>
+                        <div class="header__wrap__burger__ring header__wrap__burger__ring--3"></div>
+                    </a>
+                </div>
+                <div class="header__menu">
+                    <div class="header__menu__wrap">
+                        <div class="header__menu__wrap__item">
+                            <a href="/" class="header__menu__wrap__item__link ">Home
+                        </a>
+                        </div>
+                        <div class="header__menu__wrap__item">
+                            <a href="/topics" class="header__menu__wrap__item__link ">Topics A-Z
+                        </a>
+                        </div>
+                        <div class="header__menu__wrap__item">
+                            <a href="/images" class="header__menu__wrap__item__link ">Images
+                        </a>
+                        </div>
+                        <div class="header__menu__wrap__item">
+                            <a href="/cases" class="header__menu__wrap__item__link ">Cases
+                        </a>
+                        </div>
+                        <div class="header__menu__wrap__item">
+                            <a href="/dermdiag" class="header__menu__wrap__item__link ">Skin checker
+                        </a>
+                        </div>
+                        <div class="header__menu__wrap__item">
+                            <a href="/about/translate" class="header__menu__wrap__item__link ">Translate
+                        </a>
+                        </div>
+                        <div class="header__menu__wrap__item">
+                            <a href="/jobs" class="header__menu__wrap__item__link ">Jobs
+                        </a>
+                        </div>
+                        <div class="header__menu__wrap__item">
+                            <a href="/contact-us/website-feedback" class="header__menu__wrap__item__link [ js-feedback-link ]">Give feedback
+                        </a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <section class="mobile-menu [ js-postload ]">
+                <div class="mobile-menu__wrap">
+                    <div class="mobile-menu__wrap__intro" style="margin-bottom:0;">
+                        <p class="h5 no-margin">Main menu</p>
+                        <hr>
+                    </div>
+                    <div class="mobile-menu__wrap__links">
+                        <div class="mobile-menu__wrap__links__item">
+                            <a class="mobile-menu__wrap__links__item__link link " href="/">Home</a>
+                        </div>
+                        <div class="mobile-menu__wrap__links__item">
+                            <a class="mobile-menu__wrap__links__item__link link " href="/topics">Topics A-Z</a>
+                        </div>
+                        <div class="mobile-menu__wrap__links__item">
+                            <a class="mobile-menu__wrap__links__item__link link " href="/images">Images</a>
+                        </div>
+                        <div class="mobile-menu__wrap__links__item">
+                            <a class="mobile-menu__wrap__links__item__link link " href="/cases">Cases</a>
+                        </div>
+                        <div class="mobile-menu__wrap__links__item">
+                            <a class="mobile-menu__wrap__links__item__link current " href="/dermdiag">Skin checker</a>
+                        </div>
+                        <div class="mobile-menu__wrap__links__item">
+                            <a class="mobile-menu__wrap__links__item__link link " href="/about/translate">Translate</a>
+                        </div>
+                        <div class="mobile-menu__wrap__links__item">
+                            <a class="mobile-menu__wrap__links__item__link link " href="/jobs">Jobs</a>
+                        </div>
+                        <div class="mobile-menu__wrap__links__item">
+                            <a class="mobile-menu__wrap__links__item__link link [ js-feedback-link ]" href="/contact-us/website-feedback">Give feedback</a>
+                        </div>
+                    </div>
+                    <div class="mobile-menu__wrap__intro">
+                        <p class="h5 no-margin">Common skin conditions</p>
+                        <hr>
+                    </div>
+                    <div class="mobile-menu__wrap__links">
+                        <a href="/topics/acne" class="button button--outline">Acne</a>
+                        <a href="/topics/athletes-foot" class="button button--outline">Athlete &#039;s foot</a>
+                        <a href="/topics/cellulitis" class="button button--outline">Cellulitis</a>
+                        <a href="/topics/herpes-simplex" class="button button--outline">Cold sores</a>
+                        <a href="/topics/dermatitis" class="button button--outline">Dermatitis/Eczema</a>
+                        <a href="/topics/miliaria" class="button button--outline">Heat rash</a>
+                        <a href="/topics/urticaria-an-overview" class="button button--outline">Hives </a>
+                        <a href="/topics/impetigo" class="button button--outline">Impetigo</a>
+                        <a href="/topics/psoriasis" class="button button--outline">Psoriasis</a>
+                        <a href="/topics/tinea-corporis" class="button button--outline">Ringworm</a>
+                        <a href="/topics/rosacea" class="button button--outline">Rosacea</a>
+                        <a href="/topics/seborrhoeic-dermatitis" class="button button--outline">Seborrhoeic dermatitis</a>
+                        <a href="/topics/herpes-zoster" class="button button--outline">Shingles</a>
+                        <a href="topics/vitiligo" class="button button--outline">Vitiligo</a>
+                    </div>
+                    <a href="https://pro.dermnetnz.org/" class="mobile-menu__wrap__cta">
+                        <div class="mobile-menu__wrap__cta__background">
+                            <img src="/assets/images/home-page-pro-waitlist.webp" style="object-position:50% 50%;" loading="lazy" alt="">
+                            <span class="mobile-menu__wrap__cta__background__gradient" style="background: linear-gradient(to left, rgba(51,47,43,0.000000) 0%, rgba(51,47,43,1.000000) 100%);"></span>
+                        </div>
+                        <div class="mobile-menu__wrap__cta__copy">
+                            <p class="button">
+                                <b>NEWS</b>
+                            </p>
+                            <p class="h1 colour--white">
+                                <b>Join DermNet PRO</b>
+                            </p>
+                        </div>
+                        <div class="mobile-menu__wrap__cta__link">
+                            <p>
+                                <span class="arrow-link colour--white">Read more</span>
+                            </p>
+                        </div>
+                    </a>
+                    <div class="mobile-menu__wrap__intro">
+                        <p class="h5 no-margin">Quick links</p>
+                        <hr>
+                    </div>
+                    <div class="mobile-menu__wrap__links">
+                        <a href="/dermdiag" class="quicklink">
+                            <div class="quicklink__icon">
+                                <img src="/assets/svg/white-magnifying-glass.svg" loading="lazy" width="32" height="32" alt="">
+                            </div>
+                            <div class="quicklink__text">
+                                <p>Skin checker</p>
+                                <p class="smaller">Try our skin symptom checker</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <script>
+
+                // Default animation state
+                let animating = false;
+
+                // Animate menu slide up
+                const slideMenuUp = (container) => {
+                    container.style.height = "0px"
+
+                    container.addEventListener('transitionend', () => {
+                        container.classList.remove('active');
+                        animating = false;
+                    }
+                    , {
+                        once: true
+                    });
+
+                }
+                ;
+
+                // Animate menu slide down
+                const slideMenuDown = (container) => {
+
+                    container.classList.add('active')
+                    container.style.height = 'auto'
+
+                    let height = container.clientHeight + 'px'
+                    container.style.height = '0px'
+
+                    setTimeout( () => container.style.height = height, 0);
+
+                    container.addEventListener('transitionend', () => {
+                        animating = false;
+                    }
+                    , {
+                        once: true
+                    })
+                }
+                ;
+
+                // Toggle menu item
+                function toggleMenu(element) {
+
+                    if (animating)
+                        return;
+
+                    animating = true;
+
+                    var menu = element.closest('.mobile-menu__wrap__item');
+
+                    if (menu.classList.contains('active')) {
+                        menu.classList.remove('active');
+                        slideMenuUp(menu.querySelector('.mobile-menu__wrap__item__group'));
+                    } else {
+                        menu.classList.add('active');
+                        slideMenuDown(menu.querySelector('.mobile-menu__wrap__item__group'));
+                    }
+                }
+            </script>
+            <section class="sidebar-wrap">
+                <div class="sidebar-wrap__content">
+                    <div class="breadcrumbs">
+                        <div class="breadcrumbs__wrap">
+                            <div class="breadcrumbs__wrap__text">
+                                <a href="https://dermnetnz.org" class="breadcrumbs__wrap__item breadcrumbs__wrap__item--home" title="Home">Home
+            </a>
+                                <div class="breadcrumbs__wrap__item breadcrumbs__wrap__item--divivder">
+                                    <img src="_resources/themes/mercury/dist/images/svg/divider.svg" width="20px" height="20px" loading="lazy" alt="divider">
+                                </div>
+                                <a href="/dermdiag" class="breadcrumbs__wrap__item breadcrumbs__wrap__item--link">
+                                    <p>DermDiag</p>
+                                </a>
+                            </div>
+                            <div class="breadcrumbs__wrap__actions"></div>
+                        </div>
+                    </div>
+                    <div class="text-block">
+                        <div class="text-block__wrap">
+                            <h1 class="text-left">
+                                <span>Skin checker</span>
+                            </h1>
+                            <div class="text-left">
+                                <span>The DermDiag Tool is designed to help you understand your skin condition. This tool does not provide medical advice. To get started, select the part of the body where you are experiencing symptoms. We suggest that you search our &nbsp;</span>
+                                <a rel="noopener noreferrer" href="https://dermnetnz.org/glossary/" target="_blank">Glossary</a>
+                                <span>&nbsp;if you are unfamiliar with any dermatological terms.</span>
+                            </div>
+                            <p class="text-left">&nbsp;</p>
+                            <p class="text-left">
+                                <a class="button button--orange" href="/contact-us/website-feedback">Give us your feedback</a>
+                            </p>
+                            <div class="interactive [ js-interactive ]">
+                                <div class="tagline">
+                                    <h1>DermDiag</h1>
+                                    <h4>Assess your skin problems yourself</h4>
+                                </div>
+                                <div class="innerWrap">
+                                    <div class="dermDiag__character">
+                                        <p class="dermDiag__character__reset">
+                                            <span class="showOnInitial">
+                                                <span class="dermDiag__character__reset__close [ js-remove-final ]">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26">
+                                                        <path fill="#FFF" fill-rule="evenodd" d="M24.248 0 13 11.247 1.753 0 0 1.753 11.248 13 0 24.248 1.753 26 13 14.753 24.248 26 26 24.248 14.753 13 26 1.753z"/>
+                                                    </svg>
+                                                </span>
+                                                We'll show you a non-exclusive selection of some common skin conditions with the characteristics you have chosen: a dark blue box indicates a diagnosis is COMMON, light blue indicates it's UNCOMMON, and grey indicates a diagnosis is RARE.
+                    <br>
+                                            </span>
+                                            <span class="hideOnInitial">Click on IMAGE box for examples of the condition.
+                    To find out more about the condition, click on the BLUE box.
+                    To review the clinical features selected, click on the GREY boxes above the algorithm
+                </span>
+                                        </p>
+                                        <div class="dermDiag__character__shadow">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="562" height="564">
+                                                <path fill="#DCDCDC" fill-rule="evenodd" d="M415 477c0 9.389-59.77 17-133.5 17-73.73 0-133.5-7.611-133.5-17s59.77-17 133.5-17c73.73 0 133.5 7.611 133.5 17"/>
+                                            </svg>
+                                        </div>
+                                        <div class="dermDiag__character__confetti"></div>
+                                        <div class="dermDiag__character__bounce">
+                                            <div class="dermDiag__character__control">
+                                                <div class="dermDiag__character__spin">
+                                                    <div class="dermDiag__character__body1">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="562" height="564" viewbox="0 0 562 564">
+                                                            <path fill="#F8CE6A" fill-rule="evenodd" d="M416.324 417.208H146.569a7.837 7.837 0 0 1-7.838-7.837V254.663a7.837 7.837 0 0 1 7.838-7.838h269.755a7.838 7.838 0 0 1 7.838 7.838V409.37a7.838 7.838 0 0 1-7.838 7.837"/>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="dermDiag__character__body2">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="562" height="564" viewbox="0 0 562 564">
+                                                            <path fill="#F4B3A8" fill-rule="evenodd" d="M424.162 230.162V194.41a7.838 7.838 0 0 0-7.838-7.837H146.569a7.837 7.837 0 0 0-7.838 7.837v44.407a7.837 7.837 0 0 0 7.838 7.838H151.983c2.045 0 4.035.77 5.474 2.222 1.965 1.985 3.856 5.569 4.846 11.966 2.132 13.773 12.977 12.636 19.388 1.461 6.882-11.996 17.218-13.093 24.098-13.093 6.88 0 13.935-.73 35.386 10.228 11.866 6.063 32.317 13.922 38.05.438 3.306-7.776 9.093-11.965 15.32-13.111a7.456 7.456 0 0 1 1.348-.111h4.562c.435 0 .868.027 1.296.101 5.099.892 9.977 3.651 13.538 8.005 9.12 11.15 25.257 13.346 34.326 6.77 9.069-6.574 9.827-13.839 20.325-13.839 10.5 0 17.431 10.408 30.966 12.382 7.367 1.075 16.082-3.702 20.544-12.558a7.665 7.665 0 0 1 1.488-2.028 4.054 4.054 0 0 0 1.224-2.905v-3.647c0-.283.018-.564.05-.845.252-2.241.264-4.623-.005-7.13a7.32 7.32 0 0 1-.045-.798"/>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="dermDiag__character__body3">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="562" height="564" viewbox="0 0 562 564">
+                                                            <path fill="#F4CEA3" fill-rule="evenodd" d="M416.324 186.4H146.569a7.837 7.837 0 0 1-7.838-7.837v-44.406a7.837 7.837 0 0 1 7.838-7.838h269.755a7.838 7.838 0 0 1 7.838 7.838v44.406a7.838 7.838 0 0 1-7.838 7.837"/>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="dermDiag__character__hair-1">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="562" height="564" viewbox="0 0 562 564">
+                                                            <path fill="#522A12" fill-rule="evenodd" d="M253.238 95.46c-1.067.585-26.142 14.592-29.79 36.028-2.58 15.156 2.093 22.098 5.108 24.887 1.857 1.72 3.822 2.608 5.466 2.952.748.156 1.43.2 2.004.156 1.52-.114 2.56-.573 3.18-1.402 1.27-1.703 3.184-5.182 1.502-9.492a305.45 305.45 0 0 1-.807-2.086c-4.279-11.238-4.112-22.381.445-29.807 6.16-10.042 7.85-13.209 11.224-16.163 1.326-1.161 2.472-2.165 3.5-3.322.406-.457.373-1.106-.08-1.539-.452-.43-1.19-.52-1.752-.213"/>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="dermDiag__character__hair-2">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="562" height="564" viewbox="0 0 562 564">
+                                                            <path fill="#522A12" fill-rule="evenodd" d="M310.21 86.563c-.666-.737-1.85-.949-2.814-.496-.421.198-10.426 4.928-20.904 13.01-14.053 10.843-22.08 22.545-23.205 33.844-1.57 15.756 4.156 24.24 9.236 28.583 4.552 3.89 10.01 5.64 14.053 5.801.636.026 1.239.012 1.797-.04 3.39-.312 5.552-1.457 6.424-3.408 1.34-3-.885-7.1-7.003-12.903-10.225-9.696-9.094-26.193-2.094-36.539 8.698-12.86 14.714-17.526 19.544-21.277 1.73-1.34 3.36-2.608 4.854-4.066.729-.713.776-1.77.111-2.51"/>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="dermDiag__character__hair-3">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="562" height="564" viewbox="0 0 562 564">
+                                                            <path fill="#522A12" fill-rule="evenodd" d="M342.191 102.165c-.584-.66-1.664-.81-2.505-.348-.265.146-6.573 3.647-13.302 9.676-8.997 8.062-14.378 16.818-15.557 25.32-1.185 8.532.57 14.745 5.217 18.467 4.114 3.295 9.164 3.611 12.025 3.466a17.69 17.69 0 0 0 2.18-.233c2.784-.509 5.01-2.308 5.958-4.81 1.253-3.307-.013-7.079-3.388-10.087-6.624-5.909-8.092-12.923-4.487-21.443 4.079-9.647 7.665-12.69 12.206-16.545.47-.4.948-.806 1.437-1.226.709-.612.803-1.574.216-2.237"/>
+                                                        </svg>
+                                                    </div>
+                                                    <div class="dermDiag__character__left-eye">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="562" height="564" viewbox="0 0 562 564">
+                                                            <g fill="none" fill-rule="evenodd">
+                                                                <path fill="#FFF" d="M265.15 315.582c0 12.434-9.618 22.513-21.484 22.513-11.865 0-21.483-10.079-21.483-22.513 0-12.433 9.618-22.512 21.483-22.512 11.866 0 21.483 10.08 21.483 22.512"/>
+                                                                <path fill="#436883" d="M258.43 315.634c0 8.303-6.562 15.034-14.657 15.034-8.095 0-14.658-6.731-14.658-15.034s6.563-15.034 14.658-15.034c8.095 0 14.657 6.731 14.657 15.034"/>
+                                                                <path fill="#353434" d="M247.819 307.269a9.292 9.292 0 0 1 4.32 12.411c-2.236 4.62-7.793 6.554-12.413 4.32a9.293 9.293 0 0 1 8.093-16.73"/>
+                                                                <path fill="#FFF" d="M259.423 308.654a6.929 6.929 0 0 1-6.93 6.929 6.929 6.929 0 1 1 0-13.858 6.929 6.929 0 0 1 6.93 6.929"/>
+                                                            </g>
+                                                        </svg>
+                                                        <div class="dermDiag__character__left-eye__top-eyelid"></div>
+                                                        <div class="dermDiag__character__left-eye__bottom-eyelid"></div>
+                                                    </div>
+                                                    <div class="dermDiag__character__right-eye">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="562" height="564" viewbox="0 0 562 564">
+                                                            <g fill="none" fill-rule="evenodd">
+                                                                <path fill="#FFF" d="M339.148 315.582c0 12.434-9.619 22.513-21.483 22.513-11.865 0-21.483-10.079-21.483-22.513 0-12.433 9.618-22.512 21.483-22.512 11.864 0 21.483 10.08 21.483 22.512"/>
+                                                                <path fill="#436883" d="M332.429 315.634c0 8.303-6.563 15.034-14.658 15.034-8.095 0-14.657-6.731-14.657-15.034s6.562-15.034 14.657-15.034c8.095 0 14.658 6.731 14.658 15.034"/>
+                                                                <path fill="#353434" d="M321.818 307.269a9.292 9.292 0 0 1 4.319 12.411c-2.235 4.62-7.792 6.554-12.412 4.32a9.293 9.293 0 0 1 8.093-16.73"/>
+                                                                <path fill="#FFF" d="M333.422 308.654a6.93 6.93 0 1 1-13.86-.001 6.93 6.93 0 0 1 13.86 0"/>
+                                                            </g>
+                                                        </svg>
+                                                        <div class="dermDiag__character__right-eye__top-eyelid"></div>
+                                                        <div class="dermDiag__character__right-eye__bottom-eyelid"></div>
+                                                    </div>
+                                                    <div class="dermDiag__character__mouth">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="562" height="564" viewbox="0 0 562 564">
+                                                            <defs>
+                                                                <path id="a" d="M1.026 4.216C1.471.432 4.084-.377 11.808 1.028c7.724 1.404 21.7 3.693 35.676 1.93C61.46 1.199 63.477-.008 63.845 4.435c.368 4.443-.78 24.385-13.05 27.37-14.74 3.589-41.375 3.703-46.132-11.106C.38 7.36 1.026 4.216 1.026 4.216"/>
+                                                            </defs>
+                                                            <g fill="none" fill-rule="evenodd" transform="translate(249 347)">
+                                                                <mask id="b" fill="#fff">
+                                                                    <use xlink:href="#a"/>
+                                                                </mask>
+                                                                <use xlink:href="#a" fill="#D85A3D"/>
+                                                                <path fill="#FFF" d="M48.803 10.5H19.62c-.775 0-1.41-.306-1.41-.677V.913c0-.372.635-.677 1.41-.677h29.183c.773 0 1.408.305 1.408.678v8.909c0 .371-.635.676-1.408.676" mask="url(#b)"/>
+                                                            </g>
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="interactive__questions">
+                                        <div class="manualScroll">
+                                            <a href="/dermdiag#" class="manualScroll__up [ js-scroll-up ]"></a>
+                                            <a href="/dermdiag#" class="manualScroll__down [ js-scroll-down ]"></a>
+                                        </div>
+                                        <div class="scrollable [ js-messages ] large">
+                                            <div class="interactive__questions__item interactive__questions__item--roboto visible" id="firstQuestion"></div>
+                                        </div>
+                                    </div>
+                                    <div class="interactive__prompt [ js-prompt ][ js-first-step ] start">
+                                        <div class="interactive__prompt__button">
+                                            <span class="interactive__prompt__button__start">Click here to select the body site involved</span>
+                                            <span class="interactive__prompt__button__reply">Click here to select the body site involved</span>
+                                            <span class="interactive__prompt__button__thinking">
+                                                &nbsp;
+                                                <span class="interactive__prompt__button__thinking__dots">
+                                                    <span class="interactive__prompt__button__thinking__dots__dot interactive__prompt__button__thinking__dots__dot--one"></span>
+                                                    <span class="interactive__prompt__button__thinking__dots__dot interactive__prompt__button__thinking__dots__dot--two"></span>
+                                                    <span class="interactive__prompt__button__thinking__dots__dot interactive__prompt__button__thinking__dots__dot--three"></span>
+                                                </span>
+                                                <span class="interactive__prompt__button__thinking__shadows">
+                                                    <span class="interactive__prompt__button__thinking__shadows__shadow interactive__prompt__button__thinking__shadows__shadow--one"></span>
+                                                    <span class="interactive__prompt__button__thinking__shadows__shadow interactive__prompt__button__thinking__shadows__shadow--two"></span>
+                                                    <span class="interactive__prompt__button__thinking__shadows__shadow interactive__prompt__button__thinking__shadows__shadow--three"></span>
+                                                </span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="progress [ js-progress ]"></div>
+                                <div class="panel [ js-panel ]">
+                                    <div class="siteSelect">
+                                        <div class="siteSelect__front">
+                                            <div class="siteSelect__front__body">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="200" height="500" viewBox="0 0 200 500" class="svg-site-front">
+                                                    <g fill="none" fill-rule="evenodd" transform="translate(5 25)">
+                                                        <path fill="#E3E3E3" d="M68.8132491,29.5938503 L70.1434478,48.2240222 L68.8388678,48.2240222 C66.1060484,48.2240222 63.2091712,46.5632445 62.6017138,41.587316 L62.0676637,37.3498941 C62.0676637,33.0838976 64.5477453,29.5938503 68.8132491,29.5938503 Z M121.095773,29.5938503 C125.361277,29.5938503 127.841359,33.0838976 127.841359,37.3498941 L127.307801,41.587316 C126.700344,46.5632445 123.803467,48.2240222 121.070647,48.2240222 L119.765575,48.2240222 L121.095773,29.5938503 Z"></path>
+                                                        <path fill="#DBDBDB" d="M95.8212588,70.497165 L94.1008685,70.497165 C81.4437815,70.497165 70.9475283,60.6955712 70.0838845,48.0675514 L68.6246073,26.7562901 C67.9708392,12.3024495 80.4155871,0.420819036 94.9615564,0.420819036 C109.505555,0.420819036 122.181856,11.9708852 121.297027,26.7562901 L119.838736,48.0675514 C118.973121,60.6955712 108.478346,70.497165 95.8212588,70.497165 Z"></path>
+                                                        <path fill="#CACACA" d="M95.5494056,59.3895624 C101.070223,59.3895624 102.716713,56.8976568 102.716713,56.8976568 C102.716713,56.8976568 99.1089189,52.7193549 97.1727407,53.8741644 C96.1450391,54.4865485 94.9700302,54.4638858 93.7797487,53.8037131 C91.8908665,52.8730667 88.3825906,56.8828768 88.3825906,56.8828768 C88.3825906,56.8828768 90.0285883,59.3895624 95.5494056,59.3895624 Z"></path>
+                                                        <path fill="#E3E3E3" d="M174.852305,231.19655 C174.636518,230.639837 174.54833,230.242255 174.54833,230.242255 C174.54833,230.242255 173.594036,223.396659 173.179211,219.871139 C172.763893,216.343649 171.312006,199.996985 170.689769,195.142745 C170.068024,190.288998 165.6695,177.344687 164.548685,174.399035 C163.42984,171.452399 163.346087,165.810878 163.346087,165.810878 C163.346087,165.810878 163.511622,154.235194 163.346087,149.838641 C163.180551,145.439624 161.48036,134.321134 160.856644,130.794629 C160.2349,127.267139 159.280605,117.809426 159.196852,114.405596 C159.114084,111.004228 158.076529,106.814102 158.076529,106.814102 C158.076529,106.814102 154.965835,97.603708 150.195348,93.7027771 C145.423383,89.8033242 138.079701,87.8947354 136.295264,87.4799105 C134.512305,87.0650855 132.438181,86.6502606 130.114274,85.4052931 C128.114542,84.3362075 115.184025,79.2100158 111.610718,77.8000052 C111.056961,77.5802761 110.6983,77.0472113 110.6983,76.4515778 L110.747566,65.3064833 C106.633311,68.5610362 101.442087,70.4972143 95.8207662,70.4972143 L94.1008685,70.4972143 C88.5682272,70.4972143 83.4489329,68.6240974 79.3657155,65.4611805 L79.4139968,76.4515778 C79.4139968,77.0472113 79.0558285,77.5802761 78.5020717,77.8000052 C74.9287638,79.2100158 61.998247,84.3362075 59.9980223,85.4052931 C57.6741159,86.6502606 55.5999912,87.0650855 53.8170323,87.4799105 C52.0325954,87.8947354 44.6894058,89.8033242 39.9169485,93.7027771 C35.1469544,97.603708 32.0357674,106.814102 32.0357674,106.814102 C32.0357674,106.814102 30.9987051,111.004228 30.9159372,114.405596 C30.8321839,117.809426 29.8773969,127.267139 29.2561448,130.794629 C28.6319367,134.321134 26.9322384,145.439624 26.7667026,149.838641 C26.600674,154.235194 26.7667026,165.810878 26.7667026,165.810878 C26.7667026,165.810878 26.6824566,171.452399 25.5641044,174.399035 C24.4427961,177.344687 20.0442724,190.288998 19.4230203,195.142745 C18.8002903,199.996985 17.3488957,216.343649 16.9335781,219.871139 C16.5182605,223.396659 15.5644588,230.242255 15.5644588,230.242255 C15.5644588,230.242255 15.4762715,230.639837 15.2599911,231.19655 C19.6062922,232.39767 26.3839009,234.052536 33.1048531,235.190594 C33.0979557,234.154025 33.1679143,231.467023 33.9852475,229.081534 C35.0223099,226.051637 43.6932348,204.644305 43.6932348,204.644305 C43.6932348,204.644305 46.8054071,194.728906 47.0133122,188.380409 C47.2207247,182.032898 47.9252373,174.689708 48.5893514,169.751715 C49.2529727,164.814707 52.738586,148.967114 52.9041218,146.435795 C53.0696577,143.904476 53.7066751,139.53502 53.7066751,138.870906 C53.7066751,138.870906 55.2546322,146.947675 58.2416673,153.36416 C58.2416673,153.36416 60.5379844,161.661644 60.8705341,177.344687 C61.2011131,193.026744 61.1183452,199.334349 58.878192,212.775268 C56.6385316,226.21865 54.7299427,243.227951 54.8954786,254.181891 C55.0615071,265.134353 56.3054892,284.05372 58.4638598,294.923414 C60.621245,305.793601 63.3584984,317.410177 64.4369446,320.564226 C65.099088,322.496955 66.1001857,325.776141 66.3952927,330.047064 L66.4164774,330.040167 C66.4164774,330.040167 71.3894499,328.055215 73.8527808,330.440212 C76.9063259,333.39818 81.1117245,334.560379 84.4741712,331.215176 C88.145027,327.563534 92.0361045,329.006553 92.3075636,329.113462 C92.202133,325.106115 92.3065783,321.411119 92.4839381,317.410177 C92.8164878,309.94185 95.0561483,239.177249 95.0561483,239.177249 C95.0561483,239.177249 97.2958088,309.94185 97.6288511,317.410177 C97.8057183,321.411119 97.9101635,325.106115 97.8047329,329.113462 C98.076192,329.006553 101.967762,327.563534 105.638618,331.215176 C109.001065,334.560379 113.205971,333.39818 116.259516,330.440212 C118.722847,328.055215 123.695819,330.040167 123.695819,330.040167 L123.717004,330.043616 C124.013589,325.77417 125.014194,322.496462 125.675845,320.564226 C126.753798,317.410177 129.491544,305.793601 131.648929,294.923414 C133.806807,284.05372 135.051282,265.134353 135.216818,254.181891 C135.382846,243.227951 133.474258,226.21865 131.234597,212.775268 C128.993951,199.334349 128.911183,193.026744 129.242255,177.344687 C129.574805,161.661644 131.871122,153.36416 131.871122,153.36416 C134.857664,146.947675 136.406114,138.870906 136.406114,138.870906 C136.406114,139.53502 137.043131,143.904476 137.208667,146.435795 C137.374203,148.967114 140.859324,164.814707 141.523438,169.751715 C142.187059,174.689708 142.892064,182.032898 143.099477,188.380409 C143.307382,194.728906 146.419062,204.644305 146.419062,204.644305 C146.419062,204.644305 155.090479,226.051637 156.127049,229.081534 C156.944382,231.466531 157.014833,234.154025 157.007443,235.190594 C163.728888,234.052536 170.50699,232.39767 174.852305,231.19655 Z"></path>
+                                                        <path fill="#D0D0D0" d="M83.1321978,224.750505 C83.1321978,231.265523 91.8036153,239.177249 95.0561975,239.177249 C98.3092724,239.177249 106.981675,231.265523 106.981675,224.750505 L83.1321978,224.750505 Z"></path>
+                                                        <path fill="#DBDBDB" d="M15.2517635 231.19655C19.5970793 232.39767 26.3751807 234.052536 33.0956402 235.190594 33.0971182 235.469936 33.1050009 235.635965 33.1050009 235.635965L33.1053913 235.681C33.1098576 236.183218 33.1533369 240.745625 33.271522 242.273656 33.388963 243.804583 32.5409546 248.528106 32.4489348 249.034284L32.4408868 249.078362 28.9552736 266.85967C28.8414677 268.597796 27.7329687 269.843256 26.2529995 269.833403 24.7730303 269.824042 23.5807781 268.499263 23.5901388 266.865582L23.5901388 266.865582 24.9306835 255.592394 22.0673076 269.737826C21.6928813 271.561676 20.3390346 272.717963 18.7743268 272.49183 17.2101116 272.265696 16.1405333 270.690642 16.3903151 268.962369L16.3903151 268.962369 19.4143002 255.26083 15.0532191 271.002007C14.4546296 272.764274 12.9652997 273.742216 11.4419759 273.321972 9.91815937 272.90222 9.05500821 271.204 9.51860709 269.52253L9.51860709 269.52253 13.9792068 254.014877 8.66875792 267.581918C7.901184 269.220526 6.3566755 270.006329 4.92794355 269.436806 3.50167494 268.867777 2.8479069 267.134577 3.47753429 265.558538 3.47753429 265.558538 15.0551897 236.199575 8.99588827 249.984867 7.93567063 252.398932 5.6630015 254.138043 3.03216406 254.330676-.665788352 254.60312.910250785 251.359899.910250785 251.359899.910250785 251.359899 4.56090724 243.435856 5.51470898 241.610035 6.46998872 239.784214 11.4488732 235.303415 13.2323248 234.018049 14.3058444 233.24407 14.9256185 232.037038 15.2517635 231.19655zM174.851665 231.19655C175.17781 232.037038 175.798077 233.24407 176.871104 234.018049 178.654555 235.303415 183.633932 239.784214 184.58872 241.610035 185.542521 243.435856 189.19367 251.359899 189.19367 251.359899 189.19367 251.359899 190.76971 254.60312 187.071757 254.330676 184.44092 254.138043 182.167758 252.398932 181.10754 249.984867 175.048731 236.199575 186.626387 265.558538 186.626387 265.558538 187.256014 267.134577 186.601754 268.867777 185.175485 269.436806 183.746753 270.006329 182.202737 269.220526 181.435163 267.581918L176.124714 254.014877 180.584821 269.52253C181.048913 271.204 180.185762 272.90222 178.661945 273.321972 177.138621 273.742216 175.649292 272.764274 175.050702 271.002007L170.689621 255.26083 173.713606 268.962369C173.962895 270.690642 172.89381 272.265696 171.329102 272.49183 169.764887 272.717963 168.41104 271.561676 168.036614 269.737826L165.173238 255.592394 166.51329 266.865582C166.52265 268.499263 165.330891 269.824042 163.850922 269.833403 162.37046 269.843256 161.262454 268.597796 161.148648 266.85967L157.662542 249.078362C157.662542 249.078362 156.708247 243.892065 156.831906 242.273656 156.953568 240.700683 156.99653 235.912216 156.998823 235.647404L156.99892 235.635965C156.99892 235.635965 157.00631 235.469936 157.007788 235.190594 163.728248 234.052536 170.506349 232.39767 174.851665 231.19655zM84.4566323 331.215077C88.2624786 327.42943 92.3067753 329.119768 92.3067753 329.119768L92.3067753 329.119768C92.3998892 332.590109 92.648193 336.293973 93.1487418 340.644215 94.2271881 350.019653 94.6425057 362.798429 94.5597378 368.026602 94.4759846 373.253791 92.4846278 400.388859 92.5673957 402.87633 92.6412957 405.072144 93.1659852 419.912727 93.2891517 423.386024L93.2891517 423.386024 74.8614656 423.386024C75.4265537 417.698193 73.5667389 409.016922 73.5667389 409.016922 73.5667389 409.016922 64.6869235 370.350509 63.7749984 363.7946 62.8620879 357.239183 64.1898233 348.028296 65.849123 339.232727 66.4910671 335.827418 66.5831956 332.737416 66.3954898 330.040561L66.3954898 330.040561C66.3994311 330.040068 71.371911 328.055116 73.8352419 330.440113 76.8892796 333.398081 81.0941855 334.560281 84.4566323 331.215077zM105.656354 331.215077C109.018801 334.560281 113.223707 333.398081 116.277252 330.440113 118.740583 328.055116 123.713555 330.040068 123.713555 330.040068L123.717004 330.040561C123.529791 332.737416 123.621919 335.827418 124.263863 339.232727 125.923163 348.028296 127.250406 357.239183 126.337988 363.7946 125.426063 370.350509 116.546247 409.016922 116.546247 409.016922 116.546247 409.016922 114.68594 417.698193 115.251521 423.386024L96.8238345 423.386024C96.9470011 419.912727 97.4716906 405.072144 97.5450978 402.87633 97.6283584 400.388859 95.6370017 373.253791 95.5532484 368.026602 95.4699879 362.798429 95.8853055 350.019653 96.9642444 340.644215 97.4647933 336.293973 97.713097 332.590109 97.8042403 329.119768L97.8062109 329.119768C97.8062109 329.119768 101.850508 327.42943 105.656354 331.215077z"></path>
+                                                        <path fill="#D0D0D0" d="M47.4244914 122.139519C52.1491602 126.871577 53.706478 138.870955 53.706478 138.870955 53.1078886 149.753459 51.4209996 154.030786 51.4451402 154.615581 50.8100935 138.542839 47.4244914 122.139519 47.4244914 122.139519zM142.688051 122.139519C142.688051 122.139519 139.302449 138.542839 138.667403 154.615581 138.691543 154.030786 137.004654 149.753459 136.406065 138.870955 136.406065 138.870955 137.963383 126.871577 142.688051 122.139519zM71.3796951 228.92324C73.2838499 230.350001 75.0298589 231.704341 76.8374511 232.88871 78.6445507 234.066182 80.4881076 235.083045 82.4178811 235.915159 84.3432205 236.755154 86.3483719 237.421732 88.4461445 237.940509 90.2860064 238.400044 92.1733952 238.761884 94.1858721 239.055404L95.0562468 239.177101 95.0562468 239.177101C94.5340206 239.473686 93.9753372 239.686026 93.4102491 239.873731 92.8446683 240.063901 92.2652928 240.208252 91.6800054 240.32255 90.5084452 240.553118 89.3092957 240.64032 88.1066975 240.621599 85.7019939 240.575781 83.2825102 240.050599 81.0467911 239.079061 78.8066379 238.120825 76.7684779 236.694556 75.0943982 234.966776 73.4380544 233.219289 72.1142604 231.187534 71.3796951 228.92324zM118.732798 228.92324C117.998233 231.187534 116.674439 233.219289 115.018095 234.966776 113.344016 236.694556 111.305856 238.120825 109.065703 239.079061 106.829983 240.050599 104.4105 240.575781 102.005796 240.621599 100.803198 240.64032 99.6040484 240.553118 98.4324882 240.32255 97.8472007 240.208252 97.2678253 240.063901 96.7022445 239.873731 96.1371564 239.686026 95.578473 239.473686 95.0562468 239.177101 97.3988745 238.863273 99.5636497 238.465691 101.666349 237.940509 103.764122 237.421732 105.769273 236.755154 107.694613 235.915159 109.624386 235.083045 111.467943 234.066182 113.275042 232.88871 115.082635 231.704341 116.828644 230.350001 118.732798 228.92324zM125.641309 204.705396C124.761407 205.745414 123.712028 206.636647 122.625699 207.469253 121.540355 208.309742 120.379634 209.047263 119.187874 209.735025 116.798443 211.10513 114.245447 212.186532 111.622985 213.050669 106.364759 214.757264 100.826205 215.518926 95.3290361 215.56031 89.8348227 215.607113 84.2775481 214.916888 78.9971519 213.241823 76.3604025 212.404783 73.8010016 211.305152 71.4164973 209.914848 70.2281864 209.212799 69.0787962 208.446703 68.0082326 207.584045 66.9440736 206.717445 65.9168646 205.793203 65.0931267 204.705396 67.3490452 206.19916 69.7818309 207.258392 72.2451618 208.156523 74.7139121 209.039873 77.2314363 209.730098 79.7829545 210.237052 84.8830349 211.266724 90.0860825 211.648048 95.3039101 211.621444 100.519767 211.588435 105.720351 211.139616 110.824866 210.074472 113.376384 209.541407 115.905732 208.862021 118.386799 207.990001 120.867866 207.115026 123.317895 206.091266 125.641309 204.705396zM91.6206884 141.05391C91.6310344 141.840698 91.4127833 142.652119 91.0664389 143.394567 90.7191093 144.138985 90.2491057 144.829703 89.7116069 145.458838 88.6292193 146.7176 87.2743873 147.707859 85.8412213 148.499574 82.9487781 150.064774 79.7400433 150.81412 76.5810677 151.090505 74.9932045 151.226481 73.4225847 151.243232 71.8381703 151.150611 70.2537558 151.042224 68.659488 150.818554 67.0962582 150.397324 65.5354917 149.972646 63.9880272 149.370115 62.6070839 148.4508 61.9198146 147.991142 61.2734365 147.459063 60.7329817 146.830421 60.1984389 146.208676 59.737796 145.480023 59.5944301 144.690772 60.1324216 145.261279 60.7911163 145.615506 61.4340457 145.929827 62.0892917 146.231339 62.7652297 146.456487 63.4495431 146.633847 64.8191551 146.988074 66.225717 147.162478 67.6416397 147.269879 69.0619963 147.359052 70.4926989 147.388119 71.9342402 147.361515 73.3757814 147.335896 74.836044 147.282688 76.2652686 147.173809 79.1296299 146.952109 81.9521144 146.55502 84.6282772 145.712069 85.9658659 145.29478 87.2704459 144.763194 88.4789561 144.035526 89.6785983 143.29899 90.8235545 142.403322 91.6206884 141.05391zM98.5544231 141.05391C99.351557 142.403322 100.497006 143.29899 101.696155 144.035526 102.904666 144.763194 104.209246 145.29478 105.546834 145.712069 108.222997 146.55502 111.045974 146.952109 113.909843 147.173809 115.339067 147.282688 116.79933 147.335896 118.240871 147.361515 119.682413 147.388119 121.113115 147.359052 122.533472 147.269879 123.949394 147.162478 125.355956 146.988074 126.725568 146.633847 127.410374 146.456487 128.08582 146.231339 128.741066 145.929827 129.384488 145.615506 130.04269 145.261279 130.580681 144.690772 130.437315 145.480023 129.976673 146.208676 129.44213 146.830421 128.901675 147.459063 128.255297 147.991142 127.56852 148.4508 126.187084 149.370115 124.640112 149.972646 123.079346 150.397324 121.515623 150.818554 119.921356 151.042224 118.336941 151.150611 116.752527 151.243232 115.181907 151.226481 113.594044 151.090505 110.435068 150.81412 107.226333 150.064774 104.33389 148.499574 102.900724 147.707859 101.545892 146.7176 100.463997 145.458838 99.9264984 144.829703 99.4560022 144.138985 99.1086725 143.394567 98.7623282 142.652119 98.5440771 141.840698 98.5544231 141.05391z"></path>
+                                                        <path fill="#E3E3E3" d="M93.2886098,423.385827 C93.2886098,423.385827 94.9976688,436.545433 94.9139155,443.183125 C94.9139155,445.838103 94.0832803,448.576342 89.272395,448.783754 C87.5948666,448.856176 86.7203842,448.101411 86.2907792,447.08849 L86.2901884,447.088827 C84.4693355,448.615376 82.702096,448.535992 81.7007756,448.500038 L81.5843391,448.496037 C80.2216245,448.427556 79.4983905,447.849659 79.1397295,447.102777 L79.1397295,447.102777 C77.646951,448.269903 75.1018374,448.105353 75.1018374,448.105353 C74.0283178,448.068403 73.5893522,447.416605 73.4592884,446.610111 L73.4592884,446.610111 L73.4573177,446.620457 C72.3640914,447.843747 70.7865743,447.693484 70.1362549,447.666387 C68.8838975,447.451092 68.3774366,446.745594 68.2365341,445.937129 L68.2361884,445.938827 L68.1047883,446.030597 C67.2559916,446.571678 66.1553093,446.398295 66.047363,446.379604 C60.5612875,445.216358 65.9559823,437.748031 65.9559823,437.748031 C65.9559823,437.748031 72.468044,429.523955 74.2106043,425.541241 C74.4096414,425.087496 74.7658391,423.980475 74.8609237,423.386319 L74.8609237,423.386319 Z M115.251619,423.386319 C115.346704,423.980475 115.702901,425.087496 115.901939,425.541241 C117.644499,429.523955 124.156561,437.748031 124.156561,437.748031 C124.156561,437.748031 129.551255,445.216358 124.074285,446.378065 C124.074285,446.378065 122.781037,446.62292 121.876009,445.9391 C121.735106,446.745594 121.228645,447.451092 119.976288,447.666387 C119.325969,447.693484 117.748451,447.843747 116.655225,446.620457 L116.653254,446.610111 C116.522698,447.416605 116.083732,448.068403 115.010705,448.105353 C115.010705,448.105353 112.466085,448.269903 110.972321,447.109182 L110.972321,447.102777 C110.614152,447.849659 109.890918,448.427556 108.528204,448.496037 C107.551739,448.527075 105.716558,448.676353 103.821764,447.090953 L103.821188,447.088827 L103.760387,447.224962 C103.310957,448.168317 102.440932,448.852884 100.839655,448.783754 C96.0292625,448.576342 95.1986273,445.838103 95.1986273,443.183125 C95.1143814,436.545433 96.8239331,423.385827 96.8239331,423.385827 L115.251619,423.386319 Z"></path>
+                                                    </g>
+                                                </svg>
+                                                <span class="[ js-site-item ] torso" data-id="13" viewbox="0 0 160 269">
+                                                    <svg width="160px" height="269px" viewBox="0 0 160 269" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                        <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                            <g id="site-front" transform="translate(-20.000000, -90.000000)" fill="#183c57">
+                                                                <g id="Group" transform="translate(5.000000, 25.000000)">
+                                                                    <path d="M174.85247,231.19655 C174.636682,230.639837 174.548495,230.242255 174.548495,230.242255 C174.548495,230.242255 173.594201,223.396659 173.179376,219.871139 C172.764058,216.343649 171.312171,199.996985 170.689934,195.142745 C170.068189,190.288998 165.669665,177.344687 164.54885,174.399035 C163.430005,171.452399 163.346251,165.810878 163.346251,165.810878 C163.346251,165.810878 163.511787,154.235194 163.346251,149.838641 C163.180715,145.439624 161.480524,134.321134 160.856809,130.794629 C160.235064,127.267139 159.28077,117.809426 159.197017,114.405596 C159.114249,111.004228 158.076694,106.814102 158.076694,106.814102 C158.076694,106.814102 154.965999,97.603708 150.195513,93.7027771 C145.423548,89.8033242 138.079866,87.8947354 136.295429,87.4799105 C134.51247,87.0650855 132.438345,86.6502606 130.114439,85.4052931 C128.114707,84.3362075 115.18419,79.2100158 111.610882,77.8000052 C111.057125,77.5802761 110.698464,77.0472113 110.698464,76.4515778 L110.747731,65.3064833 C106.633476,68.5610362 101.442252,70.4972143 95.8209309,70.4972143 L94.1010332,70.4972143 C88.5683919,70.4972143 83.4490976,68.6240974 79.3658802,65.4611805 L79.4141615,76.4515778 C79.4141615,77.0472113 79.0559932,77.5802761 78.5022364,77.8000052 C74.9289285,79.2100158 61.9984117,84.3362075 59.998187,85.4052931 C57.6742806,86.6502606 55.6001559,87.0650855 53.817197,87.4799105 C52.0327601,87.8947354 44.6895705,89.8033242 39.9171132,93.7027771 C35.1471191,97.603708 32.0359321,106.814102 32.0359321,106.814102 C32.0359321,106.814102 30.9988698,111.004228 30.9161019,114.405596 C30.8323486,117.809426 29.8775616,127.267139 29.2563095,130.794629 C28.6321014,134.321134 26.9324031,145.439624 26.7668673,149.838641 C26.6008387,154.235194 26.7668673,165.810878 26.7668673,165.810878 C26.7668673,165.810878 26.6826213,171.452399 25.5642691,174.399035 C24.4429608,177.344687 20.0444371,190.288998 19.4231851,195.142745 C18.800455,199.996985 17.3490604,216.343649 16.9337428,219.871139 C16.5184252,223.396659 15.5646235,230.242255 15.5646235,230.242255 C15.5646235,230.242255 15.4764362,230.639837 15.2601558,231.19655 C19.6064569,232.39767 26.3840656,234.052536 33.1050178,235.190594 C33.0981204,234.154025 33.168079,231.467023 33.9854122,229.081534 C35.0224746,226.051637 43.6933995,204.644305 43.6933995,204.644305 C43.6933995,204.644305 46.8055718,194.728906 47.0134769,188.380409 C47.2208894,182.032898 47.925402,174.689708 48.5895161,169.751715 C49.2531374,164.814707 52.7387507,148.967114 52.9042865,146.435795 C53.0698224,143.904476 53.7068398,139.53502 53.7068398,138.870906 C53.7068398,138.870906 55.2547969,146.947675 58.241832,153.36416 C58.241832,153.36416 60.5381491,161.661644 60.8706988,177.344687 C61.2012778,193.026744 61.1185099,199.334349 58.8783567,212.775268 C56.6386963,226.21865 54.7301074,243.227951 54.8956433,254.181891 C55.0616718,265.134353 56.3056539,284.05372 58.4640245,294.923414 C60.6214097,305.793601 63.3586631,317.410177 64.4371094,320.564226 C65.0992527,322.496955 66.1003504,325.776141 66.3954575,330.047064 L66.4166421,330.040167 C66.4166421,330.040167 71.3896146,328.055215 73.8529455,330.440212 C76.9064906,333.39818 81.1118892,334.560379 84.4743359,331.215176 C88.1451917,327.563534 92.0362692,329.006553 92.3077283,329.113462 C92.2022977,325.106115 92.306743,321.411119 92.4841028,317.410177 C92.8166525,309.94185 95.056313,239.177249 95.056313,239.177249 C95.056313,239.177249 97.2959735,309.94185 97.6290158,317.410177 C97.805883,321.411119 97.9103282,325.106115 97.8048976,329.113462 C98.0763567,329.006553 101.967927,327.563534 105.638783,331.215176 C109.001229,334.560379 113.206135,333.39818 116.25968,330.440212 C118.723011,328.055215 123.695984,330.040167 123.695984,330.040167 L123.717168,330.043616 C124.013754,325.77417 125.014359,322.496462 125.676009,320.564226 C126.753963,317.410177 129.491709,305.793601 131.649094,294.923414 C133.806972,284.05372 135.051447,265.134353 135.216983,254.181891 C135.383011,243.227951 133.474422,226.21865 131.234762,212.775268 C128.994116,199.334349 128.911348,193.026744 129.24242,177.344687 C129.574969,161.661644 131.871287,153.36416 131.871287,153.36416 C134.857829,146.947675 136.406279,138.870906 136.406279,138.870906 C136.406279,139.53502 137.043296,143.904476 137.208832,146.435795 C137.374368,148.967114 140.859488,164.814707 141.523603,169.751715 C142.187224,174.689708 142.892229,182.032898 143.099642,188.380409 C143.307547,194.728906 146.419226,204.644305 146.419226,204.644305 C146.419226,204.644305 155.090644,226.051637 156.127214,229.081534 C156.944547,231.466531 157.014998,234.154025 157.007608,235.190594 C163.729053,234.052536 170.507154,232.39767 174.85247,231.19655 Z" id="F-Trunk"></path>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                </span>
+                                                <span class="[ js-site-item ] face" data-id="1">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="54" height="71" viewbox="0 0 54 71">
+                                                        <path fill="#183c57" fill-rule="evenodd" d="M27.821 70.497h-1.72c-12.657 0-23.153-9.801-24.017-22.43l-1.46-21.31C-.028 12.301 12.417.42 26.963.42c14.544 0 27.22 11.55 26.335 26.335L51.84 48.068c-.866 12.628-11.36 22.43-24.018 22.43Z"/>
+                                                    </svg>
+                                                </span>
+                                                <span class="[ js-site-item ] earsLeft" data-id="3">
+                                                    <svg width="9px" height="20px" viewBox="0 0 9 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                        <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                            <g id="site-front" transform="translate(-67.000000, -54.000000)" fill="#183c57">
+                                                                <g id="Group" transform="translate(5.000000, 25.000000)">
+                                                                    <path d="M68.8134138,29.5938503 L70.1436125,48.2240222 L68.8390325,48.2240222 C66.1062131,48.2240222 63.2093359,46.5632445 62.6018785,41.587316 L62.0678284,37.3498941 C62.0678284,33.0838976 64.54791,29.5938503 68.8134138,29.5938503 Z" id="Path"></path>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                </span>
+                                                <span class="[ js-site-item ] earsRight" data-id="3">
+                                                    <svg width="9px" height="20px" viewBox="0 0 9 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                        <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                            <g id="site-front" transform="translate(-124.000000, -54.000000)" fill="#183c57">
+                                                                <g id="Group" transform="translate(5.000000, 25.000000)">
+                                                                    <path d="M121.095938,29.5938503 C125.361442,29.5938503 127.841523,33.0838976 127.841523,37.3498941 L127.307966,41.587316 C126.700509,46.5632445 123.803631,48.2240222 121.070812,48.2240222 L119.765739,48.2240222 L121.095938,29.5938503 Z" id="Path"></path>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                </span>
+                                                <span class="[ js-site-item ] lips" data-id="4">
+                                                    <svg width="15px" height="7px" viewBox="0 0 15 7" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                        <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                            <g id="site-front" transform="translate(-93.000000, -78.000000)" fill="#183c57">
+                                                                <g id="Group" transform="translate(5.000000, 25.000000)">
+                                                                    <path d="M95.5495704,59.3895624 C101.070388,59.3895624 102.716878,56.8976568 102.716878,56.8976568 C102.716878,56.8976568 99.1090836,52.7193549 97.1729054,53.8741644 C96.1452038,54.4865485 94.9701949,54.4638858 93.7799134,53.8037131 C91.8910312,52.8730667 88.3827553,56.8828768 88.3827553,56.8828768 C88.3827553,56.8828768 90.028753,59.3895624 95.5495704,59.3895624 Z" id="F-Mouth"></path>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                </span>
+                                                <span class="[ js-site-item ] flexuresLeftUnderArm" data-id="7">
+                                                    <svg width="7px" height="33px" viewBox="0 0 7 33" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                        <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                            <g id="site-front" transform="translate(-52.000000, -147.000000)" fill="#183c57">
+                                                                <g id="Group" transform="translate(5.000000, 25.000000)">
+                                                                    <path d="M53.7066427,138.870955 C53.7066427,138.870955 52.1493249,126.871577 47.4246561,122.139519 C47.4246561,122.139519 50.8102582,138.542839 51.4453049,154.615581 C51.4211643,154.030786 53.1080533,149.753459 53.7066427,138.870955 Z" id="F-Axillae-L"></path>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                </span>
+                                                <span class="[ js-site-item ] flexuresRightUnderArm" data-id="7">
+                                                    <svg width="7px" height="33px" viewBox="0 0 7 33" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                        <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                            <g id="site-front" transform="translate(-141.000000, -147.000000)" fill="#183c57">
+                                                                <g id="Group" transform="translate(5.000000, 25.000000)">
+                                                                    <path d="M136.40623,138.870955 C136.40623,138.870955 137.963547,126.871577 142.688216,122.139519 C142.688216,122.139519 139.302614,138.542839 138.667567,154.615581 C138.691708,154.030786 137.004819,149.753459 136.40623,138.870955 Z" id="F-Axillae-R"></path>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                </span>
+                                                <span class="[ js-site-item ] flexures1" data-id="558">
+                                                    <svg width="33px" height="11px" viewBox="0 0 33 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                        <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                            <g id="site-front" transform="translate(-64.000000, -166.000000)" fill="#183c57">
+                                                                <g id="Group" transform="translate(5.000000, 25.000000)">
+                                                                    <path d="M59.5945949,144.690772 C60.1325863,145.261279 60.791281,145.615506 61.4342104,145.929827 C62.0894564,146.231339 62.7653944,146.456487 63.4497078,146.633847 C64.8193198,146.988074 66.2258818,147.162478 67.6418044,147.269879 C69.062161,147.359052 70.4928636,147.388119 71.9344049,147.361515 C73.3759461,147.335896 74.8362087,147.282688 76.2654333,147.173809 C79.1297946,146.952109 81.9522792,146.55502 84.6284419,145.712069 C85.9660306,145.29478 87.2706107,144.763194 88.4791208,144.035526 C89.678763,143.29899 90.8237192,142.403322 91.6208531,141.05391 C91.6311991,141.840698 91.412948,142.652119 91.0666036,143.394567 C90.719274,144.138985 90.2492704,144.829703 89.7117716,145.458838 C88.629384,146.7176 87.274552,147.707859 85.841386,148.499574 C82.9489428,150.064774 79.740208,150.81412 76.5812324,151.090505 C74.9933692,151.226481 73.4227494,151.243232 71.838335,151.150611 C70.2539205,151.042224 68.6596527,150.818554 67.0964229,150.397324 C65.5356564,149.972646 63.9881919,149.370115 62.6072486,148.4508 C61.9199793,147.991142 61.2736012,147.459063 60.7331464,146.830421 C60.1986036,146.208676 59.7379607,145.480023 59.5945949,144.690772" id="F-Skin-Fold-1"></path>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                </span>
+                                                <span class="[ js-site-item ] flexures2" data-id="558">
+                                                    <svg width="33px" height="11px" viewBox="0 0 33 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                        <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                            <g id="site-front" transform="translate(-103.000000, -166.000000)" fill="#183c57">
+                                                                <g id="Group" transform="translate(5.000000, 25.000000)">
+                                                                    <path d="M130.580846,144.690772 C130.43748,145.480023 129.976837,146.208676 129.442294,146.830421 C128.90184,147.459063 128.255462,147.991142 127.568685,148.4508 C126.187249,149.370115 124.640277,149.972646 123.079511,150.397324 C121.515788,150.818554 119.92152,151.042224 118.337106,151.150611 C116.752691,151.243232 115.182072,151.226481 113.594209,151.090505 C110.435233,150.81412 107.226498,150.064774 104.334055,148.499574 C102.900889,147.707859 101.546057,146.7176 100.464162,145.458838 C99.9266631,144.829703 99.4561669,144.138985 99.1088372,143.394567 C98.7624929,142.652119 98.5442418,141.840698 98.5545878,141.05391 C99.3517217,142.403322 100.497171,143.29899 101.69632,144.035526 C102.90483,144.763194 104.20941,145.29478 105.546999,145.712069 C108.223162,146.55502 111.046139,146.952109 113.910008,147.173809 C115.339232,147.282688 116.799495,147.335896 118.241036,147.361515 C119.682577,147.388119 121.11328,147.359052 122.533636,147.269879 C123.949559,147.162478 125.356121,146.988074 126.725733,146.633847 C127.410539,146.456487 128.085984,146.231339 128.74123,145.929827 C129.384653,145.615506 130.042855,145.261279 130.580846,144.690772" id="F-Skin-Fold-2"></path>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                </span>
+                                                <span class="[ js-site-item ] flexures3" data-id="558">
+                                                    <svg width="61px" height="12px" viewBox="0 0 61 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                        <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                            <g id="site-front" transform="translate(-70.000000, -229.000000)" fill="#183c57">
+                                                                <g id="Group" transform="translate(5.000000, 25.000000)">
+                                                                    <path d="M65.0932914,204.705396 C67.3492099,206.19916 69.7819956,207.258392 72.2453265,208.156523 C74.7140768,209.039873 77.231601,209.730098 79.7831192,210.237052 C84.8831996,211.266724 90.0862472,211.648048 95.3040748,211.621444 C100.519932,211.588435 105.720516,211.139616 110.82503,210.074472 C113.376549,209.541407 115.905897,208.862021 118.386964,207.990001 C120.868031,207.115026 123.31806,206.091266 125.641473,204.705396 C124.761572,205.745414 123.712193,206.636647 122.625864,207.469253 C121.54052,208.309742 120.379798,209.047263 119.188039,209.735025 C116.798608,211.10513 114.245612,212.186532 111.62315,213.050669 C106.364923,214.757264 100.82637,215.518926 95.3292008,215.56031 C89.8349874,215.607113 84.2777128,214.916888 78.9973166,213.241823 C76.3605672,212.404783 73.8011663,211.305152 71.416662,209.914848 C70.2283511,209.212799 69.0789609,208.446703 68.0083973,207.584045 C66.9442383,206.717445 65.9170293,205.793203 65.0932914,204.705396" id="F-Skin-Fold-3"></path>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                </span>
+                                                <span class="[ js-site-item ] flexures4" data-id="558">
+                                                    <svg width="24px" height="12px" viewBox="0 0 24 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                        <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                            <g id="site-front" transform="translate(-76.000000, -254.000000)" fill="#183c57">
+                                                                <g id="Group" transform="translate(5.000000, 25.000000)">
+                                                                    <path d="M95.0564115,239.177101 C94.5341853,239.473686 93.9755019,239.686026 93.4104138,239.873731 C92.844833,240.063901 92.2654575,240.208252 91.6801701,240.32255 C90.5086099,240.553118 89.3094604,240.64032 88.1068622,240.621599 C85.7021586,240.575781 83.2826749,240.050599 81.0469558,239.079061 C78.8068026,238.120825 76.7686426,236.694556 75.0945629,234.966776 C73.4382191,233.219289 72.1144251,231.187534 71.3798598,228.92324 C73.2840146,230.350001 75.0300236,231.704341 76.8376158,232.88871 C78.6447154,234.066182 80.4882723,235.083045 82.4180458,235.915159 C84.3433852,236.755154 86.3485366,237.421732 88.4463092,237.940509 C90.5490085,238.465691 92.7137838,238.863273 95.0564115,239.177101" id="F-Skin-Fold-4"></path>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                </span>
+                                                <span class="[ js-site-item ] flexures5" data-id="558">
+                                                    <svg width="24px" height="12px" viewBox="0 0 24 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                        <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                            <g id="site-front" transform="translate(-100.000000, -254.000000)" fill="#183c57">
+                                                                <g id="Group" transform="translate(5.000000, 25.000000)">
+                                                                    <path d="M95.0564115,239.177101 C97.3990392,238.863273 99.5638145,238.465691 101.666514,237.940509 C103.764286,237.421732 105.769438,236.755154 107.694777,235.915159 C109.624551,235.083045 111.468108,234.066182 113.275207,232.88871 C115.082799,231.704341 116.828808,230.350001 118.732963,228.92324 C117.998398,231.187534 116.674604,233.219289 115.01826,234.966776 C113.34418,236.694556 111.30602,238.120825 109.065867,239.079061 C106.830148,240.050599 104.410664,240.575781 102.005961,240.621599 C100.803363,240.64032 99.6042131,240.553118 98.4326529,240.32255 C97.8473655,240.208252 97.26799,240.063901 96.7024092,239.873731 C96.1373211,239.686026 95.5786377,239.473686 95.0564115,239.177101" id="F-Skin-Fold-5"></path>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                </span>
+                                                <span class="[ js-site-item ] genitals" data-id="8">
+                                                    <svg width="24px" height="16px" viewBox="0 0 24 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                        <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                            <g id="site-front" transform="translate(-88.000000, -249.000000)" fill="#183c57">
+                                                                <g id="Group" transform="translate(5.000000, 25.000000)">
+                                                                    <path d="M83.1323625,224.750505 C83.1323625,231.265523 91.8037801,239.177249 95.0563622,239.177249 C98.3094371,239.177249 106.98184,231.265523 106.98184,224.750505 L83.1323625,224.750505 Z" id="Genitalia"></path>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                </span>
+                                                <span class="[ js-site-item ] handLeft" data-id="617">
+                                                    <svg width="34px" height="43px" viewBox="0 0 34 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                        <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                            <g id="site-front" transform="translate(-5.000000, -256.000000)" fill="#183c57">
+                                                                <g id="Group" transform="translate(5.000000, 25.000000)">
+                                                                    <path d="M13.2324895,234.018049 C11.4490379,235.303415 6.47015343,239.784214 5.51487369,241.610035 C4.56107195,243.435856 0.910415489,251.359899 0.910415489,251.359899 C0.910415489,251.359899 -0.665623648,254.60312 3.03232876,254.330676 C5.66316621,254.138043 7.93583534,252.398932 8.99605297,249.984867 C15.0553544,236.199575 3.477699,265.558538 3.477699,265.558538 C2.84807161,267.134577 3.50183964,268.867777 4.92810826,269.436806 C6.3568402,270.006329 7.9013487,269.220526 8.66892262,267.581918 L13.9793715,254.014877 L9.5187718,269.52253 C9.05517292,271.204 9.91832408,272.90222 11.4421406,273.321972 C12.9654645,273.742216 14.4547943,272.764274 15.0533838,271.002007 L19.4144649,255.26083 L16.3904798,268.962369 C16.140698,270.690642 17.2102763,272.265696 18.7744915,272.49183 C20.3391993,272.717963 21.693046,271.561676 22.0674723,269.737826 L24.9308482,255.592394 L23.5903035,266.865582 C23.5809428,268.499263 24.773195,269.824042 26.2531642,269.833403 C27.7331335,269.843256 28.8416324,268.597796 28.9554383,266.85967 L32.4410515,249.078362 C32.4410515,249.078362 33.3958386,243.892065 33.2716867,242.273656 C33.1465495,240.65574 33.1051656,235.635965 33.1051656,235.635965 C33.1051656,235.635965 33.0972829,235.469936 33.0958049,235.190594 C26.3753454,234.052536 19.597244,232.39767 15.2519282,231.19655 C14.9257832,232.037038 14.3060092,233.24407 13.2324895,234.018049 Z" id="F-Hand-L"></path>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                </span>
+                                                <span class="[ js-site-item ] handRight" data-id="617">
+                                                    <svg width="34px" height="43px" viewBox="0 0 34 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                        <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                            <g id="site-front" transform="translate(-161.000000, -256.000000)" fill="#183c57">
+                                                                <g id="Group" transform="translate(5.000000, 25.000000)">
+                                                                    <path d="M176.871268,234.018049 C178.65472,235.303415 183.634097,239.784214 184.588884,241.610035 C185.542686,243.435856 189.193835,251.359899 189.193835,251.359899 C189.193835,251.359899 190.769874,254.60312 187.071922,254.330676 C184.441084,254.138043 182.167923,252.398932 181.107705,249.984867 C175.048896,236.199575 186.626552,265.558538 186.626552,265.558538 C187.256179,267.134577 186.601918,268.867777 185.17565,269.436806 C183.746918,270.006329 182.202902,269.220526 181.435328,267.581918 L176.124879,254.014877 L180.584986,269.52253 C181.049078,271.204 180.185927,272.90222 178.66211,273.321972 C177.138786,273.742216 175.649456,272.764274 175.050867,271.002007 L170.689786,255.26083 L173.713771,268.962369 C173.96306,270.690642 172.893974,272.265696 171.329266,272.49183 C169.765051,272.717963 168.411205,271.561676 168.036778,269.737826 L165.173402,255.592394 L166.513454,266.865582 C166.522815,268.499263 165.331056,269.824042 163.851086,269.833403 C162.370624,269.843256 161.262618,268.597796 161.148812,266.85967 L157.662706,249.078362 C157.662706,249.078362 156.708412,243.892065 156.832071,242.273656 C156.957208,240.65574 156.999085,235.635965 156.999085,235.635965 C156.999085,235.635965 157.006475,235.469936 157.007953,235.190594 C163.728412,234.052536 170.506514,232.39767 174.85183,231.19655 C175.177975,232.037038 175.798241,233.24407 176.871268,234.018049 Z" id="F-Hand-R"></path>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                </span>
+                                                <span class="[ js-site-item ] footBoth" data-id="618">
+                                                    <svg width="64px" height="26px" viewBox="0 0 64 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                        <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                            <g id="site-front" transform="translate(-68.000000, -448.000000)" fill="#183c57">
+                                                                <g id="Group" transform="translate(5.000000, 25.000000)">
+                                                                    <path d="M93.2887745,423.385827 C93.2887745,423.385827 94.9978335,436.545433 94.9140802,443.183125 C94.9140802,445.838103 94.083445,448.576342 89.2725597,448.783754 C87.5950313,448.856176 86.7205489,448.101411 86.2909439,447.08849 L86.2903531,447.088827 C84.4695002,448.615376 82.7022607,448.535992 81.7009403,448.500038 L81.5845038,448.496037 C80.2217892,448.427556 79.4985552,447.849659 79.1398942,447.102777 L79.1398942,447.102777 C77.6471157,448.269903 75.1020021,448.105353 75.1020021,448.105353 C74.0284825,448.068403 73.5895169,447.416605 73.4594531,446.610111 L73.4594531,446.610111 L73.4574824,446.620457 C72.3642561,447.843747 70.786739,447.693484 70.1364196,447.666387 C68.8840622,447.451092 68.3776013,446.745594 68.2366988,445.937129 L68.2363531,445.938827 L68.104953,446.030597 C67.2561563,446.571678 66.155474,446.398295 66.0475277,446.379604 C60.5614522,445.216358 65.956147,437.748031 65.956147,437.748031 C65.956147,437.748031 72.4682087,429.523955 74.210769,425.541241 C74.4098061,425.087496 74.7660038,423.980475 74.8610884,423.386319 L74.8610884,423.386319 Z M115.251784,423.386319 C115.346868,423.980475 115.703066,425.087496 115.902103,425.541241 C117.644664,429.523955 124.156725,437.748031 124.156725,437.748031 C124.156725,437.748031 129.55142,445.216358 124.07445,446.378065 C124.07445,446.378065 122.781201,446.62292 121.876173,445.9391 C121.735271,446.745594 121.22881,447.451092 119.976453,447.666387 C119.326133,447.693484 117.748616,447.843747 116.65539,446.620457 L116.653419,446.610111 C116.522863,447.416605 116.083897,448.068403 115.01087,448.105353 C115.01087,448.105353 112.466249,448.269903 110.972485,447.109182 L110.972485,447.102777 C110.614317,447.849659 109.891083,448.427556 108.528368,448.496037 C107.551904,448.527075 105.716722,448.676353 103.821928,447.090953 L103.821353,447.088827 L103.760552,447.224962 C103.311122,448.168317 102.441097,448.852884 100.83982,448.783754 C96.0294272,448.576342 95.198792,445.838103 95.198792,443.183125 C95.1145461,436.545433 96.8240978,423.385827 96.8240978,423.385827 L115.251784,423.386319 Z" id="F-Foot"></path>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                </span>
+                                                <span class="[ js-site-item ] legs" data-id="11">
+                                                    <svg width="64px" height="96px" viewBox="0 0 64 96" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                        <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                            <g id="site-front" transform="translate(-68.000000, -353.000000)" fill="#183c57">
+                                                                <g id="Group" transform="translate(5.000000, 25.000000)">
+                                                                    <path d="M84.456797,331.215077 C88.2626433,327.42943 92.30694,329.119768 92.30694,329.119768 L92.30694,329.119768 C92.4000539,332.590109 92.6483577,336.293973 93.1489065,340.644215 C94.2273528,350.019653 94.6426704,362.798429 94.5599025,368.026602 C94.4761493,373.253791 92.4847925,400.388859 92.5675604,402.87633 C92.6414604,405.072144 93.1661499,419.912727 93.2893164,423.386024 L93.2893164,423.386024 L74.8616303,423.386024 C75.4267184,417.698193 73.5669036,409.016922 73.5669036,409.016922 C73.5669036,409.016922 64.6870882,370.350509 63.7751631,363.7946 C62.8622526,357.239183 64.189988,348.028296 65.8492877,339.232727 C66.4912318,335.827418 66.5833603,332.737416 66.3956545,330.040561 L66.3956545,330.040561 C66.3995958,330.040068 71.3720757,328.055116 73.8354066,330.440113 C76.8894443,333.398081 81.0943502,334.560281 84.456797,331.215077 Z M105.656519,331.215077 C109.018965,334.560281 113.223871,333.398081 116.277416,330.440113 C118.740747,328.055116 123.71372,330.040068 123.71372,330.040068 L123.717168,330.040561 C123.529955,332.737416 123.622084,335.827418 124.264028,339.232727 C125.923328,348.028296 127.25057,357.239183 126.338153,363.7946 C125.426227,370.350509 116.546412,409.016922 116.546412,409.016922 C116.546412,409.016922 114.686105,417.698193 115.251685,423.386024 L96.8239992,423.386024 C96.9471658,419.912727 97.4718553,405.072144 97.5452625,402.87633 C97.6285231,400.388859 95.6371664,373.253791 95.5534131,368.026602 C95.4701526,362.798429 95.8854702,350.019653 96.9644091,340.644215 C97.464958,336.293973 97.7132617,332.590109 97.804405,329.119768 L97.8063756,329.119768 C97.8063756,329.119768 101.850672,327.42943 105.656519,331.215077 Z" id="F-Legs"></path>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="siteSelect__options">
+                                            <h6>Please select relevant area</h6>
+                                            <div class="panelClose [ js-panel-close-site ]">
+                                                <svg viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M20.517 0L11 9.517 1.483 0 0 1.483 9.517 11 0 20.518 1.483 22 11 12.483 20.517 22 22 20.518 12.483 11 22 1.483z" fill="#3478ae" fill-rule="evenodd"/>
+                                                </svg>
+                                            </div>
+                                            <span class="siteSelect__options__item [ js-site-select ]" data-url="https://dd-dev.dev2.wizbit.net/api/find?site=6" data-id="6">Hairy Scalp</span>
+                                            <span class="siteSelect__options__item [ js-site-select ]" data-url="https://dd-dev.dev2.wizbit.net/api/find?site=1" data-id="1">Face & Bald Scalp</span>
+                                            <span class="siteSelect__options__item [ js-site-select ]" data-url="https://dd-dev.dev2.wizbit.net/api/find?site=3" data-id="3">Ears</span>
+                                            <span class="siteSelect__options__item [ js-site-select ]" data-url="https://dd-dev.dev2.wizbit.net/api/find?site=4" data-id="4">Lips & Mouth</span>
+                                            <span class="siteSelect__options__item [ js-site-select ]" data-url="https://dd-dev.dev2.wizbit.net/api/find?site=13" data-id="13">Trunk & Limbs</span>
+                                            <span class="siteSelect__options__item [ js-site-select ]" data-url="https://dd-dev.dev2.wizbit.net/api/find?site=7" data-id="7">Axillae (armpits)</span>
+                                            <span class="siteSelect__options__item [ js-site-select ]" data-url="https://dd-dev.dev2.wizbit.net/api/find?site=617" data-id="617">Hands</span>
+                                            <span class="siteSelect__options__item [ js-site-select ]" data-url="https://dd-dev.dev2.wizbit.net/api/find?site=558" data-id="558">Skin Folds in groin,between buttocks & on front abdomen</span>
+                                            <span class="siteSelect__options__item [ js-site-select ]" data-url="https://dd-dev.dev2.wizbit.net/api/find?site=8" data-id="8">Genitalia</span>
+                                            <span class="siteSelect__options__item [ js-site-select ]" data-url="https://dd-dev.dev2.wizbit.net/api/find?site=11" data-id="11">Lower Legs only</span>
+                                            <span class="siteSelect__options__item [ js-site-select ]" data-url="https://dd-dev.dev2.wizbit.net/api/find?site=618" data-id="618">Feet</span>
+                                            <span class="siteSelect__options__item [ js-site-select ]" data-url="https://dd-dev.dev2.wizbit.net/api/find?site=690" data-id="690">Nails (hands or feet)</span>
+                                        </div>
+                                        <div class="siteSelect__back">
+                                            <div class="siteSelect__back__body">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="200" height="500" viewBox="0 0 200 500" class="svg-siteback">
+                                                    <g fill="none" fill-rule="evenodd" transform="translate(5 24)">
+                                                        <path fill="#E3E3E3" d="M110.388844,67.7786609 C115.630002,63.7239846 119.117359,57.49977 119.602222,50.4164302 L119.604197,50.3877927 L120.852891,50.3877927 C123.591723,50.3877927 126.49448,48.7233609 127.103274,43.736978 L127.638499,39.4897391 C127.638499,35.2158377 125.154442,31.719099 120.882022,31.717124 L121.063722,29.0582794 C121.950498,14.2403433 109.2468,2.66486447 94.6703073,2.66486447 C80.0928276,2.66486447 67.6202047,14.5726371 68.2754112,29.0582794 L68.457605,31.7181115 C64.1970348,31.7304553 61.7198903,35.2222564 61.7198903,39.4897391 L62.2551154,43.736978 C62.8634156,48.7233609 65.7666666,50.3877927 68.5054987,50.3877927 L69.7364179,50.3877927 L69.7383929,50.4164302 C70.2217743,57.493845 73.7076505,63.7086783 78.9379459,67.7687859 C78.9428834,67.7727359 78.9488084,67.7756984 78.9537459,67.7796484 L79.0031209,78.863352 C79.0031209,79.460296 78.6431771,79.9945337 78.0886956,80.2142525 C74.507032,81.6278592 61.5480652,86.7648359 59.5439333,87.8367675 C57.2154075,89.0839804 55.1362256,89.5002118 53.3498375,89.9154557 C51.5609807,90.3316871 44.2011407,92.2439814 39.4191704,96.1525077 C34.6376938,100.062022 31.5201553,109.292187 31.5201553,109.292187 C31.5201553,109.292187 30.4803175,113.491532 30.3973675,116.900877 C30.3134299,120.311703 29.3570359,129.790719 28.7339232,133.325476 C28.1088355,136.85974 26.4049036,148.002694 26.2390036,152.411389 C26.0731035,156.818109 26.2390036,168.419263 26.2390036,168.419263 C26.2390036,168.419263 26.1550661,174.073196 25.0337594,177.025822 C23.9104778,179.977954 19.5027701,192.950746 18.8791637,197.815172 C18.2550635,202.680093 16.8009692,219.062723 16.3842441,222.598468 C15.9690002,226.13125 15.0121124,232.991909 15.0121124,232.991909 C15.0121124,232.991909 14.9242249,233.390859 14.7079623,233.948303 C14.3815934,234.791135 13.7594682,236.000822 12.6840804,236.77601 C10.8967048,238.064698 5.90686565,242.555356 4.94948408,244.385194 C3.99457127,246.214538 0.334401315,254.15651 0.334401315,254.15651 C0.334401315,254.15651 -1.24510545,257.406373 2.46147701,257.133823 C5.09810288,256.940273 7.37626613,255.197829 8.43931023,252.777959 C14.5104622,238.962336 2.90782716,268.385896 2.90782716,268.385896 C2.27681445,269.965896 2.93251467,271.702415 4.36192139,272.273191 C5.79379686,272.843472 7.34071612,272.056434 8.11047262,270.414221 L13.4326056,256.817329 L8.9626854,272.359103 C8.49757275,274.043779 9.36311679,275.745736 10.8892985,276.166904 C12.4164678,276.58758 13.9090745,275.607979 14.508981,273.841835 L18.8791637,258.066023 L15.8490189,271.797216 C15.5991813,273.529291 16.6706192,275.10781 18.2387697,275.334442 C19.8064265,275.561073 21.1632519,274.402735 21.538502,272.574872 L24.408178,258.397824 L23.0656713,269.695815 C23.0557963,271.33309 24.2501779,272.660785 25.7329097,272.67066 C27.2171227,272.680535 28.3275668,271.43184 28.4416231,269.690384 L31.9349055,251.869459 C31.9349055,251.869459 32.8912995,246.671751 32.7673682,245.050275 C32.6424494,243.4288 32.5999869,238.39798 32.5999869,238.39798 C32.5999869,238.39798 32.5930744,238.231092 32.5915932,237.951136 C32.5846807,236.912779 32.6547932,234.219372 33.4739247,231.828634 C34.5132688,228.792564 43.2032717,207.337638 43.2032717,207.337638 C43.2032717,207.337638 46.3217977,197.400422 46.5301603,191.037958 C46.7385228,184.676974 47.4445856,177.317134 48.109667,172.368277 C48.7752422,167.4209 52.2680309,151.537945 52.4344247,149.001056 C52.6003248,146.464168 53.23825,142.085098 53.23825,141.419523 C53.23825,141.419523 54.7906005,149.514063 57.7832202,155.944665 C57.7832202,155.944665 60.0850835,164.260405 60.4178711,179.977954 C60.7501649,195.694515 60.6672149,202.015999 58.4216392,215.486491 C56.1765572,228.959451 54.2642628,246.00667 54.4301629,256.984217 C54.5960629,267.96127 55.8432758,286.92177 58.0059015,297.81538 C60.1680335,308.709484 62.9122969,320.351619 63.9926223,323.512608 C64.7949663,325.854958 66.0950104,330.166385 66.0387229,335.829205 C66.0337854,336.306168 66.0189729,336.793006 65.9937917,337.288237 C65.9928042,337.307 65.9928042,337.325268 65.9918167,337.344031 C65.9681167,337.803218 65.9320729,338.272775 65.8886229,338.747269 C65.8831916,338.808 65.8807229,338.866263 65.8752916,338.926994 C65.8333229,339.362975 65.7770353,339.809325 65.7177853,340.257651 C65.7044541,340.358869 65.6955666,340.455644 65.6812478,340.556863 C65.6052103,341.09357 65.5153478,341.639163 65.4116602,342.193151 C65.4096852,342.203026 65.4086977,342.212407 65.4067227,342.222282 C63.7442659,351.037204 62.414103,360.268851 63.3280345,366.838197 C63.3853096,367.248503 63.4736908,367.78521 63.5892284,368.430047 C63.6465034,368.751972 63.7111847,369.101548 63.7817909,369.476304 C63.9941035,370.599586 64.2627036,371.94703 64.5732724,373.460868 C64.67696,373.964987 64.785585,374.487868 64.8976663,375.027043 C65.1228164,376.105394 65.364754,377.249413 65.6185415,378.440338 C66.127598,380.823176 66.6870169,383.397096 67.2637171,386.023353 C67.4078921,386.680041 67.5530547,387.339691 67.6992047,388.000822 C67.8453548,388.661954 67.9919986,389.324073 68.1386424,389.985204 C68.2852862,390.646336 68.4314362,391.30648 68.5775863,391.963168 C69.0891114,394.262068 69.5956991,396.521469 70.074143,398.649038 C71.7835061,406.24736 73.141319,412.160018 73.141319,412.160018 C73.141319,412.160018 73.1581065,412.236549 73.186744,412.38023 C73.4696629,413.7652 74.9523946,421.395121 74.4388944,426.560735 C74.2813881,428.148142 73.9352693,429.502992 73.3072191,430.372486 C73.3072191,430.372486 72.0876562,431.925824 69.6485304,433.588281 C67.2094046,435.251232 62.7730594,438.134733 62.7730594,438.134733 C62.7730594,438.134733 55.2339881,442.346915 63.6598346,445.673804 C69.433749,447.951967 82.7319222,451.329218 82.7319222,451.329218 C82.7319222,451.329218 88.7196304,451.882712 90.6052623,450.663643 C92.4894129,449.443586 93.9854759,447.586592 94.3473947,444.80036 C94.6870949,437.509151 92.9332943,427.295435 92.9332943,427.295435 C92.9332943,427.295435 92.923913,427.026342 92.9076193,426.560735 C92.7846755,423.08029 92.2583378,408.20656 92.184769,406.005916 C92.1181128,404.019559 93.3717444,386.347253 93.9262259,376.59865 C93.9484446,376.216487 93.9686884,375.846668 93.9884384,375.489687 C94.0373196,374.598468 94.0783009,373.792174 94.1099009,373.093518 C94.1479197,372.25513 94.1731009,371.570792 94.1810009,371.079511 C94.2644447,365.839834 93.8482133,353.032942 92.7669005,343.636877 C92.7654192,343.626508 92.7644317,343.616633 92.7634442,343.606264 C92.7041942,343.090789 92.6493879,342.587164 92.5975442,342.08897 C92.5768067,341.894432 92.5580442,341.703845 92.5387879,341.511776 C92.5071879,341.204663 92.4775629,340.900513 92.4489254,340.599819 C92.4276941,340.372201 92.4064629,340.146063 92.3862191,339.9219 C92.3640003,339.675519 92.3437566,339.433088 92.3230191,339.190656 C92.3017878,338.939338 92.2800628,338.686044 92.2603128,338.438181 C92.2534003,338.347825 92.2474753,338.260431 92.2405628,338.170075 C92.1892128,337.4966 92.1437878,336.835962 92.1042878,336.188162 C92.099844,336.114593 92.0949065,336.040037 92.0904627,335.966468 C92.0707127,335.627755 92.052444,335.292499 92.0356565,334.959711 C92.0322002,334.88713 92.0282502,334.815042 92.024794,334.742461 C92.0080065,334.395355 91.9922065,334.050717 91.9783815,333.709536 C91.7912501,329.048534 91.8993814,324.897577 92.1013253,320.351619 C92.4346066,312.86686 94.6796886,241.946562 94.6796886,241.946562 C94.6796886,241.946562 96.9237831,312.86686 97.2570644,320.351619 C97.4590083,324.897577 97.5666458,329.048534 97.3795145,333.709536 C97.3661832,334.050717 97.3503832,334.394861 97.3335957,334.741967 C97.3301395,334.814549 97.3266832,334.88713 97.3227332,334.959711 C97.3059457,335.292499 97.2881707,335.627755 97.267927,335.966468 C97.2634832,336.04053 97.2580519,336.116074 97.2536082,336.19063 C97.2155894,336.822631 97.1711519,337.467468 97.1212832,338.12465 C97.1128894,338.230806 97.1059769,338.334494 97.0975831,338.442131 C97.0783269,338.686044 97.0566019,338.936375 97.0358644,339.184731 C97.0151269,339.429138 96.9943894,339.674038 96.9721706,339.922888 C96.9519268,340.146063 96.9311893,340.372201 96.9094643,340.598832 C96.8813206,340.901994 96.8507081,341.208613 96.8196018,341.518195 C96.8003455,341.706807 96.781583,341.894432 96.7613393,342.085514 C96.708508,342.593583 96.6527142,343.107576 96.591983,343.633914 L96.591983,343.636877 C95.5442451,352.739655 95.1206075,365.042921 95.1714638,370.566504 C95.172945,370.744748 95.1754138,370.916079 95.1773888,371.079511 C95.1956575,372.221061 95.3047763,374.405906 95.4632701,377.149675 C95.4642576,377.171894 95.4657389,377.194113 95.4672201,377.215838 C95.4884514,377.587632 95.5111639,377.9693 95.5343701,378.359857 C95.5605389,378.800282 95.5876951,379.25157 95.6158389,379.712239 C95.6410202,380.133901 95.6676827,380.56297 95.6943452,380.999445 C95.7921077,382.575002 95.8967828,384.23894 96.0044203,385.929541 C96.0197265,386.171478 96.0360203,386.413416 96.0513266,386.655847 C96.609758,395.385844 97.2205269,404.603665 97.1736207,406.005916 C97.1049894,408.069298 96.6379017,421.270696 96.4784204,425.78061 C96.4729892,425.93071 96.4685454,426.071429 96.4636079,426.201779 C96.4586704,426.332129 96.4547204,426.45211 96.4507704,426.560735 C96.4344767,427.026342 96.4250954,427.295435 96.4250954,427.295435 C96.4250954,427.295435 94.6708011,437.509151 95.010995,444.80036 C95.3729138,447.586592 96.8694706,449.443586 98.7541149,450.663643 C100.639253,451.882712 106.625974,451.329218 106.625974,451.329218 C106.625974,451.329218 119.925134,447.951967 125.698061,445.673804 C134.124402,442.346915 126.58533,438.134733 126.58533,438.134733 C126.58533,438.134733 122.148985,435.251232 119.710353,433.588281 C117.270734,431.925824 116.050677,430.372486 116.050677,430.372486 C115.42312,429.502992 115.077002,428.148142 114.919495,426.560735 C114.90172,426.382491 114.886414,426.201285 114.873083,426.01761 C114.860245,425.834429 114.848889,425.647791 114.840495,425.459672 C114.604483,420.372071 115.907983,413.669906 116.171152,412.38023 C116.200777,412.236549 116.217071,412.160018 116.217071,412.160018 C116.217071,412.160018 117.574884,406.24736 119.284247,398.649038 C119.762691,396.521469 120.269278,394.262068 120.780803,391.963168 C120.926953,391.30648 121.073597,390.646336 121.220241,389.985204 C121.366391,389.324073 121.513035,388.661954 121.659185,388.000822 C121.804841,387.339691 121.950498,386.680041 122.094179,386.023353 C122.671373,383.397096 123.230792,380.823176 123.739354,378.440338 C123.994129,377.249413 124.236067,376.105394 124.460723,375.027043 C124.573298,374.487868 124.68143,373.964987 124.784624,373.460868 C125.095686,371.94703 125.364286,370.599586 125.576599,369.476304 C125.646711,369.101548 125.711393,368.751972 125.769161,368.430047 C125.884699,367.78521 125.972586,367.248503 126.030355,366.838197 C126.94478,360.268851 125.614124,351.037204 123.951667,342.222282 C123.949692,342.212407 123.948704,342.203026 123.946729,342.193151 C123.842548,341.639163 123.752686,341.09357 123.676648,340.556863 C123.662329,340.455644 123.653936,340.358869 123.641098,340.257651 C123.581354,339.809325 123.525067,339.362975 123.483592,338.926994 C123.477667,338.866263 123.475198,338.808 123.469273,338.747763 C123.426317,338.272775 123.390273,337.802725 123.366079,337.343537 C123.365586,337.32675 123.365092,337.310456 123.364598,337.294162 C123.339417,336.796462 123.324604,336.307155 123.319667,335.828218 C123.263379,330.165891 124.563917,325.854958 125.366261,323.512608 C126.446093,320.351619 129.190356,308.709484 131.351994,297.81538 C133.515114,286.92177 134.762327,267.96127 134.928227,256.984217 C135.094621,246.00667 133.181833,228.959451 130.937244,215.486491 C128.691175,202.015999 128.608225,195.694515 128.940025,179.977954 C129.2738,164.260405 131.574676,155.944665 131.574676,155.944665 C134.568283,149.514063 136.12014,141.419523 136.12014,141.419523 C136.12014,142.085098 136.758065,146.464168 136.923965,149.001056 C137.089865,151.537945 140.583147,167.4209 141.248723,172.368277 C141.913804,177.317134 142.620361,184.676974 142.828229,191.037958 C143.036098,197.400422 146.155118,207.337638 146.155118,207.337638 C146.155118,207.337638 154.845615,228.792564 155.884959,231.828634 C156.70409,234.219372 156.774203,236.913273 156.76729,237.951629 L156.776178,237.951629 C156.774203,238.231092 156.76729,238.39798 156.76729,238.39798 C156.76729,238.39798 156.725322,243.4288 156.599909,245.050275 C156.475978,246.671751 157.431878,251.869459 157.431878,251.869459 L160.926148,269.690384 C161.03971,271.43184 162.150648,272.680535 163.634368,272.67066 C165.117099,272.660785 166.311975,271.33309 166.3021,269.695815 L164.958605,258.397824 L167.828775,272.574872 C168.204025,274.402735 169.560851,275.561073 171.129001,275.334442 C172.696658,275.10781 173.768096,273.529291 173.518258,271.797216 L170.488114,258.066023 L174.858296,273.841835 C175.458203,275.607979 176.950809,276.58758 178.477485,276.166904 C180.004654,275.745736 180.869704,274.043779 180.405086,272.359103 L175.935165,256.817329 L181.256311,270.414221 C182.026561,272.056434 183.573974,272.843472 185.00585,272.273191 C186.435256,271.702415 187.090956,269.965896 186.458956,268.385896 C186.458956,268.385896 174.856321,238.962336 180.928461,252.777959 C181.991505,255.197829 184.269174,256.940273 186.9058,257.133823 C190.612383,257.406373 189.032382,254.15651 189.032382,254.15651 C189.032382,254.15651 185.3732,246.214538 184.417793,244.385194 C183.460412,242.555356 178.470572,238.064698 176.683691,236.77601 C175.607809,236.000822 174.977784,234.79311 174.651415,233.950772 C174.434659,233.391353 174.346277,232.991909 174.346277,232.991909 C174.346277,232.991909 173.390377,226.13125 172.973652,222.598468 C172.557914,219.062723 171.103326,202.680093 170.478732,197.815172 C169.85562,192.950746 165.448406,179.977954 164.32463,177.025822 C163.203817,174.073196 163.119386,168.419263 163.119386,168.419263 C163.119386,168.419263 163.28578,156.818109 163.119386,152.411389 C162.953486,148.002694 161.250048,136.85974 160.624467,133.325476 C160.00086,129.790719 159.04496,120.311703 158.961022,116.900877 C158.877578,113.491532 157.838728,109.292187 157.838728,109.292187 C157.838728,109.292187 154.720202,100.062022 149.940207,96.1525077 C145.156755,92.2439814 137.797903,90.3316871 136.009046,89.9154557 C134.222164,89.5002118 132.14397,89.0839804 129.81495,87.8367675 C127.809831,86.7648359 114.850864,81.6278592 111.270188,80.2142525 C110.715213,79.9945337 110.356256,79.460296 110.356256,78.863352 L110.40415,67.7791546"></path>
+                                                        <path fill="#E3E3E3" d="M69.0775633,29.4088542 L70.407762,48.0390261 L69.1026893,48.0390261 C66.36987,48.0390261 63.4729928,46.3782484 62.8655354,41.4023199 L62.3319779,37.164898 C62.3319779,32.8989014 64.8120595,29.4088542 69.0775633,29.4088542 Z M121.360137,29.4088542 C125.625641,29.4088542 128.105722,32.8989014 128.105722,37.164898 L128.105722,37.164898 L127.572165,41.4023199 C126.964707,46.3782484 124.06783,48.0390261 121.335011,48.0390261 L121.335011,48.0390261 L120.029938,48.0390261 Z"></path>
+                                                        <path fill="#DBDBDB" d="M96.0697092,67.5412171 L94.3493189,67.5412171 C88.7447483,67.5353052 81.9799489,67.29784 79.5121839,65.3818612 C74.2928783,61.3306672 70.8151477,55.1294779 70.3323348,48.0676007 L68.8730576,26.7563394 C68.2192896,12.3024988 80.6640375,0.420868303 95.2100067,0.420868303 C109.754005,0.420868303 122.430306,11.9709344 121.545478,26.7563394 L120.087186,48.0676007 C119.603388,55.1353899 116.124179,61.3454472 110.894527,65.3917146 C107.726684,67.8422362 101.643242,67.5412171 96.0697092,67.5412171"></path>
+                                                        <path fill="#E3E3E3" d="M174.711106,230.242058 C174.711106,230.242058 173.756812,223.396461 173.341987,219.871435 C172.926177,216.343945 171.475275,199.996788 170.852545,195.142548 C170.230307,190.288801 165.832769,177.344489 164.71146,174.398838 C163.592616,171.452695 163.508862,165.811174 163.508862,165.811174 C163.508862,165.811174 163.674398,154.235489 163.508862,149.838444 C163.343326,145.43992 161.643135,134.320937 161.01942,130.794925 C160.397675,127.267435 159.443381,117.809722 159.359628,114.405891 C159.27686,111.004031 158.239305,106.813905 158.239305,106.813905 C158.239305,106.813905 155.12861,97.6040036 150.357631,93.7030727 C145.586159,89.8031271 138.242477,87.895031 136.457547,87.4797134 C134.675081,87.0653811 132.600464,86.6500635 130.27705,85.4055887 C128.277318,84.3360104 115.346801,79.2103114 111.773001,77.7998081 C111.219736,77.5805717 110.860583,77.0475068 110.860583,76.4518734 L110.909849,65.3920102 C107.742006,67.8420391 101.658564,67.5410201 96.0855238,67.5410201 L94.3651334,67.5410201 C88.7605629,67.5356008 81.9967488,67.297643 79.5284912,65.3821568 L79.5762798,76.4518734 C79.5762798,77.0475068 79.2181115,77.5805717 78.6643547,77.7998081 C75.0915395,79.2103114 62.1610227,84.3360104 60.1603053,85.4055887 C57.8363989,86.6500635 55.7632596,87.0653811 53.979808,87.4797134 C52.1948784,87.895031 44.8521815,89.8031271 40.0797241,93.7030727 C35.3097301,97.6040036 32.1980505,106.813905 32.1980505,106.813905 C32.1980505,106.813905 31.1614808,111.004031 31.0782202,114.405891 C30.994467,117.809722 30.0406652,127.267435 29.4184278,130.794925 C28.7942198,134.320937 27.0945214,145.43992 26.9289856,149.838444 C26.7629571,154.235489 26.9289856,165.811174 26.9289856,165.811174 C26.9289856,165.811174 26.8447397,171.452695 25.7263874,174.398838 C24.6050792,177.344489 20.2075408,190.288801 19.585796,195.142548 C18.9625733,199.996788 17.5111787,216.343945 17.0963538,219.871435 C16.6805435,223.396461 15.7267418,230.242058 15.7267418,230.242058 C15.7267418,230.242058 15.6385545,230.640132 15.4232594,231.196353 C19.7685752,232.397965 26.5466766,234.052831 33.2671361,235.190397 C33.2602388,234.15432 33.3301974,231.466826 34.1475306,229.081337 C35.1845929,226.051932 43.8560105,204.644108 43.8560105,204.644108 C43.8560105,204.644108 46.9681828,194.728709 47.1755953,188.380212 C47.3830077,182.033194 48.088013,174.689511 48.7516344,169.751518 C49.4152557,164.815003 52.9013617,148.966917 53.0668975,146.435598 C53.2324334,143.904279 53.8689581,139.534823 53.8689581,138.871202 C53.8689581,138.871202 55.4174079,146.947478 58.404443,153.363963 C58.404443,153.363963 60.7002675,161.661447 61.0333098,177.344489 C61.3643815,193.026547 61.2816136,199.334152 59.0404751,212.775071 C56.8008146,226.218453 54.8922258,243.228246 55.0577616,254.181694 C55.2237901,265.134648 56.4682649,284.053523 58.6266355,294.923709 C60.783528,305.793896 63.5217667,317.40998 64.5992277,320.564028 C65.3998102,322.901237 66.6979856,327.203198 66.641329,332.853587 L66.641329,332.84866 C69.2194512,332.325941 71.8355086,331.528807 74.0042252,330.314385 C75.8852247,329.261065 77.0671309,328.385597 80.6956174,328.115616 C83.4299147,327.911652 85.2128737,329.119669 86.1735727,329.706928 C87.4372615,330.478935 89.9695657,330.72182 92.5245326,330.738571 C92.3378121,326.087802 92.445706,321.945957 92.6467138,317.40998 C92.9792635,309.941653 95.2184313,239.177052 95.2184313,239.177052 C95.2184313,239.177052 97.4585844,309.941653 97.7911341,317.40998 C97.9926346,321.945957 98.1005285,326.087802 97.913808,330.738571 C100.468282,330.72182 103.001079,330.478935 104.264275,329.706928 C105.224974,329.119669 107.007933,327.911652 109.742231,328.115616 C113.370717,328.385597 114.552131,329.261065 116.43313,330.314385 C118.602339,331.528807 121.218397,332.325941 123.796026,332.84866 C123.796026,332.849645 123.796519,332.853587 123.796519,332.853587 C123.740355,327.202705 125.038038,322.901237 125.838128,320.564028 C126.916081,317.40998 129.65432,305.793896 131.811705,294.923709 C133.969583,284.053523 135.214058,265.134648 135.379594,254.181694 C135.545129,243.228246 133.637033,226.218453 131.39688,212.775071 C129.156234,199.334152 129.073466,193.026547 129.405031,177.344489 C129.737088,161.661447 132.033898,153.363963 132.033898,153.363963 C135.02044,146.947478 136.56889,138.871202 136.56889,138.871202 C136.56889,139.534823 137.205415,143.904279 137.37095,146.435598 C137.536979,148.966917 141.022099,164.815003 141.686214,169.751518 C142.349835,174.689511 143.054348,182.033194 143.262253,188.380212 C143.470158,194.728709 146.581837,204.644108 146.581837,204.644108 C146.581837,204.644108 155.252762,226.051932 156.289825,229.081337 C157.107158,231.466826 157.177116,234.154813 157.170219,235.19089 L157.179087,235.19089 L157.179087,235.190397 C163.896098,234.053324 170.669765,232.399936 175.015081,231.198816 C174.799293,230.641118 174.711106,230.242058 174.711106,230.242058"></path>
+                                                        <path fill="#D0D0D0" d="M95.219121,218.753625 C92.9853725,237.522728 90.6097362,243.79634 90.6097362,243.79634 C92.6838608,242.447912 95.219121,239.54463 95.219121,239.54463 C95.219121,239.54463 97.7548739,242.447912 99.8285059,243.79634 C99.8285059,243.79634 97.4533622,237.522728 95.219121,218.753625"></path>
+                                                        <path fill="#DBDBDB" d="M80.6954203 328.115271C83.4297177 327.911307 85.2126766 329.119325 86.1733757 329.707075 87.4365718 330.479083 89.9693686 330.721475 92.5243355 330.738718 92.6450387 333.74546 92.8874305 336.963063 93.3106307 340.644265 94.3895697 350.019702 94.8048873 362.798478 94.7216267 368.026652 94.6378734 373.25384 92.6465167 400.388908 92.7297773 402.87638 92.8031846 405.072193 93.3283667 419.913269 93.4510406 423.386073L93.4510406 423.386073 75.0233545 423.386073C75.5889353 417.698242 73.7286277 409.016971 73.7286277 409.016971 73.7286277 409.016971 64.8488124 370.350558 63.9368873 363.794649 63.0244695 357.239233 64.3517122 348.028346 66.0110119 339.232776 66.4406168 336.956166 66.621918 334.821443 66.641132 332.848315 69.2192541 332.326089 71.8353116 331.528955 74.0045208 330.31404 75.8855203 329.26072 77.0669338 328.385745 80.6954203 328.115271zM109.742329 328.115271C113.370816 328.385745 114.552229 329.26072 116.433229 330.31404 118.602438 331.528955 121.218495 332.326089 123.796617 332.848315 123.815831 334.821443 123.997133 336.956166 124.426737 339.232776 126.086037 348.028346 127.41328 357.239233 126.500862 363.794649 125.588937 370.350558 116.709122 409.016971 116.709122 409.016971 116.709122 409.016971 114.848814 417.698242 115.414395 423.386073L96.9867088 423.386073C97.1093826 419.913269 97.6345648 405.072193 97.7079721 402.87638 97.7912327 400.388908 95.7998759 373.25384 95.7161227 368.026652 95.6328621 362.798478 96.0481797 350.019702 97.1271186 340.644265 97.5503189 336.963063 97.7927107 333.74546 97.9134139 330.738718 100.468381 330.721475 103.001178 330.479083 104.264374 329.707075 105.225073 329.119325 107.008032 327.911307 109.742329 328.115271zM15.4232594 231.196599C19.7685752 232.397719 26.5466766 234.052585 33.2671361 235.190644 33.2691068 235.469985 33.2764967 235.636014 33.2764967 235.636014L33.2768915 235.681049C33.2814052 236.183267 33.3252981 240.745674 33.4430179 242.273705 33.5604589 243.804632 32.7124505 248.528155 32.6204307 249.034333L32.6123827 249.078411 29.1267694 266.859719C29.0129636 268.597845 27.9049573 269.843305 26.4244954 269.833452 24.9445262 269.824091 23.7527667 268.499312 23.7621273 266.865631L23.7621273 266.865631 25.1021793 255.592443 22.2388035 269.737875C21.8643772 271.561725 20.5105305 272.718013 18.9463153 272.491879 17.3816075 272.265745 16.3125219 270.690691 16.561811 268.962418L16.561811 268.962418 19.585796 255.260879 15.2247149 271.002056C14.6261255 272.764323 13.1367956 273.742266 11.6134718 273.322021 10.0896553 272.90227 9.22650409 271.204049 9.69059564 269.52258L9.69059564 269.52258 14.1507026 254.014926 8.8402538 267.581968C8.07267988 269.220575 6.52866405 270.006378 5.0999321 269.436856 3.67366348 268.867826 3.01940279 267.134627 3.64903018 265.558588 3.64903018 265.558588 15.2266856 236.199624 9.16787682 249.984917 8.10765918 252.398981 5.83449739 254.138093 3.20365994 254.330725-.494292469 254.603169 1.08174667 251.359948 1.08174667 251.359948 1.08174667 251.359948 4.73289579 243.435905 5.68620486 241.610084 6.6414846 239.784263 11.6203691 235.303464 13.4038207 234.018098 14.4773403 233.24412 15.0976071 232.037087 15.4232594 231.196599zM175.023654 231.196599C175.349306 232.037087 175.969573 233.24412 177.043092 234.018098 178.826544 235.303464 183.805428 239.784263 184.760708 241.610084 185.714017 243.435905 189.365166 251.359948 189.365166 251.359948 189.365166 251.359948 190.941205 254.603169 187.243253 254.330725 184.612416 254.138093 182.339254 252.398981 181.279036 249.984917 175.220227 236.199624 186.797883 265.558588 186.797883 265.558588 187.42751 267.134627 186.773249 268.867826 185.346981 269.436856 183.918249 270.006378 182.374233 269.220575 181.606659 267.581968L176.29621 254.014926 180.756317 269.52258C181.220409 271.204049 180.357258 272.90227 178.833441 273.322021 177.310117 273.742266 175.820787 272.764323 175.222198 271.002056L170.861117 255.260879 173.885102 268.962418C174.134391 270.690691 173.065305 272.265745 171.500598 272.491879 169.936382 272.718013 168.582536 271.561725 168.208109 269.737875L165.344734 255.592443 166.684786 266.865631C166.694146 268.499312 165.502387 269.824091 164.022418 269.833452 162.541956 269.843305 161.433949 268.597845 161.320144 266.859719L157.83453 249.078411 157.826482 249.034333C157.734462 248.528155 156.886454 243.804632 157.003895 242.273705 157.125077 240.700732 157.168026 235.912265 157.170318 235.647453L157.170416 235.636014C157.170416 235.636014 157.177806 235.469985 157.179777 235.190644 163.900236 234.052585 170.678338 232.397719 175.023654 231.196599z"></path>
+                                                        <path stroke="#D3D3D3" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.496" d="M32.8169875 125.088881C29.3500955 129.885479 23.4706172 133.039528 16.7994244 133.039528 9.59664468 133.039528 3.31564345 129.36276-5.68434189e-14 123.914365M26.5994416-2.84217094e-14C26.5994416-2.84217094e-14 27.6961166 22.1345065 24.4977277 25.9989801 21.8407789 29.207715 18.5226722 31.1990717 18.5226722 31.1990717M33.9653924 125.088881C37.4322843 129.885479 43.3117626 133.039528 49.9829555 133.039528 57.1857352 133.039528 63.4667364 129.36276 66.7823798 123.914365M40.1828889-2.84217094e-14C40.1828889-2.84217094e-14 39.086214 22.1345065 42.2846029 25.9989801 44.9415516 29.207715 48.2596584 31.1990717 48.2596584 31.1990717M33.3909436 47.8971546L33.3909436 66.5509745" transform="translate(61.828 114.088)"></path>
+                                                        <path fill="#E3E3E3" d="M115.414543,423.385827 C115.571703,424.969749 115.917555,426.322117 116.543734,427.18921 C116.543734,427.18921 117.761112,428.739138 120.19439,430.398437 C122.628654,432.057244 127.054767,434.934415 127.054767,434.934415 C127.054767,434.934415 134.577779,439.13735 126.169446,442.457428 C120.409685,444.730097 107.139721,448.099933 107.139721,448.099933 C107.139721,448.099933 101.165159,448.652212 99.2846517,447.436312 C97.4036522,446.218441 95.9108736,444.365524 95.550242,441.585901 C95.210795,434.310699 96.9607453,424.118914 96.9607453,424.118914 C96.9607453,424.118914 96.9705986,423.850411 96.9868566,423.385827 L96.9868566,423.385827 Z M93.4507943,423.386122 C93.4675449,423.850214 93.4769056,424.118717 93.4769056,424.118717 C93.4769056,424.118717 95.2268559,434.310502 94.8874089,441.585704 C94.5267772,444.365819 93.0339987,446.218737 91.1529992,447.436115 C89.3579699,448.597217 83.8326127,448.146333 83.3340163,448.102945 L83.2979295,448.099736 C83.2979295,448.099736 70.0279657,444.730392 64.2682053,442.457231 C55.8603641,439.137153 63.3828841,434.93471 63.3828841,434.93471 C63.3828841,434.93471 67.8094898,432.057047 70.2432608,430.39824 C72.4332113,428.905314 73.6382826,427.50058 73.8573974,427.234562 L73.8939173,427.189505 C74.5205886,426.32192 74.8659476,424.969552 75.0231082,423.386122 L75.0231082,423.386122 Z"></path>
+                                                    </g>
+                                                </svg>
+                                                <span class="[ js-site-item ] earsLeftAlt" data-id="3">
+                                                    <svg width="9px" height="20px" viewBox="0 0 9 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                        <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                            <g id="siteback" transform="translate(-67.000000, -53.000000)" fill="#183c57">
+                                                                <g id="Group" transform="translate(5.000000, 24.000000)">
+                                                                    <path d="M70.407762,48.0390261 L69.1026893,48.0390261 C66.36987,48.0390261 63.4729928,46.3782484 62.8655354,41.4023199 L62.3319779,37.164898 C62.3319779,32.8989014 64.8120595,29.4088542 69.0775633,29.4088542 L70.407762,48.0390261 Z" id="Fill"></path>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                </span>
+                                                <span class="[ js-site-item ] earsRightAlt" data-id="3">
+                                                    <svg width="9px" height="20px" viewBox="0 0 9 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                        <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                            <g id="siteback" transform="translate(-125.000000, -53.000000)" fill="#183c57">
+                                                                <g id="Group" transform="translate(5.000000, 24.000000)">
+                                                                    <path d="M120.029938,48.0390261 L121.335011,48.0390261 C124.06783,48.0390261 126.964707,46.3782484 127.572165,41.4023199 L128.105722,37.164898 C128.105722,32.8989014 125.625641,29.4088542 121.360137,29.4088542 L120.029938,48.0390261 Z" id="Fill"></path>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                </span>
+                                                <span class="[ js-site-item ] scalp" data-id="6">
+                                                    <svg width="54px" height="68px" viewBox="0 0 54 68" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                        <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                            <g id="siteback" transform="translate(-73.000000, -24.000000)" fill="#183c57">
+                                                                <g id="Group" transform="translate(5.000000, 24.000000)">
+                                                                    <path d="M96.0697092,67.5412171 L94.3493189,67.5412171 C88.7447483,67.5353052 81.9799489,67.29784 79.5121839,65.3818612 C74.2928783,61.3306672 70.8151477,55.1294779 70.3323348,48.0676007 L68.8730576,26.7563394 C68.2192896,12.3024988 80.6640375,0.420868303 95.2100067,0.420868303 C109.754005,0.420868303 122.430306,11.9709344 121.545478,26.7563394 L120.087186,48.0676007 C119.603388,55.1353899 116.124179,61.3454472 110.894527,65.3917146 C107.726684,67.8422362 101.643242,67.5412171 96.0697092,67.5412171" id="B-Scalp"></path>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                </span>
+                                                <span class="[ js-site-item ] handLeftAlt" data-id="617">
+                                                    <svg width="34px" height="43px" viewBox="0 0 34 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                        <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                            <g id="siteback" transform="translate(-5.000000, -255.000000)" fill="#183c57">
+                                                                <g id="Group" transform="translate(5.000000, 24.000000)">
+                                                                    <path d="M13.4038207,234.018098 C11.6203691,235.303464 6.6414846,239.784263 5.68620486,241.610084 C4.73289579,243.435905 1.08174667,251.359948 1.08174667,251.359948 C1.08174667,251.359948 -0.494292469,254.603169 3.20365994,254.330725 C5.83449739,254.138093 8.10765918,252.398981 9.16787682,249.984917 C15.2266856,236.199624 3.64903018,265.558588 3.64903018,265.558588 C3.01940279,267.134627 3.67366348,268.867826 5.0999321,269.436856 C6.52866405,270.006378 8.07267988,269.220575 8.8402538,267.581968 L14.1507026,254.014926 L9.69059564,269.52258 C9.22650409,271.204049 10.0896553,272.90227 11.6134718,273.322021 C13.1367956,273.742266 14.6261255,272.764323 15.2247149,271.002056 L19.585796,255.260879 L16.561811,268.962418 C16.3125219,270.690691 17.3816075,272.265745 18.9463153,272.491879 C20.5105305,272.718013 21.8643772,271.561725 22.2388035,269.737875 L25.1021793,255.592443 L23.7621273,266.865631 C23.7527667,268.499312 24.9445262,269.824091 26.4244954,269.833452 C27.9049573,269.843305 29.0129636,268.597845 29.1267694,266.859719 L32.6123827,249.078411 C32.6123827,249.078411 33.5671698,243.892114 33.4430179,242.273705 C33.3183734,240.65579 33.2764967,235.636014 33.2764967,235.636014 C33.2764967,235.636014 33.2691068,235.469985 33.2671361,235.190644 C26.5466766,234.052585 19.7685752,232.397719 15.4232594,231.196599 C15.0976071,232.037087 14.4773403,233.24412 13.4038207,234.018098" id="Fill-"></path>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                </span>
+                                                <span class="[ js-site-item ] handRightAlt" data-id="617">
+                                                    <svg width="33px" height="43px" viewBox="0 0 33 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                        <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                            <g id="siteback" transform="translate(-162.000000, -255.000000)" fill="#183c57">
+                                                                <g id="Group" transform="translate(5.000000, 24.000000)">
+                                                                    <path d="M177.043092,234.018098 C178.826544,235.303464 183.805428,239.784263 184.760708,241.610084 C185.714017,243.435905 189.365166,251.359948 189.365166,251.359948 C189.365166,251.359948 190.941205,254.603169 187.243253,254.330725 C184.612416,254.138093 182.339254,252.398981 181.279036,249.984917 C175.220227,236.199624 186.797883,265.558588 186.797883,265.558588 C187.42751,267.134627 186.773249,268.867826 185.346981,269.436856 C183.918249,270.006378 182.374233,269.220575 181.606659,267.581968 L176.29621,254.014926 L180.756317,269.52258 C181.220409,271.204049 180.357258,272.90227 178.833441,273.322021 C177.310117,273.742266 175.820787,272.764323 175.222198,271.002056 L170.861117,255.260879 L173.885102,268.962418 C174.134391,270.690691 173.065305,272.265745 171.500598,272.491879 C169.936382,272.718013 168.582536,271.561725 168.208109,269.737875 L165.344734,255.592443 L166.684786,266.865631 C166.694146,268.499312 165.502387,269.824091 164.022418,269.833452 C162.541956,269.843305 161.433949,268.597845 161.320144,266.859719 L157.83453,249.078411 C157.83453,249.078411 156.879743,243.892114 157.003895,242.273705 C157.12854,240.65579 157.170416,235.636014 157.170416,235.636014 C157.170416,235.636014 157.177806,235.469985 157.179777,235.190644 C163.900236,234.052585 170.678338,232.397719 175.023654,231.196599 C175.349306,232.037087 175.969573,233.24412 177.043092,234.018098" id="Fill-"></path>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                </span>
+                                                <span class="[ js-site-item ] feetBoth" data-id="618">
+                                                    <svg width="70px" height="28px" viewBox="0 0 70 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                        <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                            <g id="siteback" transform="translate(-65.000000, -447.000000)" fill="#183c57">
+                                                                <g id="Group" transform="translate(5.000000, 24.000000)">
+                                                                    <path d="M115.112492,423 C115.271267,424.785473 115.620672,426.309929 116.253283,427.287358 C116.253283,427.287358 117.483166,429.034511 119.94144,430.904954 C122.400709,432.774842 126.872289,436.018128 126.872289,436.018128 C126.872289,436.018128 134.47258,440.755881 125.977873,444.498433 C120.314118,446.991979 107.462275,450.657224 106.780871,450.850931 L106.752669,450.858939 C106.752669,450.858939 100.716734,451.481494 98.81691,450.110873 C96.9165883,448.73803 95.4084754,446.649331 95.0441392,443.516006 C94.7012053,435.315046 96.4691317,423.826372 96.4691317,423.826372 C96.4691317,423.826372 96.4790862,423.523702 96.4955112,423 L96.4955112,423 Z M93.5044794,423 C93.5214022,423.523153 93.5308591,423.825827 93.5308591,423.825827 C93.5308591,423.825827 95.2987966,435.314648 94.9558605,443.515712 C94.591522,446.649633 93.0833997,448.738358 91.183066,450.110663 C89.28323,451.481858 83.2472565,450.858739 83.2472565,450.858739 C83.2472565,450.858739 69.8408951,447.060603 64.0219319,444.498152 C55.5276693,440.755552 63.1275109,436.018294 63.1275109,436.018294 C63.1275109,436.018294 67.5996162,432.774412 70.0584032,430.9045 C72.5166923,429.034588 73.7465835,427.287412 73.7465835,427.287412 C74.3796963,426.309416 74.7286051,424.784941 74.887381,423 L74.887381,423 Z" id="B-Feet"></path>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                </span>
+                                                <span class="[ js-site-item ] legsBoth" data-id="11">
+                                                    <svg width="64px" height="96px" viewBox="0 0 64 96" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                        <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                            <g id="siteback" transform="translate(-68.000000, -352.000000)" fill="#183c57">
+                                                                <g id="Group" transform="translate(5.000000, 24.000000)">
+                                                                    <path d="M80.6954203,328.115271 C83.4297177,327.911307 85.2126766,329.119325 86.1733757,329.707075 C87.4365718,330.479083 89.9693686,330.721475 92.5243355,330.738718 C92.6450387,333.74546 92.8874305,336.963063 93.3106307,340.644265 C94.3895697,350.019702 94.8048873,362.798478 94.7216267,368.026652 C94.6378734,373.25384 92.6465167,400.388908 92.7297773,402.87638 C92.8031846,405.072193 93.3283667,419.913269 93.4510406,423.386073 L93.4510406,423.386073 L75.0233545,423.386073 C75.5889353,417.698242 73.7286277,409.016971 73.7286277,409.016971 C73.7286277,409.016971 64.8488124,370.350558 63.9368873,363.794649 C63.0244695,357.239233 64.3517122,348.028346 66.0110119,339.232776 C66.4406168,336.956166 66.621918,334.821443 66.641132,332.848315 C69.2192541,332.326089 71.8353116,331.528955 74.0045208,330.31404 C75.8855203,329.26072 77.0669338,328.385745 80.6954203,328.115271 Z M109.742329,328.115271 C113.370816,328.385745 114.552229,329.26072 116.433229,330.31404 C118.602438,331.528955 121.218495,332.326089 123.796617,332.848315 C123.815831,334.821443 123.997133,336.956166 124.426737,339.232776 C126.086037,348.028346 127.41328,357.239233 126.500862,363.794649 C125.588937,370.350558 116.709122,409.016971 116.709122,409.016971 C116.709122,409.016971 114.848814,417.698242 115.414395,423.386073 L96.9867088,423.386073 C97.1093826,419.913269 97.6345648,405.072193 97.7079721,402.87638 C97.7912327,400.388908 95.7998759,373.25384 95.7161227,368.026652 C95.6328621,362.798478 96.0481797,350.019702 97.1271186,340.644265 C97.5503189,336.963063 97.7927107,333.74546 97.9134139,330.738718 C100.468381,330.721475 103.001178,330.479083 104.264374,329.707075 C105.225073,329.119325 107.008032,327.911307 109.742329,328.115271 Z" id="B-Legs"></path>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                </span>
+                                                <span class="[ js-site-item ] torsoAlt" data-id="13" viewbox="0 0 160 268">
+                                                    <svg width="160px" height="268px" viewBox="0 0 160 268" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                        <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                            <g id="siteback" transform="translate(-20.000000, -89.000000)" fill="#183c57">
+                                                                <g id="Group" transform="translate(5.000000, 24.000000)">
+                                                                    <path d="M174.711106,230.242058 C174.711106,230.242058 173.756812,223.396461 173.341987,219.871435 C172.926177,216.343945 171.475275,199.996788 170.852545,195.142548 C170.230307,190.288801 165.832769,177.344489 164.71146,174.398838 C163.592616,171.452695 163.508862,165.811174 163.508862,165.811174 C163.508862,165.811174 163.674398,154.235489 163.508862,149.838444 C163.343326,145.43992 161.643135,134.320937 161.01942,130.794925 C160.397675,127.267435 159.443381,117.809722 159.359628,114.405891 C159.27686,111.004031 158.239305,106.813905 158.239305,106.813905 C158.239305,106.813905 155.12861,97.6040036 150.357631,93.7030727 C145.586159,89.8031271 138.242477,87.895031 136.457547,87.4797134 C134.675081,87.0653811 132.600464,86.6500635 130.27705,85.4055887 C128.277318,84.3360104 115.346801,79.2103114 111.773001,77.7998081 C111.219736,77.5805717 110.860583,77.0475068 110.860583,76.4518734 L110.909849,65.3920102 C107.742006,67.8420391 101.658564,67.5410201 96.0855238,67.5410201 L94.3651334,67.5410201 C88.7605629,67.5356008 81.9967488,67.297643 79.5284912,65.3821568 L79.5762798,76.4518734 C79.5762798,77.0475068 79.2181115,77.5805717 78.6643547,77.7998081 C75.0915395,79.2103114 62.1610227,84.3360104 60.1603053,85.4055887 C57.8363989,86.6500635 55.7632596,87.0653811 53.979808,87.4797134 C52.1948784,87.895031 44.8521815,89.8031271 40.0797241,93.7030727 C35.3097301,97.6040036 32.1980505,106.813905 32.1980505,106.813905 C32.1980505,106.813905 31.1614808,111.004031 31.0782202,114.405891 C30.994467,117.809722 30.0406652,127.267435 29.4184278,130.794925 C28.7942198,134.320937 27.0945214,145.43992 26.9289856,149.838444 C26.7629571,154.235489 26.9289856,165.811174 26.9289856,165.811174 C26.9289856,165.811174 26.8447397,171.452695 25.7263874,174.398838 C24.6050792,177.344489 20.2075408,190.288801 19.585796,195.142548 C18.9625733,199.996788 17.5111787,216.343945 17.0963538,219.871435 C16.6805435,223.396461 15.7267418,230.242058 15.7267418,230.242058 C15.7267418,230.242058 15.6385545,230.640132 15.4232594,231.196353 C19.7685752,232.397965 26.5466766,234.052831 33.2671361,235.190397 C33.2602388,234.15432 33.3301974,231.466826 34.1475306,229.081337 C35.1845929,226.051932 43.8560105,204.644108 43.8560105,204.644108 C43.8560105,204.644108 46.9681828,194.728709 47.1755953,188.380212 C47.3830077,182.033194 48.088013,174.689511 48.7516344,169.751518 C49.4152557,164.815003 52.9013617,148.966917 53.0668975,146.435598 C53.2324334,143.904279 53.8689581,139.534823 53.8689581,138.871202 C53.8689581,138.871202 55.4174079,146.947478 58.404443,153.363963 C58.404443,153.363963 60.7002675,161.661447 61.0333098,177.344489 C61.3643815,193.026547 61.2816136,199.334152 59.0404751,212.775071 C56.8008146,226.218453 54.8922258,243.228246 55.0577616,254.181694 C55.2237901,265.134648 56.4682649,284.053523 58.6266355,294.923709 C60.783528,305.793896 63.5217667,317.40998 64.5992277,320.564028 C65.3998102,322.901237 66.6979856,327.203198 66.641329,332.853587 L66.641329,332.84866 C69.2194512,332.325941 71.8355086,331.528807 74.0042252,330.314385 C75.8852247,329.261065 77.0671309,328.385597 80.6956174,328.115616 C83.4299147,327.911652 85.2128737,329.119669 86.1735727,329.706928 C87.4372615,330.478935 89.9695657,330.72182 92.5245326,330.738571 C92.3378121,326.087802 92.445706,321.945957 92.6467138,317.40998 C92.9792635,309.941653 95.2184313,239.177052 95.2184313,239.177052 C95.2184313,239.177052 97.4585844,309.941653 97.7911341,317.40998 C97.9926346,321.945957 98.1005285,326.087802 97.913808,330.738571 C100.468282,330.72182 103.001079,330.478935 104.264275,329.706928 C105.224974,329.119669 107.007933,327.911652 109.742231,328.115616 C113.370717,328.385597 114.552131,329.261065 116.43313,330.314385 C118.602339,331.528807 121.218397,332.325941 123.796026,332.84866 C123.796026,332.849645 123.796519,332.853587 123.796519,332.853587 C123.740355,327.202705 125.038038,322.901237 125.838128,320.564028 C126.916081,317.40998 129.65432,305.793896 131.811705,294.923709 C133.969583,284.053523 135.214058,265.134648 135.379594,254.181694 C135.545129,243.228246 133.637033,226.218453 131.39688,212.775071 C129.156234,199.334152 129.073466,193.026547 129.405031,177.344489 C129.737088,161.661447 132.033898,153.363963 132.033898,153.363963 C135.02044,146.947478 136.56889,138.871202 136.56889,138.871202 C136.56889,139.534823 137.205415,143.904279 137.37095,146.435598 C137.536979,148.966917 141.022099,164.815003 141.686214,169.751518 C142.349835,174.689511 143.054348,182.033194 143.262253,188.380212 C143.470158,194.728709 146.581837,204.644108 146.581837,204.644108 C146.581837,204.644108 155.252762,226.051932 156.289825,229.081337 C157.107158,231.466826 157.177116,234.154813 157.170219,235.19089 L157.179087,235.19089 L157.179087,235.190397 C163.896098,234.053324 170.669765,232.399936 175.015081,231.198816 C174.799293,230.641118 174.711106,230.242058 174.711106,230.242058" id="B-Trunk"></path>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                </span>
+                                                <span class="[ js-site-item ] bumSkin" data-id="558">
+                                                    <svg width="10px" height="26px" viewBox="0 0 10 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                                        <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                            <g id="siteback" transform="translate(-95.000000, -242.000000)" fill="#183c57">
+                                                                <g id="Group" transform="translate(5.000000, 24.000000)">
+                                                                    <path d="M95.219121,218.753625 C92.9853725,237.522728 90.6097362,243.79634 90.6097362,243.79634 C92.6838608,242.447912 95.219121,239.54463 95.219121,239.54463 C95.219121,239.54463 97.7548739,242.447912 99.8285059,243.79634 C99.8285059,243.79634 97.4533622,237.522728 95.219121,218.753625" id="B-Skin-fold"></path>
+                                                                </g>
+                                                            </g>
+                                                        </g>
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <p>
+                                <a class="floatable" href="https://www.amazon.co.uk/Differential-Diagnosis-Dermatology-Richard-Ashton/dp/0367085976/" rel="noopener" target="_blank">
+                                    <img style="max-width: 14rem;" src="https://m.media-amazon.com/images/I/91CcSjTk1yL._SY522_.jpg">
+                                    <span style="display:block;text-align:center;line-height:1.1;margin-top:.4rem;">
+                                        Differential Diagnosis <br>in Dermatology
+                                    </span>
+                                </a>
+                                <img src="https://ir-na.amazon-adsystem.com/e/ir?t=nzdermnet-20&amp;language=en_US&amp;l=li2&amp;o=1&amp;a=1138448087" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;width:0 !important;">
+                                <i>
+                                    The DermDiag tool is based on the best-selling book for Doctors, <a href="https://www.amazon.co.uk/Differential-Diagnosis-Dermatology-Richard-Ashton/dp/0367085976/" rel="noopener" target="_blank">Differential Diagnosis in Dermatology</a>
+                                    . This tool does not provide medical advice. It is intended for informational purposes only. If you have any medical problems, see your doctor or a dermatologist. © DermNet New Zealand © Dr Richard Ashton.
+                                </i>
+                                <br>
+                                <br>
+                                Buy <a href="https://www.amazon.co.uk/Differential-Diagnosis-Dermatology-Richard-Ashton/dp/0367085976/" rel="noopener" target="_blank">Differential Diagnosis in Dermatology</a>
+                                on Amazon.
+                
+                            </p>
+                        </div>
+                    </div>
+                    <section class="advertisement advertisement--sticky-footer sticky">
+                        <div class="advertisement__wrap">
+                            <div class="advertisement__wrap__close" onclick="event.preventDefault();event.currentTarget.closest('.advertisement').classList.toggle('sticky')">
+                                <img src="_resources/themes/mercury/dist/images/svg/close.svg" width="20" height="20" loading="lazy" alt="close">
+                            </div>
+                            <div class="advertisement__wrap__title">ADVERTISEMENT</div>
+                            <div class="advertisement__wrap__content">
+                                <div id="30418eb7-d69f-4757-a142-b63ec13b52b0" class="_ap_apex_ad"></div>
+                                <div id="847f03da-44c6-4484-b3d9-96694a409bf7" class="_ap_apex_ad"></div>
+                                <script>
+                                    var adpushup = window.adpushup = window.adpushup || {
+                                        que: []
+                                    };
+                                    adpushup.que.push(function() {
+                                        if (adpushup.config.platform === "MOBILE") {
+                                            adpushup.triggerAd("847f03da-44c6-4484-b3d9-96694a409bf7");
+                                        } else {
+                                            adpushup.triggerAd("30418eb7-d69f-4757-a142-b63ec13b52b0");
+                                        }
+                                    });
+                                </script>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="sidebar-wrap__sidebar">
+                    <section class="advertisement advertisement--300x600 advertisement--sidebar-1">
+                        <div class="advertisement__wrap">
+                            <div class="advertisement__wrap__title">ADVERTISEMENT</div>
+                            <div class="advertisement__wrap__content">
+                                <div id="ca6f37ec-23fc-42e2-8a0a-a3d3936b755c" class="_ap_apex_ad" style="width: 300px; height: 600px;">
+                                    <script>
+                                        var adpushup = window.adpushup = window.adpushup || {};
+                                        adpushup.que = adpushup.que || [];
+                                        adpushup.que.push(function() {
+                                            adpushup.triggerAd("ca6f37ec-23fc-42e2-8a0a-a3d3936b755c");
+                                        });
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </section>
+            <footer class="footer">
+                <div class="footer__wrap">
+                    <div class="footer__wrap__newsletter">
+                        <h2 class="colour--white">Join our newsletter</h2>
+                        <form method="post" class="[ js-newsletter-form ]" action="/newsletter-subscription">
+                            <label for="newsletter_email">Your email</label>
+                            <input id="newsletter_email" name="newsletter_email" type="email" placeholder="Your Email" required/>
+                            <label for="newsletter_name">Your name</label>
+                            <input id="newsletter_name" name="newsletter_name" type="text" placeholder="Your Name" required/>
+                            <label for="newsletter_profession">Your profession</label>
+                            <select id="newsletter_profession" name="newsletter_profession" required>
+                                <option>Profession or specialty</option>
+                                <option value="I am a dermatologist">I am a dermatologist</option>
+                                <option value="Primary care physician">Primary care physician</option>
+                                <option value="Other health professional">Other health professional</option>
+                                <option value="Other (not health professional)">Other (not health professional)</option>
+                                <option value="Medical student or physician in training">Medical student or physician in training</option>
+                                <option value="Patient or caregiver">Patient or caregiver</option>
+                                <option value="Marketing/media">Marketing/media</option>
+                            </select>
+                            <button type="submit" class="button button--white button--arrow">Join Now</button>
+                        </form>
+                    </div>
+                    <div class="footer__wrap__newsletter__links">
+                        <p class="h6 colour--white">
+                            <b>RESOURCES</b>
+                        </p>
+                        <p class="colour--white small">
+                            <a href="/dermdiag" class="">Skin checker</a>
+                            <br>
+                            <a href="/resources/psoriasis-po-pasi" class="">PO-PASI scoring</a>
+                            <br>
+                            <a href="/dermatology-image-dataset" class="">AI image dataset</a>
+                            <br>
+                            <a href="/quizzes" class="">Quizzes</a>
+                            <br>
+                            <a href="/glossary" class="">Glossary</a>
+                            <br>
+                        </p>
+                    </div>
+                    <div class="footer__wrap__newsletter__links">
+                        <p class="h6 colour--white">
+                            <b>CONTACT</b>
+                        </p>
+                        <p class="colour--white small">
+                            <a href="/contact-us" class="">Contact us</a>
+                            <br>
+                            <a href="/contact-us/website-feedback" class="[ js-feedback-link ]">Website feedback</a>
+                            <br>
+                            <a href="/volunteer" class="">Volunteer</a>
+                            <br>
+                            <a href="/donate" class="">Donate</a>
+                            <br>
+                        </p>
+                    </div>
+                    <div class="footer__wrap__newsletter__links">
+                        <p class="h6 colour--white">
+                            <b>ABOUT</b>
+                        </p>
+                        <p class="colour--white small">
+                            <a href="/about" class="">About DermNet</a>
+                            <br>
+                            <a href="/about/editorial-process" class="">Editorial process</a>
+                            <br>
+                            <a href="/terms" class="">Website terms</a>
+                            <br>
+                            <a href="/image-licence" class="">Image licence</a>
+                            <br>
+                            <a href="/faq" class="">FAQ</a>
+                            <br>
+                            <button onclick="event.preventDefault();document.querySelector('.qc-cmp2-persistent-link').click()">Privacy settings</button>
+                            <br>
+                        </p>
+                    </div>
+                    <div class="footer__wrap__divider"></div>
+                    <a href="https://dermnetnz.org" class="footer__wrap__logo" title="DermNet®">
+                        <img src="_resources/themes/mercury/dist/images/svg/logo-white-tm.svg" loading="lazy" width="185" height="41" alt="DermNet®">
+                    </a>
+                    <div class="footer__wrap__social">
+                        <p class="colour--white small no-margin">
+                            <a class="colour--white" href="/privacy-policy">Privacy policy &nbsp;&nbsp;</a>
+                            <span class="footer__wrap__social__copyright">© DermNet® 2024
+                </span>
+                        <div class="footer__wrap__social__break" style="display:none;"></div>
+                        <a href="https://www.facebook.com/dermnetnz/" class="footer__wrap__social__item" target="_blank">
+                            <img src="_resources/themes/mercury/dist/images/svg/footer-facebook.svg" width="44" height="44" alt="Social link facebook" loading="lazy">
+                        </a>
+                        <a href="https://www.instagram.com/dermnet" class="footer__wrap__social__item" target="_blank">
+                            <img src="_resources/themes/mercury/dist/images/svg/footer-instagram.svg" width="44" height="44" alt="Social link instagram" loading="lazy">
+                        </a>
+                        <a href="https://twitter.com/dermnetnz" class="footer__wrap__social__item" target="_blank">
+                            <img src="_resources/themes/mercury/dist/images/svg/footer-x.svg" width="44" height="44" alt="Social link x" loading="lazy">
+                        </a>
+    </p></div></div>
+    <div class="footer__warning">
+        <div class="footer__warning__wrap">
+            <p class="colour--white smaller text-center">
+                <b>IMPORTANT NOTICE:</b>
+                DermNet does not provide a free online consultation service. If you have any concerns with your skin or its treatment, see a dermatologist for advice.
+            </p>
+        </div>
+    </div>
+    </footer><script>
+        window.search_images = '/assets/___cache/images.json';
+        window.search_galleries = '/assets/___cache/galleries.json';
+        window.search_topics = '/assets/___cache/topics.json';
+        window.search_collections = '/assets/___cache/image_collections.json';
+    </script>
+    </body></html>

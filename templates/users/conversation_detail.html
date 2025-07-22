@@ -1,0 +1,61 @@
+<div class="flex flex-col h-full">
+    <!-- Chat Header -->
+    <div id="chat-header" class="p-4 bg-white shadow flex items-center justify-between">
+        <h2 id="chat-title" class="text-lg font-bold text-gray-800">{{ other_participant.username }}</h2>
+    </div>
+
+    <!-- Chat Messages -->
+    <div id="chat-messages" class="flex-1 overflow-y-auto p-4 space-y-4 bg-blue-50">
+        {% for message in messages %}
+        <div class="flex {% if message.sender == request.user %}justify-end{% else %}justify-start{% endif %}">
+            <div class="max-w-xs px-4 py-2 rounded-lg {% if message.sender == request.user %}bg-blue-500 text-white{% else %}bg-gray-200{% endif %}">
+                {{ message.content }}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- Message Input -->
+    <form id="message-form" method="POST" class="p-4 bg-white border-t">
+        {% csrf_token %}
+        <div class="flex">
+            <input id="message-input" type="text" name="text" placeholder="Type a message..." class="flex-1 border rounded p-2">
+            <button id="send-message" type="button" class="ml-2 bg-blue-500 text-white px-4 py-2 rounded">Send</button>
+        </div>
+    </form>
+</div>
+
+<script>
+    document.getElementById('send-message').addEventListener('click', function () {
+        const input = document.getElementById('message-input');
+        const message = input.value;
+        const conversationId = {{ conversation.id }};
+        if (!message) return;
+
+        fetch(`/users/conversation/${conversationId}/send_message/`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRFToken': '{{ csrf_token }}',
+            },
+            body: JSON.stringify({ content: message }),
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                const chatMessages = document.getElementById('chat-messages');
+                const isSelf = data.message.sender_id === {{ request.user.id }};
+                const newMessage = document.createElement('div');
+                newMessage.className = `flex ${isSelf ? 'justify-end' : 'justify-start'}`;
+                newMessage.innerHTML = `
+                    <div class="max-w-xs px-4 py-2 ${isSelf ? 'bg-blue-500 text-white' : 'bg-gray-200'} rounded-lg">
+                        ${data.message.content}
+                    </div>
+                `;
+                chatMessages.appendChild(newMessage);
+                input.value = '';
+            }
+            
+        });
+    });
+</script>

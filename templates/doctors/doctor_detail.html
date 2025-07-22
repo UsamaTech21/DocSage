@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block content %}
+<div class="min-h-screen bg-gray-50 py-10">
+    <div class="container mx-auto bg-white rounded-lg shadow-md p-6">
+        <div class="flex flex-col items-center md:flex-row">
+            <!-- Doctor Image -->
+            <div class="w-32 h-32 md:w-48 md:h-48 rounded-full overflow-hidden shadow-md">
+                <img src="{{ doctor.picture.url }}" alt="Doctor Picture" class="w-full h-full object-cover">
+            </div>
+            <!-- Doctor Details -->
+            <div class="mt-6 md:mt-0 md:ml-10">
+                <h1 class="text-3xl font-bold text-blue-600">{{ doctor.name }}</h1>
+                <p class="text-gray-700 mt-2"><strong>Location:</strong> {{ doctor.location }}</p>
+                <p class="text-gray-700 mt-2"><strong>Expertise:</strong> {{ doctor.expertise }}</p>
+                <p class="text-gray-700 mt-2"><strong>Degree:</strong> {{ doctor.degree }}</p>
+                <div class="mt-6 space-x-4">
+                    <a href="{% url 'chat_with_doctor' doctor.id %}" class="bg-blue-500 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-600">Report Analysis</a>
+                    <a href="{% url 'chat_with_doctor' doctor.id %}" class="bg-green-500 text-white px-4 py-2 rounded-lg shadow hover:bg-green-600">Book Online</a>
+                    <a href="{% url 'chat_with_doctor' doctor.id %}" class="bg-gray-500 text-white px-4 py-2 rounded-lg shadow hover:bg-gray-600">Contact</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

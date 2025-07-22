@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocSage Medical Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .header img {
+            max-width: 120px;
+        }
+        .header h1 {
+            margin: 10px 0;
+            color: #007bff;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h2 {
+            margin-bottom: 10px;
+            color: #555;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 5px;
+        }
+        .uploaded-image img {
+            width: 100%;
+            max-width: 300px;
+            display: block;
+            margin: 10px auto;
+            border: 1px solid #ddd;
+        }
+        ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        ul li {
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <div class="header">
+            <img src="{{ company_logo }}" alt="DocSage Logo">
+            <h1>DocSage Medical Report</h1>
+            <p>Your Trusted Skin Condition Analysis</p>
+            <p>Contact: contact@docsage.com | +1-800-DOCSAGE</p>
+        </div>
+
+        <!-- User Information -->
+        <div class="section user-info">
+            <h2>User Information</h2>
+            <p><strong>Name:</strong> {{ user_name }}</p>
+            <p><strong>Email:</strong> {{ user_email }}</p>
+            <p><strong>Age:</strong> {{ user_age }}</p>
+            <p><strong>Blood Group:</strong> {{ user_blood_group }}</p>
+        </div>
+
+        <!-- Uploaded Image -->
+        <div class="section uploaded-image">
+            <h2>Uploaded Image</h2>
+            <img src="{{ uploaded_image }}" alt="Uploaded Skin Image">
+        </div>
+
+        <!-- Disease Details -->
+        <div class="section disease-info">
+            <h2>Disease Details</h2>
+            <p><strong>Predicted Disease:</strong> {{ disease_name }}</p>
+            <p><strong>Common Name:</strong> {{ disease_common_name }}</p>
+            <p><strong>Symptoms:</strong></p>
+            <ul>
+                {% for symptom in disease_symptoms %}
+                    <li>{{ symptom }}</li>
+                {% endfor %}
+            </ul>
+            <p><strong>Precautions:</strong></p>
+            <ul>
+                {% for precaution in disease_precautions %}
+                    <li>{{ precaution }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

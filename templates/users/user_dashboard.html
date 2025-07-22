@@ -1,0 +1,130 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block content %}
+<div class="min-h-screen bg-blue-50 py-10">
+    <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-6">
+        <!-- Sidebar -->
+        <div class="bg-white rounded-lg shadow-md p-4">
+            <div class="user-info text-center">
+                {% if user.profile_picture and user.profile_picture.url %}
+                    <img src="{{ user.profile_picture.url }}" alt="User Profile Picture" class="rounded-full h-24 w-24 mx-auto shadow-md">
+                {% else %}
+                    <img src="{% static 'media/default_profile_picture.jpg' %}" alt="Default Profile Picture" class="rounded-full h-24 w-24 mx-auto shadow-md">
+                {% endif %}
+                <h2 class="text-2xl font-bold text-gray-700 mt-4">{{ user.username }}</h2>
+                <p class="text-sm text-gray-500">Specialization: {{ user.specialization|default:"N/A" }}</p>
+            </div>
+
+            <ul class="mt-6 space-y-4">
+                <li>
+                    <a href="{% url 'user_dashboard' %}" class="flex items-center gap-2 text-blue-600 hover:text-blue-800">
+                        <span class="material-icons">Dashboard</span> 
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'edit_profile' %}" class="flex items-center gap-2 text-gray-600 hover:text-blue-600">
+                        <span class="material-icons">Edit Profile</span> 
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'list_articles' %}" class="flex items-center gap-2 text-gray-600 hover:text-blue-600">
+                        <span class="material-icons">My Article</span>
+                    </a>
+                </li>                
+                <li>
+                    <a href="{% url 'inbox' %}" class="flex items-center gap-2 text-gray-600 hover:text-blue-600">
+                        <span class="material-icons">Inbox</span> 
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'logout' %}" class="flex items-center gap-2 text-red-600 hover:text-red-800">
+                        <span class="material-icons">Log Out</span> 
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Dashboard Content -->
+        <div class="md:col-span-3 bg-white rounded-lg shadow-md p-6">
+            <!-- Header -->
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl font-bold text-blue-600">Dashboard</h2>
+                {% if application_status == "Pending" %}
+                    <span class="bg-yellow-500 text-white px-4 py-2 rounded-lg shadow">Your application is being processed</span>
+                {% elif application_status == "Approved" %}
+                    <span class="bg-green-500 text-white px-4 py-2 rounded-lg shadow">You are now a Doctor</span>
+                {% else %}
+                    <a href="{% url 'join_as_doctor' %}" class="bg-green-500 text-white px-4 py-2 rounded-lg shadow hover:bg-green-600">Join As Doctor</a>
+                {% endif %}
+            </div>
+
+            <!-- Quick Stats -->
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                <div class="bg-blue-100 rounded-lg p-4 shadow text-center">
+                    <h3 class="text-lg font-semibold text-gray-700">Gender</h3>
+                    <p class="text-xl text-blue-500">{{ user.gender|default:"N/A" }}</p>
+                </div>
+                <div class="bg-blue-100 rounded-lg p-4 shadow text-center">
+                    <h3 class="text-lg font-semibold text-gray-700">Blood Group</h3>
+                    <p class="text-xl text-blue-500">{{ user.blood_group|default:"N/A" }}</p>
+                </div>
+                <div class="bg-blue-100 rounded-lg p-4 shadow text-center">
+                    <h3 class="text-lg font-semibold text-gray-700">Weight</h3>
+                    <p class="text-xl text-blue-500">{{ user.weight|default:"N/A" }} kg</p>
+                </div>
+                <div class="bg-blue-100 rounded-lg p-4 shadow text-center">
+                    <h3 class="text-lg font-semibold text-gray-700">Height</h3>
+                    <p class="text-xl text-blue-500">{{ user.height|default:"N/A" }} m</p>
+                </div>
+                <div class="bg-blue-100 rounded-lg p-4 shadow text-center">
+                    <h3 class="text-lg font-semibold text-gray-700">BMI</h3>
+                    <p class="text-xl text-blue-500">{{ user.calculate_bmi|default:"N/A" }}</p>
+                </div>
+                <div class="bg-blue-100 rounded-lg p-4 shadow text-center">
+                    <h3 class="text-lg font-semibold text-gray-700">Daily Caloric Needs</h3>
+                    <p class="text-xl text-blue-500">{{ user.calculate_caloric_needs|default:"N/A" }} kcal</p>
+                </div>
+            </div>
+
+            <!-- Articles Section -->
+            {% if user.is_doctor %}
+                <div class="mt-10">
+                    <div class="flex justify-between items-center mb-4">
+                        <h2 class="text-2xl font-bold text-blue-600">Your Articles</h2>
+                        <a href="{% url 'add_article' %}" class="bg-blue-500 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-600">Add New Article</a>
+                    </div>
+
+                    {% if articles %}
+                        <table class="table-auto w-full border-collapse border border-gray-200">
+                            <thead>
+                                <tr>
+                                    <th class="border border-gray-200 px-4 py-2">Title</th>
+                                    <th class="border border-gray-200 px-4 py-2">Category</th>
+                                    <th class="border border-gray-200 px-4 py-2">Status</th>
+                                    <th class="border border-gray-200 px-4 py-2">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for article in articles %}
+                                    <tr>
+                                        <td class="border border-gray-200 px-4 py-2">{{ article.title }}</td>
+                                        <td class="border border-gray-200 px-4 py-2">{{ article.category }}</td>
+                                        <td class="border border-gray-200 px-4 py-2">{{ article.get_status_display }}</td>
+                                        <td class="border border-gray-200 px-4 py-2">
+                                            <a href="{% url 'edit_article' article.id %}" class="text-blue-500 hover:underline">Edit</a> |
+                                            <a href="{% url 'delete_article' article.id %}" class="text-red-500 hover:underline">Delete</a>
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    {% else %}
+                        <p class="text-gray-500">You have not published any articles yet.</p>
+                    {% endif %}
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

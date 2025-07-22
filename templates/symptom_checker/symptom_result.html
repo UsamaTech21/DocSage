@@ -1,0 +1,49 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block content %}
+<div class="min-h-screen bg-blue-50 py-10">
+    <div class="container mx-auto">
+        <h1 class="text-3xl font-bold text-center text-blue-500">Symptom Analysis Results</h1>
+
+        <div class="result-summary mt-8 bg-white rounded-lg shadow-md p-6">
+            {% if uploaded_file_url %}
+            <div class="mt-4 text-center">
+                <h3 class="text-lg font-medium text-gray-700">Uploaded Image:</h3>
+                <img src="{{ uploaded_file_url }}" alt="Uploaded Image" class="w-40 h-40 mt-2 border rounded-md">
+            </div>
+            {% endif %}
+        </div>
+
+        <div class="analysis-results mt-6 bg-white rounded-lg shadow-md p-6">
+            <h2 class="text-xl font-semibold text-gray-800">Predicted Conditions:</h2>
+            {% if predictions %}
+            <ul class="mt-4 space-y-2">
+                {% for prediction in predictions %}
+                <li class="text-gray-700">
+                    <strong class="text-blue-500">{{ prediction.name }}</strong>: {{ prediction.details }}
+                </li>
+                {% endfor %}
+            </ul>
+            {% else %}
+            <p class="text-gray-600 mt-4">No conditions detected. Please try again with another image.</p>
+            {% endif %}
+        </div>
+
+        <div class="doctor-recommendations mt-6 bg-white rounded-lg shadow-md p-6">
+            <h2 class="text-xl font-semibold text-gray-800">Recommended Doctors:</h2>
+            {% if recommended_doctors %}
+            <ul class="mt-4 space-y-2">
+                {% for doctor in recommended_doctors %}
+                <li>
+                    <strong>{{ doctor.name }}</strong> - {{ doctor.specialization }} ({{ doctor.location }})
+                </li>
+                {% endfor %}
+            </ul>
+            {% else %}
+            <p>No doctors available for this condition in your area.</p>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

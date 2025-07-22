@@ -1,0 +1,195 @@
+{% extends 'layout.html' %}
+{% load static %} 
+{% block content %}
+<div>
+    <!-- Hero Section -->
+    <section class="hero relative #3189c4 py-16">
+        <div class="container mx-auto flex flex-col lg:flex-row items-center px-4 lg:px-12">
+            <!-- Hero Content -->
+            <div class="text-center lg:text-left lg:w-1/2 space-y-4">
+                <h1 class="text-4xl font-bold text-green-600">WELCOME TO DOCSAGE</h1>
+                <p class="text-gray-800 text-lg">CHECK YOUR SYMPTOMS AND GET WELL ASAP WITH EXPERT ADVICE.</p>
+                <p class="text-gray-600">Your Trusted Partner in Health Management</p>
+                <a href="{% url 'symptom_checker' %}" 
+                   class="mt-6 inline-block bg-green-500 text-white font-bold py-3 px-6 rounded shadow-lg hover:bg-green-600 transition">
+                    CHECK SYMPTOMS
+                </a>
+            </div>
+    
+            <!-- Hero Image -->
+            <div class="relative lg:w-1/2 flex justify-center mt-8 lg:mt-0">
+                <div class="relative">
+                    <!-- Flipped Girl Image -->
+                    <img src="{% static 'media/main_pic.png' %}" alt="Main Image" 
+                         class="w-full max-w-md rounded-md transform scale-x-[-1] object-cover">
+                    <!-- Blurry Transparent Overlay -->
+                    <div class="absolute bottom-[-20px] left-0 w-full h-1/6 #66c2ff bg-opacity-30 backdrop-blur-md rounded-b-md"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+
+
+    <!-- Features Section -->
+    <section class="features-section py-12 bg-gradient-to-br from-blue-50 to-white backdrop-blur-md">
+        <h2 class="text-center text-3xl font-bold text-gray-800 mb-8">OUR FEATURES</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-6">
+            <div class="feature-card bg-white bg-opacity-80 backdrop-blur-lg border border-blue-300 rounded-xl shadow-lg p-6 flex flex-col items-center text-center">
+                <div class="mb-4">
+                    <img src="{% static 'media/ff04.png' %}" alt="Symptom Checker" class="h-16 w-16 mx-auto">
+                </div>
+                <h3 class="text-lg font-bold text-gray-800 mb-2">SYMPTOM CHECKER</h3>
+                <p class="text-sm text-gray-600">Identify Symptoms And Receive Preliminary Diagnoses Quickly.</p>
+            </div>
+            <div class="feature-card bg-white bg-opacity-80 backdrop-blur-lg border border-blue-300 rounded-xl shadow-lg p-6 flex flex-col items-center text-center">
+                <div class="mb-4">
+                    <img src="{% static 'media/ff02.png' %}" alt="Find Doctor" class="h-16 w-16 mx-auto">
+                </div>
+                <h3 class="text-lg font-bold text-gray-800 mb-2">FIND DOCTOR</h3>
+                <p class="text-sm text-gray-600">Get Personalized Recommendations For Nearby Dermatologists.</p>
+            </div>
+            <div class="feature-card bg-white bg-opacity-80 backdrop-blur-lg border border-blue-300 rounded-xl shadow-lg p-6 flex flex-col items-center text-center">
+                <div class="mb-4">
+                    <img src="{% static 'media/ff03.png' %}" alt="Report Analyzer" class="h-16 w-16 mx-auto">
+                </div>
+                <h3 class="text-lg font-bold text-gray-800 mb-2">REPORT ANALYZER</h3>
+                <p class="text-sm text-gray-600">Upload And Analyze Your Medical Reports For Expert Feedback.</p>
+            </div>
+            <div class="feature-card bg-white bg-opacity-80 backdrop-blur-lg border border-blue-300 rounded-xl shadow-lg p-6 flex flex-col items-center text-center">
+                <div class="mb-4">
+                    <img src="{% static 'media/ff01.png' %}" alt="Online Treatment" class="h-16 w-16 mx-auto">
+                </div>
+                <h3 class="text-lg font-bold text-gray-800 mb-2">ONLINE TREATMENT</h3>
+                <p class="text-sm text-gray-600">Consult With Doctors Online And Receive Treatment Plans.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews-section py-10 bg-blue-50">
+        <h2 class="text-center text-3xl font-bold text-gray-800 mb-8">What Our Clients Say</h2>
+        <div class="relative overflow-hidden w-full px-8">
+            <div id="reviewCarousel" class="flex gap-8 transition-transform duration-300 cursor-grab">
+                {% for review in latest_reviews %}
+                <div class="review-card bg-gradient-to-br from-blue-50 to-white p-6 rounded-lg shadow-lg border border-blue-500 flex-shrink-0" style="width: 400px;">
+                    <div class="flex items-center space-x-4">
+                        {% if review.user.profile_picture %}
+                        <img src="{{ review.user.profile_picture.url }}" alt="User Image" class="h-16 w-16 rounded-full shadow-md">
+                        {% else %}
+                        <img src="{% static 'media/default_profile_picture.jpg' %}" alt="Default Profile" class="h-16 w-16 rounded-full shadow-md">
+                        {% endif %}
+                        <div>
+                            <p class="text-lg font-bold text-gray-800">{{ review.user.username }}</p>
+                            <p class="text-sm text-gray-500 italic">{{ review.role }}</p>
+                        </div>
+                    </div>
+                    <p class="mt-4 italic text-gray-600">"{{ review.content }}"</p>
+                </div>
+                {% endfor %}
+            </div>
+            <button id="prevReview" class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-blue-200 hover:bg-blue-300 p-3 rounded-full shadow-md">
+                &#8592;
+            </button>
+            <button id="nextReview" class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-blue-200 hover:bg-blue-300 p-3 rounded-full shadow-md">
+                &#8594;
+            </button>
+        </div>
+    </section>
+    <!-- Articles Section -->
+    <section class="articles py-10 bg-gray-50">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Top Health Articles</h2>
+        <div class="relative overflow-hidden w-full px-8">
+            <div id="articleCarousel" class="flex gap-6 transition-transform duration-300 cursor-grab">
+                {% for article in articles_by_likes %}
+                <div class="article-item bg-white rounded-lg shadow-md p-6 flex-shrink-0 w-[320px] lg:w-[360px]">
+                    {% if article.feature_image %}
+                    <img src="{{ article.feature_image.url }}" alt="{{ article.title }}" class="rounded-md w-full h-40 object-cover">
+                    {% else %}
+                    <img src="{% static 'media/default_article_image.jpg' %}" alt="Default Image" class="rounded-md w-full h-40 object-cover">
+                    {% endif %}
+                    <h3 class="text-lg font-bold mt-2">{{ article.title }}</h3>
+                    <p class="text-sm text-gray-600 mt-2">{{ article.content|truncatewords:20 }}</p>
+                    <p class="text-xs text-gray-500 mt-2">Likes: {{ article.total_likes }}</p>
+                    <a href="{% url 'article_detail' article.id %}" class="text-blue-600 mt-4 inline-block hover:underline">Read More...</a>
+                </div>
+                {% endfor %}
+            </div>
+            <!-- Navigation Buttons -->
+            <button id="prevArticle" class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-gray-200 hover:bg-gray-300 p-3 rounded-full shadow-md">
+                &#8592;
+            </button>
+            <button id="nextArticle" class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gray-200 hover:bg-gray-300 p-3 rounded-full shadow-md">
+                &#8594;
+            </button>
+        </div>
+    </section>
+
+
+    <!-- About Section -->
+    <section class="about-section py-12 bg-white">
+        <h2 class="text-center text-3xl font-bold text-gray-800 mb-8">ABOUT US</h2>
+        <p class="text-center text-gray-600 mb-6 mx-auto max-w-4xl">
+            At DocSage, We Are Dedicated To Empowering Individuals To Take Control Of Their Health. Our Mission Is To Provide Accessible, Reliable, And Expert Medical Advice To Everyone, Everywhere. With Our Comprehensive Symptom Checker, Detailed Disease Information, And Expert Consultations, We Ensure That You Have The Tools And Resources You Need To Make Informed Health Decisions.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-6">
+            <div class="about-card bg-gradient-to-br from-blue-50 to-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-lg font-bold text-gray-800 mb-2">Our Mission</h3>
+                <p class="text-sm text-gray-600">
+                    To Provide Accessible, Reliable, And Expert Medical Advice To Everyone, Everywhere.
+                </p>
+            </div>
+            <div class="about-card bg-gradient-to-br from-blue-50 to-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-lg font-bold text-gray-800 mb-2">Our Vision</h3>
+                <p class="text-sm text-gray-600">
+                    To Be The Leading Platform For Personalized Healthcare Solutions, Empowering Individuals To Take Control Of Their Health.
+                </p>
+            </div>
+            <div class="about-card bg-gradient-to-br from-blue-50 to-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-lg font-bold text-gray-800 mb-2">Our Values</h3>
+                <p class="text-sm text-gray-600">
+                    Integrity, Compassion, Innovation, Excellence
+                </p>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script>
+    function setupCarousel(carouselId, prevBtnId, nextBtnId) {
+        const carousel = document.getElementById(carouselId);
+        const prevBtn = document.getElementById(prevBtnId);
+        const nextBtn = document.getElementById(nextBtnId);
+
+        let scrollAmount = 0;
+        const scrollStep = 450;
+
+        prevBtn.addEventListener('click', () => {
+            scrollAmount -= scrollStep;
+            if (scrollAmount < 0) scrollAmount = 0;
+            carousel.style.transform = `translateX(-${scrollAmount}px)`;
+        });
+
+        nextBtn.addEventListener('click', () => {
+            const maxScroll = carousel.scrollWidth - carousel.clientWidth;
+            scrollAmount += scrollStep;
+            if (scrollAmount > maxScroll) scrollAmount = maxScroll;
+            carousel.style.transform = `translateX(-${scrollAmount}px)`;
+        });
+
+        carousel.addEventListener('mousedown', () => {
+            carousel.style.cursor = 'grabbing';
+        });
+
+        carousel.addEventListener('mouseup', () => {
+            carousel.style.cursor = 'grab';
+        });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        setupCarousel('reviewCarousel', 'prevReview', 'nextReview');
+        setupCarousel('articleCarousel', 'prevArticle', 'nextArticle');
+    });
+</script>
+{% endblock %}
