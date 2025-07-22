@@ -94,5 +94,5 @@ Project Link: [https://github.com/UsamaTech21/DocSage](https://github.com/UsamaT
 ## Acknowledgments
 
 - Final Year Project
-- Supervised by [Supervisor Name]
-- Developed with ❤️ by [Your Name/Team Name] 
+- Supervised by DR Foqia Zafeer
+- Developed with ❤️ by Usama innovates
